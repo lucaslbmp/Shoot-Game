@@ -8,9 +8,11 @@ public class Shooting : MonoBehaviour
     public Transform firePoint;
     public GameObject bulletPrefab;
     //public float bulletForce = 20f;
+    public int loaded_ammo;
+    public int remaining_ammo;
 
     private int GunType = 1; // Variavel para seleçao da arma
-    Handgun hg = new Handgun(15, 3, 10, true);
+    Handgun hg = new Handgun(30, 5, 15, true);
 
     Animator animator;
 
@@ -23,11 +25,11 @@ public class Shooting : MonoBehaviour
         public float shootDelay { get; protected set; }
         public float timeToShoot { get; protected set; } // tempo de espera para o proximo tiro
 
-        public Weapon(int total_ammo, int loaded_ammo, int max_ammo_loaded, bool is_available)
+        public Weapon(int total_ammo, int loaded_ammo, int ammo_capacity, bool is_available)
         {
             totalAmmo = total_ammo;
             loadedAmmo = loaded_ammo;
-            ammoCapacity = max_ammo_loaded;
+            ammoCapacity = ammo_capacity;
             isAvailable = is_available;
         }
         public virtual void Shoot()
@@ -58,7 +60,7 @@ public class Shooting : MonoBehaviour
 
         public bool CanReload()
         {
-            return totalAmmo > 0 && Mathf.Min(ammoCapacity - loadedAmmo, totalAmmo - loadedAmmo) > 0 && timeToShoot <= 0;
+            return totalAmmo > 0 && Mathf.Min(ammoCapacity - loadedAmmo, totalAmmo - loadedAmmo) > 0;
         }
 
         public void CountdownToShoot()
@@ -130,7 +132,7 @@ public class Shooting : MonoBehaviour
                 animator.SetInteger("GunType", GunType);
             }
         }
-        (int loaded_ammo, int remaining_ammo) = currentGun.AmmoStats();
+        (loaded_ammo,remaining_ammo) = currentGun.AmmoStats();
         Debug.Log(loaded_ammo + "-" + remaining_ammo);
     }
 }

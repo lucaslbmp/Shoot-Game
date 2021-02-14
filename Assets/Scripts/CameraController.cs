@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CameraController : MonoBehaviour
 {
@@ -8,7 +9,6 @@ public class CameraController : MonoBehaviour
     public Vector3 offset;
 
     public GameObject playerObj;
-    public GameObject ammoTxtObj;
 
     void Update()
     {
@@ -18,6 +18,8 @@ public class CameraController : MonoBehaviour
 
     void UpdateAmmo()
     {
-        //GameObject.Find("scoreUI").GetComponent<Text>().text = "Score: " + score;
+        int loaded_ammo = GameObject.Find("Player").GetComponent<Shooting>().loaded_ammo;
+        int remaining_ammo = GameObject.Find("Player").GetComponent<Shooting>().remaining_ammo;
+        GameObject.Find("ammoUI").GetComponent<Text>().text = loaded_ammo + "-" + remaining_ammo;
     }
 }
