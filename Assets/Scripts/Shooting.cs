@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,29 +6,50 @@ using UnityEngine;
 public class Shooting : MonoBehaviour
 {
     // Audios
+    AudioSource[] allMyAudioSources;
     private AudioSource shotSound;
     private AudioSource reloadSound;
+    private static Dictionary<int, int> dictShootAudioSources = new Dictionary<int, int>() { { 1, 0 }, { 2, 3 } }; // Associa o GunType ao respectivo Audio Source de tiro
+    private static Dictionary<int, int> dictReloadAudioSources = new Dictionary<int, int>() { { 1, 2 }, { 2, 4 } }; // Associa o GunType ao respectivo Audio Source de recarga
 
     // Variaveis de tiro
     public Transform firePoint;
     public GameObject bulletPrefab;
-    //public float bulletForce = 20f;
+    public GameObject pelletPrefab;
+    public float bulletForce = 20f;
     public int loaded_ammo;
     public int remaining_ammo;
+    //public IDictionary<int, dynamic> dictBulletType = new Dictionary<int, dynamic>() { { 1, bulletPrefab }, { 2, shellPrefab } };
+    //enum BulletTypes {bulletPrefab,shellPrefab}
+    List<BulletType> BulletTypes = new List<BulletType>() { new BulletType(1, "bulletPrefab") };
 
+    // Variaveis das armas
     private int GunType = 1; // Variavel para seleçao da arma
-    Handgun hg = new Handgun(30, 5, 15, true);
+    Handgun hg = new Handgun(30, 5, 15, true); // Objeto associado a pistola
+    Shotgun sg = new Shotgun(10,3,5,true); // Objeto associado a espingarda
+    public int ammountOfGuns = 2; // quantidade de armas que o player possui 
 
     Animator animator;
 
+    public class BulletType
+    {
+        int TypeOfGun;
+        string ShotPrefabName;
+        public BulletType(int typeOfGun,string shotPrefabName)
+        {
+            TypeOfGun = typeOfGun;
+            ShotPrefabName = shotPrefabName;
+        }
+    }
+
     public class Weapon
     {
-        protected int totalAmmo {get; set;}
-        protected int loadedAmmo {get; set;}
-        protected int ammoCapacity { get; set; }
-        protected bool isAvailable { get; set; }
-        public float shootDelay { get; protected set; }
-        public float timeToShoot { get; protected set; } // tempo de espera para o proximo tiro
+        protected int totalAmmo {get; set;} // Total de muniçao que o player possui para a arma
+        protected int loadedAmmo {get; set;} // Muniçao que está carregada na arma
+        protected int ammoCapacity { get; set; } // Capacidade de munição da arma
+        protected bool isAvailable { get; set; } // Informa se a arma está disponivel para o player ou nao
+        public float shootDelay { get; protected set; } // tempo de espera para o proximo tiro 
+        public float timeToShoot { get; protected set; } // timer que contabiliza o tempo de espera para o proximo tiro
 
         public Weapon(int total_ammo, int loaded_ammo, int ammo_capacity, bool is_available)
         {
@@ -49,7 +71,6 @@ public class Shooting : MonoBehaviour
         public void Reload()
         {
             int ammoToReload = Mathf.Min(ammoCapacity - loadedAmmo, totalAmmo - loadedAmmo);
-            //totalAmmo -= ammoToReload;
             loadedAmmo += ammoToReload;
         }
 
@@ -81,7 +102,7 @@ public class Shooting : MonoBehaviour
 
     public class Handgun:Weapon
     {
-        private float bulletForce = 20f;
+        private float bulletForce = 30f;
         public Handgun(int total_ammo, int loaded_ammo, int max_ammo_loaded, bool is_available):base(total_ammo, loaded_ammo, max_ammo_loaded, is_available)
         {
             shootDelay = 0.6f; // tempo até poder atirar de novo com a pistola
@@ -102,40 +123,77 @@ public class Shooting : MonoBehaviour
             timeToShoot = shootDelay;
         }
     }
+
+    public class Shotgun : Weapon
+    {
+        private float bulletForce = 30f;
+        public Shotgun(int total_ammo, int loaded_ammo, int max_ammo_loaded, bool is_available) : base(total_ammo, loaded_ammo, max_ammo_loaded, is_available)
+        {
+            shootDelay = 1.2f; // tempo até poder atirar de novo com a espingarda
+        }
+
+        public override void Shoot(Transform firePoint, GameObject pelletPrefab)
+        {
+            Vector3 posIncrement = firePoint.right*0.2f + firePoint.up*0.6f;
+            Vector3 direction = firePoint.right;
+            float angleIncrement=-45f;
+            base.Shoot();
+            for(int i=0; i < 7; i++) {
+                // Posicinando os pellets a uma dada distancia na direção do vetor perpendicilar à direção do personagem e 
+                // com uma diferença de 20° entre si
+                GameObject shell = Instantiate(pelletPrefab, firePoint.position+posIncrement, firePoint.rotation*Quaternion.Euler(0,0,angleIncrement));
+                Rigidbody2D rb = shell.GetComponent<Rigidbody2D>();
+                //direction = Quaternion.AngleAxis(angleIncrement, Vector3.right)*direction;
+                rb.AddForce(rb.transform.up * bulletForce, ForceMode2D.Impulse);
+                posIncrement -= firePoint.up*0.2f;
+                angleIncrement -= 15f;
+            }
+            timeToShoot = shootDelay;
+        }
+    }
+
+    // ===============================================================================================================
+
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
-        AudioSource[] allMyAudioSources = GetComponents<AudioSource>();
-        shotSound = allMyAudioSources[0];
-        reloadSound = allMyAudioSources[2];
-        //shotSound = GetComponent<AudioSource>();
+        allMyAudioSources = GetComponents<AudioSource>();
+        //shotSound = allMyAudioSources[0];
+        //reloadSound = allMyAudioSources[2];
     }
 
     // Update is called once per frame
     void Update()
     {
-        //CountdownToShoot();
-        Weapon currentGun = hg;
+        Weapon currentGun;
+        GameObject shotPrefab;
+        UpdateGunSelection();
         switch (GunType)
         {
-            case 1:     currentGun = hg;       break;
+            case 1:     currentGun = hg;       shotPrefab = bulletPrefab;       break;
+            case 2:     currentGun = sg;       shotPrefab = pelletPrefab;        break;
+            default:    currentGun = hg;       shotPrefab = bulletPrefab;       break;
         }
+        animator.SetInteger("GunType", GunType);
         currentGun.CountdownToShoot();
         if (Input.GetButtonDown("Fire1"))
         {
+            Debug.Log(currentGun.CanShoot());
             if (currentGun.CanShoot())
             {
+                shotSound = allMyAudioSources[dictShootAudioSources[GunType]];
                 shotSound.Play();
-                currentGun.Shoot(firePoint,bulletPrefab);
+                //currentGun.Shoot(firePoint, GameObject.Find("bulletPrefab"));
+                currentGun.Shoot(firePoint, shotPrefab);
                 animator.SetTrigger("IsShooting");
-                animator.SetInteger("GunType", GunType);
             }
         }
         else if (Input.GetKeyDown(KeyCode.R))
         {
             if (currentGun.CanReload())
             {
+                reloadSound = allMyAudioSources[dictReloadAudioSources[GunType]];
                 reloadSound.Play();
                 currentGun.Reload();
                 animator.SetTrigger("IsReloading");
@@ -143,6 +201,23 @@ public class Shooting : MonoBehaviour
             }
         }
         (loaded_ammo,remaining_ammo) = currentGun.AmmoStats();
-        Debug.Log(loaded_ammo + "-" + remaining_ammo);
+        //Debug.Log(loaded_ammo + "-" + remaining_ammo);
+    }
+
+    void UpdateGunSelection()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            GunType++;
+            //GunType %= (ammountOfGuns+1);
+            if (GunType == ammountOfGuns+1)
+                GunType = 1;
+        }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            GunType--;
+            if (GunType == 0)
+                GunType = ammountOfGuns;
+        }
     }
 }

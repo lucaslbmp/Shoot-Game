@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 832818301820888599}
   - component: {fileID: 2659310828654555734}
   - component: {fileID: 1450181901422396044}
-  - component: {fileID: 2282832660084022996}
+  - component: {fileID: 292096090532462675}
   m_Layer: 0
   m_Name: Brick
   m_TagString: Untagged
@@ -105,7 +105,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &2282832660084022996
+--- !u!61 &292096090532462675
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     Animator animator;
     private AudioSource footstepsSound;
 
+    private static Dictionary<int, int> dictMoveAudioSources = new Dictionary<int, int>() { { 1, 1 }, { 2, 4 } }; // Associa o GunType ao respectivo Audio Source de movimento
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-        Debug.Log(movement);
+        //Debug.Log(movement);
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
     }
 
