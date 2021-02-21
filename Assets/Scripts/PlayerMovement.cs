@@ -10,12 +10,16 @@ public class PlayerMovement : MonoBehaviour
     public Camera cam;
     private Vector2 mousePos;
     Animator animator;
+    private AudioSource footstepsSound;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        //footstepsSound = GetComponent<AudioSource>();
+        AudioSource[] allMyAudioSources = GetComponents<AudioSource>();
+        footstepsSound = allMyAudioSources[1];
     }
 
     // Update is called once per frame
@@ -36,10 +40,13 @@ public class PlayerMovement : MonoBehaviour
         if(movement.magnitude > 0.01)
         {
             animator.SetBool("IsMoving",true);
+            if(!footstepsSound.isPlaying)
+                footstepsSound.Play();
         }
         else
         {
             animator.SetBool("IsMoving", false);
+            footstepsSound.Stop();
         }
     }
 }

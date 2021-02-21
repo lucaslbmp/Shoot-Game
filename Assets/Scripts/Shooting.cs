@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
+    // Audios
+    private AudioSource shotSound;
+    private AudioSource reloadSound;
+
     // Variaveis de tiro
     public Transform firePoint;
     public GameObject bulletPrefab;
@@ -102,6 +106,10 @@ public class Shooting : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        AudioSource[] allMyAudioSources = GetComponents<AudioSource>();
+        shotSound = allMyAudioSources[0];
+        reloadSound = allMyAudioSources[2];
+        //shotSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -118,6 +126,7 @@ public class Shooting : MonoBehaviour
         {
             if (currentGun.CanShoot())
             {
+                shotSound.Play();
                 currentGun.Shoot(firePoint,bulletPrefab);
                 animator.SetTrigger("IsShooting");
                 animator.SetInteger("GunType", GunType);
@@ -127,6 +136,7 @@ public class Shooting : MonoBehaviour
         {
             if (currentGun.CanReload())
             {
+                reloadSound.Play();
                 currentGun.Reload();
                 animator.SetTrigger("IsReloading");
                 animator.SetInteger("GunType", GunType);
