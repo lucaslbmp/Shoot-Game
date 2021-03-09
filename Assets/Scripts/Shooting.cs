@@ -16,7 +16,7 @@ public class Shooting : MonoBehaviour
     public Transform firePoint;
     public GameObject bulletPrefab;
     public GameObject pelletPrefab;
-    public float bulletForce = 20f;
+    //public float bulletForce = 20f;
     public int loaded_ammo;
     public int remaining_ammo;
     //public IDictionary<int, dynamic> dictBulletType = new Dictionary<int, dynamic>() { { 1, bulletPrefab }, { 2, shellPrefab } };
@@ -48,8 +48,9 @@ public class Shooting : MonoBehaviour
         protected int loadedAmmo {get; set;} // Muniçao que está carregada na arma
         protected int ammoCapacity { get; set; } // Capacidade de munição da arma
         protected bool isAvailable { get; set; } // Informa se a arma está disponivel para o player ou nao
-        public float shootDelay { get; protected set; } // tempo de espera para o proximo tiro 
+        public float shootDelay { get; protected set; } // tempo de espera para o proximo tiro
         public float timeToShoot { get; protected set; } // timer que contabiliza o tempo de espera para o proximo tiro
+        public float reloadSoundTime { get; protected set; } // delay correspondente ao tempo de recarga
 
         public Weapon(int total_ammo, int loaded_ammo, int ammo_capacity, bool is_available)
         {
@@ -88,10 +89,17 @@ public class Shooting : MonoBehaviour
             return totalAmmo > 0 && Mathf.Min(ammoCapacity - loadedAmmo, totalAmmo - loadedAmmo) > 0;
         }
 
-        public void CountdownToShoot()
+        public bool CountdownTimers()
         {
+            bool canShootAgain, playShootAnim;
             if (timeToShoot >= 0)
+            {
                 timeToShoot -= Time.deltaTime;
+                canShootAgain = false;
+            }
+            else
+                canShootAgain = true;
+            return canShootAgain;
         }
 
         public (int,int) AmmoStats()
@@ -106,6 +114,7 @@ public class Shooting : MonoBehaviour
         public Handgun(int total_ammo, int loaded_ammo, int max_ammo_loaded, bool is_available):base(total_ammo, loaded_ammo, max_ammo_loaded, is_available)
         {
             shootDelay = 0.6f; // tempo até poder atirar de novo com a pistola
+            reloadSoundTime = 0.2f;
         }
 
         //public override void Reload(Animator animator)
@@ -117,7 +126,7 @@ public class Shooting : MonoBehaviour
         public override void Shoot(Transform firePoint,GameObject bulletPrefab)
         {
             base.Shoot();
-            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+            GameObject bullet = Instantiate(bulletPrefab, firePoint.position + firePoint.right * 0.5f, firePoint.rotation);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             rb.AddForce(firePoint.right * bulletForce, ForceMode2D.Impulse);
             timeToShoot = shootDelay;
@@ -130,11 +139,12 @@ public class Shooting : MonoBehaviour
         public Shotgun(int total_ammo, int loaded_ammo, int max_ammo_loaded, bool is_available) : base(total_ammo, loaded_ammo, max_ammo_loaded, is_available)
         {
             shootDelay = 1.2f; // tempo até poder atirar de novo com a espingarda
+            reloadSoundTime = 0.5f;
         }
 
         public override void Shoot(Transform firePoint, GameObject pelletPrefab)
         {
-            Vector3 posIncrement = firePoint.right*0.2f + firePoint.up*0.6f;
+            Vector3 posIncrement = firePoint.right*0.5f + firePoint.up*0.6f;
             Vector3 direction = firePoint.right;
             float angleIncrement=-45f;
             base.Shoot();
@@ -176,7 +186,9 @@ public class Shooting : MonoBehaviour
             default:    currentGun = hg;       shotPrefab = bulletPrefab;       break;
         }
         animator.SetInteger("GunType", GunType);
-        currentGun.CountdownToShoot();
+        bool canShootAgain = currentGun.CountdownTimers();
+        //if(!canShootAgain) // Se pode nao pode executar animaçao de tiro **
+            //animator.SetBool("IsShooting", false); // entao setar a flag IsShooting para falso **
         if (Input.GetButtonDown("Fire1"))
         {
             Debug.Log(currentGun.CanShoot());
@@ -187,6 +199,7 @@ public class Shooting : MonoBehaviour
                 //currentGun.Shoot(firePoint, GameObject.Find("bulletPrefab"));
                 currentGun.Shoot(firePoint, shotPrefab);
                 animator.SetTrigger("IsShooting");
+                //animator.SetBool("IsShooting",true); //***
             }
         }
         else if (Input.GetKeyDown(KeyCode.R))
@@ -194,10 +207,11 @@ public class Shooting : MonoBehaviour
             if (currentGun.CanReload())
             {
                 reloadSound = allMyAudioSources[dictReloadAudioSources[GunType]];
-                reloadSound.Play();
+                reloadSound.PlayDelayed(currentGun.reloadSoundTime);
                 currentGun.Reload();
                 animator.SetTrigger("IsReloading");
-                animator.SetInteger("GunType", GunType);
+                //animator.SetBool("IsReloading",true); //**
+                animator.SetInteger("GunType", GunType); // redundante?
             }
         }
         (loaded_ammo,remaining_ammo) = currentGun.AmmoStats();
