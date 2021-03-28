@@ -1,0 +1,896 @@
+Using pre-set license
+Built from '2020.2/staging' branch; Version is '2020.2.6f1 (8a2143876886) revision 9052483'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Education; OS build 19042.867; Version 2009; 64bit' Language: 'pt' Physical Memory: 16264 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.2.6f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/GilmarCorreia/Documents/Documentos/UFABC/17° Quad/Programação Baseada em Componentes de Jogos/Unity/Shoot-Game
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+4270
+Successfully changed project path to: C:/Users/GilmarCorreia/Documents/Documentos/UFABC/17° Quad/Programação Baseada em Componentes de Jogos/Unity/Shoot-Game
+C:/Users/GilmarCorreia/Documents/Documentos/UFABC/17° Quad/Programação Baseada em Componentes de Jogos/Unity/Shoot-Game
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 72.79 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.6f1 (8a2143876886)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.6f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/GilmarCorreia/Documents/Documentos/UFABC/17° Quad/Programação Baseada em Componentes de Jogos/Unity/Shoot-Game/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: AMD Radeon R7 M260 (ID=0x6900)
+    Vendor:   
+    VRAM:     2038 MB
+    Driver:   27.20.14501.28009
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.6f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.6f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.6f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56932
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.6f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.6f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.6f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.6f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
+Registered in 0.009731 seconds.
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 51.04 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.610 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.002648 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 58.87 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.652 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.14 seconds
+Refreshing native plugins compatible for Editor in 0.70 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1801 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 85.2 MB.
+System memory in use after: 85.3 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2247.
+Total: 4.359700 ms (FindLiveObjects: 0.507700 ms CreateObjectMapping: 0.272500 ms MarkObjects: 3.477500 ms  DeleteObjects: 0.098800 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Scenes
+  artifactKey: Guid(b556dad127da76943b99e9901428b699) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes using Guid(b556dad127da76943b99e9901428b699) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6bee789c820d3629e3186d2b38afca59') in 0.017201 seconds
+  Import took 0.023269 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000362 seconds.
+  path: Assets/Scenes/SampleScene.unity
+  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SampleScene.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d52a78a0277e0ab661c12131a094091') in 0.042476 seconds
+  Import took 0.047863 seconds .
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 5.21 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 48.5 MB.
+System memory in use after: 48.7 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2247.
+Total: 3.528200 ms (FindLiveObjects: 0.324000 ms CreateObjectMapping: 0.221900 ms MarkObjects: 2.956700 ms  DeleteObjects: 0.023600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 63.195085 seconds.
+  path: Assets/Sprites
+  artifactKey: Guid(8f68a5ecb9841654cb5c0cf69230333d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites using Guid(8f68a5ecb9841654cb5c0cf69230333d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '613914bde77c5994c0f89621c20ff5e5') in 0.013015 seconds
+  Import took 0.023173 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000874 seconds.
+  path: Assets/Sprites
+  artifactKey: Guid(8f68a5ecb9841654cb5c0cf69230333d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites using Guid(8f68a5ecb9841654cb5c0cf69230333d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '613914bde77c5994c0f89621c20ff5e5') in 0.010378 seconds
+  Import took 0.017278 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.073973 seconds.
+  path: Assets/Sprites/brick.jpg
+  artifactKey: Guid(31c2ade7afec405408a6cb811b091092) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/brick.jpg using Guid(31c2ade7afec405408a6cb811b091092) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf06dff9cb4886d8f3d4b79544db2c34') in 0.283589 seconds
+  Import took 0.288213 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000411 seconds.
+  path: Assets/Sprites/bullet.png
+  artifactKey: Guid(9ca23aab5bce3e9409d65e8d567911cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/bullet.png using Guid(9ca23aab5bce3e9409d65e8d567911cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '447de5897aaf6f66b564d5e53b090451') in 0.034546 seconds
+  Import took 0.039077 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000312 seconds.
+  path: Assets/Sprites/pellet.png
+  artifactKey: Guid(194aa097a14750c45a722fa00054d374) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/pellet.png using Guid(194aa097a14750c45a722fa00054d374) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72f1fd4cf8d44d7a4b4f1321d913ea9e') in 0.040461 seconds
+  Import took 0.046237 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000740 seconds.
+  path: Assets/Sprites/grass_1.gif
+  artifactKey: Guid(9414230b8f0a35b45a89c41769ca7727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/grass_1.gif using Guid(9414230b8f0a35b45a89c41769ca7727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '383b37b26ffb6edf7ad6af2e549625b1') in 0.043076 seconds
+  Import took 0.048941 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.438333 seconds.
+  path: Assets/Sprites/Tilemap
+  artifactKey: Guid(99790b878c4f9e54d9e2526dec182749) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tilemap using Guid(99790b878c4f9e54d9e2526dec182749) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79aacf43214c06cf5315f6265e1c123b') in 0.011376 seconds
+  Import took 0.019601 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.073956 seconds.
+  path: Assets/Sprites/Tilemap/grass_1.asset
+  artifactKey: Guid(4bd5284736044624e8a07833b4d1cf8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tilemap/grass_1.asset using Guid(4bd5284736044624e8a07833b4d1cf8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16324dac766fa17f8ced2279f47e4c81') in 0.122884 seconds
+  Import took 0.127164 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.572081 seconds.
+  path: Assets/Sprites/PlayerShotgunShoot
+  artifactKey: Guid(7081b97dc89170b4e81e4f9ef4fa5918) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunShoot using Guid(7081b97dc89170b4e81e4f9ef4fa5918) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a56a80b89f430e486e39874955cd7d55') in 0.016689 seconds
+  Import took 0.027274 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.077788 seconds.
+  path: Assets/Sprites/PlayerShotgunShoot/survivor-shoot_shotgun_0.png
+  artifactKey: Guid(71a75a85d49d72a458f2f209567bfcf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunShoot/survivor-shoot_shotgun_0.png using Guid(71a75a85d49d72a458f2f209567bfcf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbc7ae12a86e91a37df0f1b618e5b8b8') in 0.027694 seconds
+  Import took 0.033159 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000273 seconds.
+  path: Assets/Sprites/PlayerShotgunShoot/survivor-shoot_shotgun_1.png
+  artifactKey: Guid(ad39d48d775f3af43a6f5d6444a31e1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunShoot/survivor-shoot_shotgun_1.png using Guid(ad39d48d775f3af43a6f5d6444a31e1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11b80fe46f7c75e2849f87e09f6bb217') in 0.031322 seconds
+  Import took 0.037247 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000303 seconds.
+  path: Assets/Sprites/PlayerShotgunShoot/survivor-shoot_shotgun_2.png
+  artifactKey: Guid(83784c7f1afb74b439024d62dbf35800) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunShoot/survivor-shoot_shotgun_2.png using Guid(83784c7f1afb74b439024d62dbf35800) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26684a31268022c60b662ede299e6307') in 0.035057 seconds
+  Import took 0.040589 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.141230 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2
+  artifactKey: Guid(2879fd0c56d835e40bdcb3ec8904ab15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2 using Guid(2879fd0c56d835e40bdcb3ec8904ab15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd772e72cf98fa7258db699807c7f194') in 0.025916 seconds
+  Import took 0.032878 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.062763 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_0.png
+  artifactKey: Guid(e4de5351eee9f024b97af92f572cc890) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_0.png using Guid(e4de5351eee9f024b97af92f572cc890) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '744b26a8eaefeeabd08f642188e8b05f') in 0.030418 seconds
+  Import took 0.035697 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000330 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_40.png
+  artifactKey: Guid(ce6ecb61dff1604428966411688999be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_40.png using Guid(ce6ecb61dff1604428966411688999be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '728b65a929a6a4bc9ee5facedd8f30fc') in 0.027602 seconds
+  Import took 0.034488 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000317 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_1.png
+  artifactKey: Guid(ff1f78fc4a7d87340bc645869f6df550) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_1.png using Guid(ff1f78fc4a7d87340bc645869f6df550) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6ce65495ddbd28a2067b088da5c47b0') in 0.073729 seconds
+  Import took 0.084298 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000525 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_29.png
+  artifactKey: Guid(8f78976eb26cec247bddacb78f7f804a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_29.png using Guid(8f78976eb26cec247bddacb78f7f804a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5c2bc618daab38ad0a0517fc0a4aa27') in 0.068390 seconds
+  Import took 0.119313 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000611 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_1.png
+  artifactKey: Guid(ff1f78fc4a7d87340bc645869f6df550) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_1.png using Guid(ff1f78fc4a7d87340bc645869f6df550) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6ce65495ddbd28a2067b088da5c47b0') in 0.065289 seconds
+  Import took 0.077436 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000395 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_13.png
+  artifactKey: Guid(8dbdf336543181f439cdc30780486735) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_13.png using Guid(8dbdf336543181f439cdc30780486735) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85c33f8f66b7385178aac0a11aac7d35') in 0.060727 seconds
+  Import took 0.071954 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000536 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_18.png
+  artifactKey: Guid(8c4ccb8df9cf39847b3f1425e70d3a0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_18.png using Guid(8c4ccb8df9cf39847b3f1425e70d3a0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45e40f7741db511a4b2311940012a5ee') in 0.037755 seconds
+  Import took 0.050735 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000342 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_10.png
+  artifactKey: Guid(01e63a993d30c24499112db4657fd4db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_10.png using Guid(01e63a993d30c24499112db4657fd4db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01aa4b59d9463edc1fe7c2c413dc4155') in 0.078181 seconds
+  Import took 0.091142 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000322 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_31.png
+  artifactKey: Guid(431a187188db89c4eaa5165fa4c1c703) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_31.png using Guid(431a187188db89c4eaa5165fa4c1c703) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4a7557188aa2b04bf0fbaec52701f95') in 0.026157 seconds
+  Import took 0.031491 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000327 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_20.png
+  artifactKey: Guid(8d3730f3620f1c340b2c00e6935dbcf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_20.png using Guid(8d3730f3620f1c340b2c00e6935dbcf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8f680dc304d0d5c4734e2a88a1c7c03') in 0.029464 seconds
+  Import took 0.035245 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000301 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_21.png
+  artifactKey: Guid(ac5105fd01682e84888e5d0ffe2a55e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_21.png using Guid(ac5105fd01682e84888e5d0ffe2a55e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ba5c6e3b43dae56e6978e92a9488f6e') in 0.026361 seconds
+  Import took 0.031914 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000304 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_43.png
+  artifactKey: Guid(debec1fd01ed61b458fc1813f5e78af9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_43.png using Guid(debec1fd01ed61b458fc1813f5e78af9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07a54fdf5814c38e5a045723cdcee48d') in 0.028919 seconds
+  Import took 0.033929 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000351 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_37.png
+  artifactKey: Guid(a48eb17c06d40fb46876169e895ddbdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_37.png using Guid(a48eb17c06d40fb46876169e895ddbdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '588d0ef07940218b19243dc54f03774c') in 0.033730 seconds
+  Import took 0.040824 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000287 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_42.png
+  artifactKey: Guid(c7cc49d6cd5563642bdc8b33169e87b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_42.png using Guid(c7cc49d6cd5563642bdc8b33169e87b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4eaece5c15938f3a58cd1cc9a8145f32') in 0.030066 seconds
+  Import took 0.034803 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000313 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_35.png
+  artifactKey: Guid(07d8eb094eae52e48a8d806d282fdbc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_35.png using Guid(07d8eb094eae52e48a8d806d282fdbc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bf744fe6c482173468eafab72e24589') in 0.029838 seconds
+  Import took 0.034947 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000329 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_4.png
+  artifactKey: Guid(43efd35b050d44442baf830b22c3ad96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_4.png using Guid(43efd35b050d44442baf830b22c3ad96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '447404aa3eda7eee510053a1692a0ca0') in 0.029179 seconds
+  Import took 0.034724 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000440 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_36.png
+  artifactKey: Guid(edc9331584d3f4a468f479cd76bf034b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_36.png using Guid(edc9331584d3f4a468f479cd76bf034b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '359de6c47863468d9f30f8526c197b91') in 0.029394 seconds
+  Import took 0.035514 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000448 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_7.png
+  artifactKey: Guid(5b66d136091f3c94cbc957a4172e1ba0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_7.png using Guid(5b66d136091f3c94cbc957a4172e1ba0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '045e624c17c0626ebfcafdff1299b312') in 0.026010 seconds
+  Import took 0.032500 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000355 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_28.png
+  artifactKey: Guid(5f05be8fbd942dc4e93a85b8c7204c69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_28.png using Guid(5f05be8fbd942dc4e93a85b8c7204c69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '809b9fc3a6bc4234d5e6e718e386739c') in 0.032605 seconds
+  Import took 0.038703 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000441 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_16.png
+  artifactKey: Guid(c46aca4329534ea40a04b4142d537600) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_16.png using Guid(c46aca4329534ea40a04b4142d537600) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd08aa60b0e05d71337eff45951c9f751') in 0.026515 seconds
+  Import took 0.036056 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000617 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_41.png
+  artifactKey: Guid(1ea3afd92f46e63428d350739029269e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_41.png using Guid(1ea3afd92f46e63428d350739029269e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a2076fab1b915e3f09d460dc5a450cb') in 0.048645 seconds
+  Import took 0.057090 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000700 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_23.png
+  artifactKey: Guid(031f747fef45ef7459fe0f9071d69375) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_23.png using Guid(031f747fef45ef7459fe0f9071d69375) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e83339941efb0047a7453fbc840cc6d') in 0.039195 seconds
+  Import took 0.048149 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000323 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_19.png
+  artifactKey: Guid(27f75569112535b43a3f152dfe8becb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_19.png using Guid(27f75569112535b43a3f152dfe8becb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b6b583f74d5f11e0b667dc654cab72c') in 0.024983 seconds
+  Import took 0.030401 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000284 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_3.png
+  artifactKey: Guid(506f8001c68674046a031f68e281a37d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_3.png using Guid(506f8001c68674046a031f68e281a37d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6652d712a63a4e9c5e2dc0b881c8b937') in 0.027635 seconds
+  Import took 0.033081 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000347 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_50.png
+  artifactKey: Guid(ea6ebe6eadefc7543879bab9f999cbd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_50.png using Guid(ea6ebe6eadefc7543879bab9f999cbd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ef7ad6dde85826ad27f2650d37f963d') in 0.027736 seconds
+  Import took 0.034169 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000832 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_49.png
+  artifactKey: Guid(ce115d873c8e9fb4fae6022dc78b3c28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_49.png using Guid(ce115d873c8e9fb4fae6022dc78b3c28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ca8a661a43e4694c31d146ae72f429f') in 0.030587 seconds
+  Import took 0.041430 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001035 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_46.png
+  artifactKey: Guid(f6904e05101720b408cdd9f9752e10dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_46.png using Guid(f6904e05101720b408cdd9f9752e10dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77ac5eb0b7a3991faf5320759775b642') in 0.051051 seconds
+  Import took 0.058404 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002826 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_52.png
+  artifactKey: Guid(f8c060c3521ea86409ba042ea6353ff4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_52.png using Guid(f8c060c3521ea86409ba042ea6353ff4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a1c43c501a999449a15abd8f8219fc6') in 0.052901 seconds
+  Import took 0.059061 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000336 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_56.png
+  artifactKey: Guid(daecc9a2e67cb5d41b135509f978394c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_56.png using Guid(daecc9a2e67cb5d41b135509f978394c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0759b09332718cbed6e51e484d2b411e') in 0.026771 seconds
+  Import took 0.032238 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000351 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_48.png
+  artifactKey: Guid(272e145fb54777248ace691ad565b0fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_48.png using Guid(272e145fb54777248ace691ad565b0fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a6bbe6283408c3171101df1a7a11c88') in 0.028588 seconds
+  Import took 0.034796 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000436 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_11.png
+  artifactKey: Guid(6ea9c4af29476d64eb0d253ab51dbd7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_11.png using Guid(6ea9c4af29476d64eb0d253ab51dbd7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3ca52c7c7a8c9b83a3e34aa3b2725a8') in 0.027880 seconds
+  Import took 0.041840 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000318 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_25.png
+  artifactKey: Guid(18cef9549c4c78a479d3935a072540e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_25.png using Guid(18cef9549c4c78a479d3935a072540e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20b73439ac0cc598007ab2b51e6ac537') in 0.030698 seconds
+  Import took 0.036320 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000432 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_51.png
+  artifactKey: Guid(03dbdf8b063bce84ebfdff08164d6b6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_51.png using Guid(03dbdf8b063bce84ebfdff08164d6b6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77864570ce02fd022b52829a8ac0b3b4') in 0.040154 seconds
+  Import took 0.047865 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000393 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_38.png
+  artifactKey: Guid(990773fbcc4437e46a2eab75653403fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_38.png using Guid(990773fbcc4437e46a2eab75653403fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a222cb05adeb0c650b47590010edfb3') in 0.030911 seconds
+  Import took 0.037522 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000432 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_57.png
+  artifactKey: Guid(fc5be370f53e0224eac2af9c50f76248) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_57.png using Guid(fc5be370f53e0224eac2af9c50f76248) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b90f7e1fd12cfe39287c95c34ee6192') in 0.035211 seconds
+  Import took 0.043443 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000520 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_59.png
+  artifactKey: Guid(2d49fd767ee9eaf4d9f2a9dd3673a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_59.png using Guid(2d49fd767ee9eaf4d9f2a9dd3673a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba55f4a30c9da84549d67598899f95bd') in 0.058076 seconds
+  Import took 0.065800 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000427 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_9.png
+  artifactKey: Guid(d63ac18cd1b78ad4e99fc48898b725c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_9.png using Guid(d63ac18cd1b78ad4e99fc48898b725c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac253764653eb19d7cc24806351954f2') in 0.047763 seconds
+  Import took 0.055077 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000446 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_14.png
+  artifactKey: Guid(af67593c368340e4385e9e5def6b87bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_14.png using Guid(af67593c368340e4385e9e5def6b87bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b059cb30e5acdea242de00912194f20') in 0.035311 seconds
+  Import took 0.044140 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000525 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_12.png
+  artifactKey: Guid(36fa20bfa48b17e47b2b297d721de0d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_12.png using Guid(36fa20bfa48b17e47b2b297d721de0d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe0f9c06c9b0ddef73e586cb616498e2') in 0.041780 seconds
+  Import took 0.049136 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000395 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_34.png
+  artifactKey: Guid(bb9285df1a1ebe04bb2dc085441c6391) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_34.png using Guid(bb9285df1a1ebe04bb2dc085441c6391) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4293fba960aca49c91675fe3e9d1738c') in 0.035832 seconds
+  Import took 0.044108 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000507 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_26.png
+  artifactKey: Guid(b1ee8f6c16cf86947a903dd2ab2a45d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_26.png using Guid(b1ee8f6c16cf86947a903dd2ab2a45d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e7d41f67664b7e180170685fa2f76a7') in 0.033484 seconds
+  Import took 0.040847 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000403 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_58.png
+  artifactKey: Guid(34c0a62aaeca1f34180b40db97dcd322) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_58.png using Guid(34c0a62aaeca1f34180b40db97dcd322) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03c52934e6b165f6b2449137ab7be206') in 0.041432 seconds
+  Import took 0.047769 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000608 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_2.png
+  artifactKey: Guid(3d9f08efe8eeb1d4d8ed9647b9530ff2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_2.png using Guid(3d9f08efe8eeb1d4d8ed9647b9530ff2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29ccd4118f426e063bfc64df30712733') in 0.033163 seconds
+  Import took 0.040518 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000479 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_53.png
+  artifactKey: Guid(1c24a33769c8e214fb01eb42fa76733d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_53.png using Guid(1c24a33769c8e214fb01eb42fa76733d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '341b550bb2a5d35c40f388fdc23af1a7') in 0.044230 seconds
+  Import took 0.051453 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000541 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_8.png
+  artifactKey: Guid(5b2a040b5063e4c4caad0d09136e71ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_8.png using Guid(5b2a040b5063e4c4caad0d09136e71ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd03a0cdd7c03556a76bf2550497bb06d') in 0.039525 seconds
+  Import took 0.049674 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000518 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_45.png
+  artifactKey: Guid(c971e4d4dcda01c4db0824af1f4f7594) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_45.png using Guid(c971e4d4dcda01c4db0824af1f4f7594) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e37968a22665a17b4a64dd1f3e2e4c0d') in 0.052173 seconds
+  Import took 0.066041 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000447 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_54.png
+  artifactKey: Guid(964a5669d0fe04140bf5b7c0eb9b972d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_54.png using Guid(964a5669d0fe04140bf5b7c0eb9b972d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5c159e289a27eaa903b66dafbb5a579') in 0.061897 seconds
+  Import took 0.072964 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000506 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_30.png
+  artifactKey: Guid(ac18e46ba629b9e40b6acc48a0fdb891) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_30.png using Guid(ac18e46ba629b9e40b6acc48a0fdb891) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2324e98ec4e8bf5f029d766a1ba080e1') in 0.035986 seconds
+  Import took 0.054014 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000527 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_24.png
+  artifactKey: Guid(45ca5dcf44c28a64da21f662ffa2d22b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_24.png using Guid(45ca5dcf44c28a64da21f662ffa2d22b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5830e8f91c65cc2c32a83587988b872') in 0.055057 seconds
+  Import took 0.078837 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000387 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_47.png
+  artifactKey: Guid(f13aaa909135322488d01ded232240d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_47.png using Guid(f13aaa909135322488d01ded232240d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f5dbbd0cf1b256a2e4857074cdfdaf1') in 0.055369 seconds
+  Import took 0.072165 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000421 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_44.png
+  artifactKey: Guid(93070ca909d86d14b991831e248c0186) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_44.png using Guid(93070ca909d86d14b991831e248c0186) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27bb6a85cb55b76f0137339598a257e7') in 0.047440 seconds
+  Import took 0.058495 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000371 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_5.png
+  artifactKey: Guid(28ca012d6bf7bbc439213b5c30647026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_5.png using Guid(28ca012d6bf7bbc439213b5c30647026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e65f20c8e62f6bbbb22e30423c208d5') in 0.035555 seconds
+  Import took 0.042955 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000478 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_27.png
+  artifactKey: Guid(f1c3ab74bd520a34ab9a7b6bf5a878e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_27.png using Guid(f1c3ab74bd520a34ab9a7b6bf5a878e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16910a2f6cd561eae998550a4550acee') in 0.034117 seconds
+  Import took 0.042571 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000538 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_22.png
+  artifactKey: Guid(a05ff940da745004dbee03c4963d1612) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_22.png using Guid(a05ff940da745004dbee03c4963d1612) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a77ff14a127808b1421888f25fcb67e') in 0.035018 seconds
+  Import took 0.042240 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000442 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_6.png
+  artifactKey: Guid(e1658fe331a22974586550a36f46f5f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_6.png using Guid(e1658fe331a22974586550a36f46f5f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed495e457bec9d9ea6b43bace2741d10') in 0.039871 seconds
+  Import took 0.048247 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000435 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_32.png
+  artifactKey: Guid(50c357f140f0ac54fb690939069e1cd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_32.png using Guid(50c357f140f0ac54fb690939069e1cd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cbe7747074d10f66369986f23cf257f') in 0.049894 seconds
+  Import took 0.059403 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000478 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_15.png
+  artifactKey: Guid(441f1aa8b36dc984c8a213d744ae280c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_15.png using Guid(441f1aa8b36dc984c8a213d744ae280c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '628fccbe20b3e6e68f6c532fbfc772e0') in 0.064517 seconds
+  Import took 0.071483 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000447 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_33.png
+  artifactKey: Guid(65fa6df97f6c45740aabd106fc3e7007) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_33.png using Guid(65fa6df97f6c45740aabd106fc3e7007) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be4b0d7b398627c2b22afdbc02e634b2') in 0.037668 seconds
+  Import took 0.045625 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000573 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_55.png
+  artifactKey: Guid(30f3325e6d3635f4f9c7ffc35621e711) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_55.png using Guid(30f3325e6d3635f4f9c7ffc35621e711) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09e96872c438966f7d2e88212a93ce7f') in 0.039133 seconds
+  Import took 0.048653 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000455 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_39.png
+  artifactKey: Guid(8b35435eabe5e8c429bb69b9165b9033) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_39.png using Guid(8b35435eabe5e8c429bb69b9165b9033) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a97ed5bba0579022d9bb36cbe1afe553') in 0.035090 seconds
+  Import took 0.042432 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000440 seconds.
+  path: Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_17.png
+  artifactKey: Guid(5533b002d0683cf408c42a9004240fb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload2/survivor-reload_shotgun_17.png using Guid(5533b002d0683cf408c42a9004240fb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64bc8ac9c3158c95c9eed7572e872397') in 0.036931 seconds
+  Import took 0.046326 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.646280 seconds.
+  path: Assets/Sprites/PlayerShotgunReload
+  artifactKey: Guid(3f45254b24a18dc4ebc543abeb789684) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload using Guid(3f45254b24a18dc4ebc543abeb789684) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f38ba25e48ab8fcd0b4333074deff59') in 0.021239 seconds
+  Import took 0.028814 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.033552 seconds.
+  path: Assets/Sprites/PlayerShotgunReload/survivor-reload_shotgun_0.png
+  artifactKey: Guid(471bcdde21dbe1b40b6accb31b9b8c40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload/survivor-reload_shotgun_0.png using Guid(471bcdde21dbe1b40b6accb31b9b8c40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76bf29f672f06836d8228d5540d4e4d6') in 0.032992 seconds
+  Import took 0.042925 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000436 seconds.
+  path: Assets/Sprites/PlayerShotgunReload/survivor-reload_shotgun_12.png
+  artifactKey: Guid(da1f4b852a506de44b52be9c4dee625b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload/survivor-reload_shotgun_12.png using Guid(da1f4b852a506de44b52be9c4dee625b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1101c8557bd2fe0c75f91e484e23ac5a') in 0.022235 seconds
+  Import took 0.027617 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000338 seconds.
+  path: Assets/Sprites/PlayerShotgunReload/survivor-reload_shotgun_4.png
+  artifactKey: Guid(b35bc95ed5f0bf44692d01ca38612855) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload/survivor-reload_shotgun_4.png using Guid(b35bc95ed5f0bf44692d01ca38612855) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '006599bf1e8caa09797ac35f180b4b93') in 0.023613 seconds
+  Import took 0.029119 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000467 seconds.
+  path: Assets/Sprites/PlayerShotgunReload/survivor-reload_shotgun_18.png
+  artifactKey: Guid(4a8cb418e1a5c564b9c30523fc4b7cbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload/survivor-reload_shotgun_18.png using Guid(4a8cb418e1a5c564b9c30523fc4b7cbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea76be6c01e8f598f7d6d72d027d5daa') in 0.024733 seconds
+  Import took 0.029718 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000366 seconds.
+  path: Assets/Sprites/PlayerShotgunReload/survivor-reload_shotgun_3.png
+  artifactKey: Guid(48b52872711ebc0449f3a8a2e5cffbf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload/survivor-reload_shotgun_3.png using Guid(48b52872711ebc0449f3a8a2e5cffbf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9cdd657f8a16517a0beb15f2038262b') in 0.023067 seconds
+  Import took 0.030983 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000304 seconds.
+  path: Assets/Sprites/PlayerShotgunReload/survivor-reload_shotgun_5.png
+  artifactKey: Guid(650546bf2ea89de4a91228f3bcc35a26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload/survivor-reload_shotgun_5.png using Guid(650546bf2ea89de4a91228f3bcc35a26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7f84e5c84ee42222bff0309fafe30c3') in 0.024242 seconds
+  Import took 0.031134 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000333 seconds.
+  path: Assets/Sprites/PlayerShotgunReload/survivor-reload_shotgun_15.png
+  artifactKey: Guid(316795d3f0a4ccf41a7f4515b3b05bce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload/survivor-reload_shotgun_15.png using Guid(316795d3f0a4ccf41a7f4515b3b05bce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f3d065236c1ac556f0e5aee9d904c04') in 0.022730 seconds
+  Import took 0.027803 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000333 seconds.
+  path: Assets/Sprites/PlayerShotgunReload/survivor-reload_shotgun_11.png
+  artifactKey: Guid(181327c06e35bb0469eba3120daede48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload/survivor-reload_shotgun_11.png using Guid(181327c06e35bb0469eba3120daede48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b3a631fa00387d539f847c7383e7c09') in 0.021752 seconds
+  Import took 0.029619 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000367 seconds.
+  path: Assets/Sprites/PlayerShotgunReload/survivor-reload_shotgun_13.png
+  artifactKey: Guid(dc2b2ad79ff4d7c42b65bc8763651465) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload/survivor-reload_shotgun_13.png using Guid(dc2b2ad79ff4d7c42b65bc8763651465) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae951968beee93114e554cd2258f40c0') in 0.024202 seconds
+  Import took 0.030080 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000411 seconds.
+  path: Assets/Sprites/PlayerShotgunReload/survivor-reload_shotgun_19.png
+  artifactKey: Guid(a8a710d78e6b0fd438661a0a3fb25db4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload/survivor-reload_shotgun_19.png using Guid(a8a710d78e6b0fd438661a0a3fb25db4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0deaa823f9609bf10f99b37292fe73fd') in 0.023827 seconds
+  Import took 0.029049 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000291 seconds.
+  path: Assets/Sprites/PlayerShotgunReload/survivor-reload_shotgun_10.png
+  artifactKey: Guid(b7a4f3f7e780c16409108c5b0f70b830) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload/survivor-reload_shotgun_10.png using Guid(b7a4f3f7e780c16409108c5b0f70b830) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '282a4b0df2888f15d7b04adecb9c3f0b') in 0.022566 seconds
+  Import took 0.028348 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000421 seconds.
+  path: Assets/Sprites/PlayerShotgunReload/survivor-reload_shotgun_6.png
+  artifactKey: Guid(c76c55f2ddcfeca4487b428476b54cf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload/survivor-reload_shotgun_6.png using Guid(c76c55f2ddcfeca4487b428476b54cf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc31aa9a0b6693135b104ec9946306ac') in 0.023194 seconds
+  Import took 0.028617 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000325 seconds.
+  path: Assets/Sprites/PlayerShotgunReload/survivor-reload_shotgun_16.png
+  artifactKey: Guid(80543cabbe8a2104c811951c781f15cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload/survivor-reload_shotgun_16.png using Guid(80543cabbe8a2104c811951c781f15cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b1aad1c1580ab69f8d3bddc7772b26b') in 0.024538 seconds
+  Import took 0.029761 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000320 seconds.
+  path: Assets/Sprites/PlayerShotgunReload/survivor-reload_shotgun_1.png
+  artifactKey: Guid(6419b53150af81c4a9f5bbf6c07e3638) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload/survivor-reload_shotgun_1.png using Guid(6419b53150af81c4a9f5bbf6c07e3638) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc2df555abbcce06869b3d6d30854ac1') in 0.023318 seconds
+  Import took 0.029748 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000326 seconds.
+  path: Assets/Sprites/PlayerShotgunReload/survivor-reload_shotgun_2.png
+  artifactKey: Guid(4d46404bafda4fa4284a23d43bf0e5e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload/survivor-reload_shotgun_2.png using Guid(4d46404bafda4fa4284a23d43bf0e5e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a83256b8243f3c8208324473dd2a6189') in 0.025208 seconds
+  Import took 0.030354 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000351 seconds.
+  path: Assets/Sprites/PlayerShotgunReload/survivor-reload_shotgun_8.png
+  artifactKey: Guid(1a388e1574d62d64186ec79092043388) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload/survivor-reload_shotgun_8.png using Guid(1a388e1574d62d64186ec79092043388) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a78366d8f07ddd79c3ec218b372561d') in 0.022421 seconds
+  Import took 0.029282 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000333 seconds.
+  path: Assets/Sprites/PlayerShotgunReload/survivor-reload_shotgun_17.png
+  artifactKey: Guid(f0db6624b6b07f34193ce364b42c97d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload/survivor-reload_shotgun_17.png using Guid(f0db6624b6b07f34193ce364b42c97d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3a06f4274ca259abe20f395f5f497c3') in 0.023433 seconds
+  Import took 0.029107 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000363 seconds.
+  path: Assets/Sprites/PlayerShotgunReload/survivor-reload_shotgun_7.png
+  artifactKey: Guid(0e5f4fae59c5bb1459ffd35283d640d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload/survivor-reload_shotgun_7.png using Guid(0e5f4fae59c5bb1459ffd35283d640d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d775d3491d232c5c54b0681ae02cd8b') in 0.022986 seconds
+  Import took 0.029070 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000333 seconds.
+  path: Assets/Sprites/PlayerShotgunReload/survivor-reload_shotgun_14.png
+  artifactKey: Guid(ecee7b566e9795146be9f88906d446b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload/survivor-reload_shotgun_14.png using Guid(ecee7b566e9795146be9f88906d446b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c971ae7ae065864464a3aba4be8fb589') in 0.026465 seconds
+  Import took 0.031690 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000309 seconds.
+  path: Assets/Sprites/PlayerShotgunReload/survivor-reload_shotgun_9.png
+  artifactKey: Guid(1ab674fb2ebc8de47a97b8ec173365df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/PlayerShotgunReload/survivor-reload_shotgun_9.png using Guid(1ab674fb2ebc8de47a97b8ec173365df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83790289c1e2f59e64d125059a861a7c') in 0.030305 seconds
+  Import took 0.035923 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002997 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.500 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.49 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1791 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 88.2 MB.
+System memory in use after: 88.3 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2268.
+Total: 3.801100 ms (FindLiveObjects: 0.337800 ms CreateObjectMapping: 0.111800 ms MarkObjects: 3.315400 ms  DeleteObjects: 0.033600 ms)
+
