@@ -1,0 +1,28 @@
+LEIA - ME
+
+
+Mudanças nessa versão (Ivan, 31-03-2021)
+----------------------------------------------------------------------------------------------
+
+GERENCIAMENTO DE PASTAS E CENAS
+- Adição de uma pasta créditos, com uma cena creditando os autores que baixei conteúdo
+- Criação de uma pasta Music para musica ambiente
+- Criação da pasta Guns, MeleeStrike e AK47
+SCRRIPT
+- Implementação da nova HealthBar
+- Implementação do Switch de armas
+- Limpeza no codigo do char
+
+SPRITES
+- Adição da pasta Inimigo e adição de animações em gifs do inimigo
+- Adição de novos elementos de UI
+
+SOM
+
+- Adição de SFX novos
+- Adição de duas faixas de musica para som ambiente 
+-
+Qualquer dúvida mande uma mensagem!
+
+
+------------------------------------------------------------------------------------------------

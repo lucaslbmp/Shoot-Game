@@ -192,9 +192,10 @@ MonoBehaviour:
   firePoint: {fileID: 3721893845630123602}
   bulletPrefab: {fileID: 7186047329018993962, guid: 3e8ed1f8a9b69b04d8ab997191208a3a, type: 3}
   pelletPrefab: {fileID: 719934178707733658, guid: bc5bcec0f6dff2040a79005c9604ccc9, type: 3}
+  knifePrefab: {fileID: 5874420412728840410, guid: 480b4de661fe2b14ca86d7a20099ade4, type: 3}
   loaded_ammo: 0
   remaining_ammo: 0
-  ammountOfGuns: 2
+  ammountOfGuns: 4
 --- !u!82 &3721893846682999160
 AudioSource:
   m_ObjectHideFlags: 0

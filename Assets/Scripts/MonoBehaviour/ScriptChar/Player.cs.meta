@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: ea94cf0f8c82d9d42b6a324c4206fd84
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - HealthPoints: {fileID: 11400000, guid: bf3a63c604381754387a6ff44ed479a8, type: 2}
+  - barraVidaPrefab: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

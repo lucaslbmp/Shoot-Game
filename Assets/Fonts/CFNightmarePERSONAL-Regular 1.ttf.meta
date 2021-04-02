@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: e82afde22f426d74aad9853bd9c57fe7
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - CF Nightmare PERSONAL
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 65b88b18d8e3f2e4a872e931baadcf9c, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
