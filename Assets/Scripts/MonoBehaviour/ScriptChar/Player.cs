@@ -15,14 +15,10 @@ public class Player : Character
     {
 
         // inventory = Instantiate(inventoryPrefab);
-
-
-        barraVida.Character = this;
-        HealthPoints.valor = initialHealthPoints;
         barraVida = Instantiate(barraVidaPrefab);
-        
-
-
+        barraVida.Character = this;
+        print(barraVida);
+        HealthPoints.valor = initialHealthPoints;
     }
 
     /*

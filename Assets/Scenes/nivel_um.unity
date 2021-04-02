@@ -12960,7 +12960,7 @@ MonoBehaviour:
   maxHitpoints: 6
   initialHealthPoints: 10
   barraVidaPrefab: {fileID: 689588815}
-  ammountOfGuns: 2
+  aGuns: 2
 --- !u!1001 &3721893845821235925
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13116,6 +13116,30 @@ PrefabInstance:
     - target: {fileID: 8653381821022915740, guid: 2ef2dbbc7febe924aa093266c3af9bf2, type: 3}
       propertyPath: m_Name
       value: HealthBarObj
+      objectReference: {fileID: 0}
+    - target: {fileID: 8653381821126581928, guid: 2ef2dbbc7febe924aa093266c3af9bf2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 8653381822280034584, guid: 2ef2dbbc7febe924aa093266c3af9bf2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 8653381822280034584, guid: 2ef2dbbc7febe924aa093266c3af9bf2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8653381822280034585, guid: 2ef2dbbc7febe924aa093266c3af9bf2, type: 3}
+      propertyPath: m_Text
+      value: 000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8653381822280034585, guid: 2ef2dbbc7febe924aa093266c3af9bf2, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8653381822280034585, guid: 2ef2dbbc7febe924aa093266c3af9bf2, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ef2dbbc7febe924aa093266c3af9bf2, type: 3}

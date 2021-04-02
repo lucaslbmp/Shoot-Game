@@ -13,6 +13,7 @@ public class BarraVida : MonoBehaviour
 
     void Start()
     {
+        print(Character);
         maxHitpoints = Character.maxHitpoints;                              
     }
 

@@ -17,7 +17,7 @@ public class Shooting : MonoBehaviour
     private AudioSource MeleeSound;                                                                                             // Som da faca ao atacar é iniciado
     private static Dictionary<int, int> dictShootAudioSources = new Dictionary<int, int>() { { 1, 0 }, { 2, 3 } };              // Associa o GunType ao respectivo Audio Source de tiro
     private static Dictionary<int, int> dictReloadAudioSources = new Dictionary<int, int>() { { 1, 2 }, { 2, 4} };             // Associa o GunType ao respectivo Audio Source de recarga
-    private static Dictionary<int, int> dictMeleeAudioSources = new Dictionary<int, int>() { {1, }, { 2, 3} };               // Associa o MeleeType ao respectivo Audio Source de Faca
+    //private static Dictionary<int, int> dictMeleeAudioSources = new Dictionary<int, int>() { {1, }, { 2, 3} };               // Associa o MeleeType ao respectivo Audio Source de Faca
                                                                                                  
     // Variaveis de tiro
     public Transform firePoint;                                                                                                 // variável de posição
@@ -40,7 +40,7 @@ public class Shooting : MonoBehaviour
     Shotgun sg = new Shotgun(10,3,5,true);                                                                                      // Objeto associado a espingarda
     AK47 rifle = new AK47(30, 15, 30, true);                                                                                    // Objeto associado a AK47
     Knife knf = new Knife(10, 10, 10, true);                                                                                    // Objeto associado a faca
-    public int ammountOfGuns = 4;                                                                                               // quantidade de armas que o player possui 
+    public int ammountOfGuns = 2;                                                                                               // quantidade de armas que o player possui 
 
     Animator animator;                                                                                                          // inicia um animator para carregar as animações dos projéteis
 
@@ -67,7 +67,7 @@ public class Shooting : MonoBehaviour
         public float shootDelay { get; protected set; }                                                                         // tempo de espera para o proximo tiro
         public float timeToShoot { get; protected set; }                                                                        // timer que contabiliza o tempo de espera para o proximo tiro
         public float reloadSoundTime { get; protected set; }                                                                    // delay correspondente ao tempo de recarga
-        public int aGuns;
+
 
         public Weapon(int total_ammo, int loaded_ammo, int ammo_capacity, bool is_available)
         {
