@@ -4,22 +4,23 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    public int totalAmmo { get; set; }                              // Total de muniçao que o player possui para a arma
-    public int loadedAmmo { get; set; }                             // Muniçao que está carregada na arma
-    public int ammoCapacity { get; set; }                           // Capacidade de munição da arma
-    public bool isAvailable { get; set; }                           // Informa se a arma está disponivel para o player ou nao
-    public virtual float shootDelay { get; set; }                   // tempo de espera para o proximo tiro
-    public float timeToShoot { get; set; }                          // timer que contabiliza o tempo de espera para o proximo tiro
-    public virtual float reloadSoundTime { get; set; }              // delay correspondente ao tempo para executar o som de recarga
+    public int totalAmmo;                           // Total de muniçao que o player possui para a arma
+    public int loadedAmmo;                          // Muniçao que está carregada na arma
+    public int ammoCapacity;                       // Capacidade de munição da arma
+    public bool isAvailable;                         // Informa se a arma está disponivel para o player ou nao
+    public float shootDelay;                 // tempo de espera para o proximo tiro
+    protected float timeToShoot;                      // timer que contabiliza o tempo de espera para o proximo tiro
+    public float reloadSoundTime;             // delay correspondente ao tempo para executar o som de recarga
+    bool isSelected;
 
     //método que define os parâmetros da arma
-    public Weapon(int total_ammo, int loaded_ammo, int ammo_capacity, bool is_available)    
-    {
-        totalAmmo = total_ammo;
-        loadedAmmo = loaded_ammo;
-        ammoCapacity = ammo_capacity;
-        isAvailable = is_available;
-    }
+    //public Weapon(int total_ammo, int loaded_ammo, int ammo_capacity, bool is_available)    
+    //{
+    //    totalAmmo = total_ammo;
+    //    loadedAmmo = loaded_ammo;
+    //    ammoCapacity = ammo_capacity;
+    //    isAvailable = is_available;
+    //}
 
     public virtual void Shoot()                                          //matemática de suibtração das armas no paint clip da arma
     {
@@ -64,11 +65,11 @@ public class Weapon : MonoBehaviour
         return canShootAgain;
     }
 
-    public int AmmoUsed()                                                   //define a quantidade de balas prontas para serem disparadas na arma
+    public int AmmoLoaded()                                                   //define a quantidade de balas carregadas na arma
     {
         return (loadedAmmo);
     }
-    public int AmmoClip()                                                   //define a quantidade de balas carregadas no clip da arma
+    public int AmmoRemaining()                                                   //define a quantidade de balas disponivel para a arma que nao está carregada
     {
         return (totalAmmo - loadedAmmo);
     }

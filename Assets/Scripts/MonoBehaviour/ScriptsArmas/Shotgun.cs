@@ -49,17 +49,17 @@ public class Shotgun : Weapon
 //Classe da espingarda. Ela possui as ações da espingarda assim que o player a coletar e poder usá-la
 public class Shotgun : Weapon                         
 {
-    float aux;                                                                                          // Variável pivô
+    //float aux;                                                                                          // Variável pivô
     private float bulletForce = 30f;                                                                    // Dano causado pela bala da espingarda
-    public override float shootDelay { set { aux = 1.2f; } }                                            // tempo até poder atirar de novo com a espingarda
-    public override float reloadSoundTime { set { aux = 0.5f; } }                                       // tempo de recarregamento da espingarda
+    //public override float shootDelay { set { aux = 1.2f; } }                                            // tempo até poder atirar de novo com a espingarda
+    //public override float reloadSoundTime { set { aux = 0.5f; } }                                       // tempo de recarregamento da espingarda
 
     //método da espingarda. ele traz as informações sobre a Shotgun como Arma
-    public Shotgun(int total_ammo, int loaded_ammo, int max_ammo_loaded, bool is_available) : base(total_ammo, loaded_ammo, max_ammo_loaded, is_available)
-    {
-        shootDelay = 1.2f; // tempo até poder atirar de novo com a espingarda
-        reloadSoundTime = 0.5f;
-    }
+    //public Shotgun(int total_ammo, int loaded_ammo, int max_ammo_loaded, bool is_available) : base(total_ammo, loaded_ammo, max_ammo_loaded, is_available)
+    //{
+    //    shootDelay = 1.2f; // tempo até poder atirar de novo com a espingarda
+    //    reloadSoundTime = 0.5f;
+    //}
 
     //método de tempo de tiro e quantidade com a shotgun
     public override void Shoot(Transform firePoint, GameObject pelletPrefab)
