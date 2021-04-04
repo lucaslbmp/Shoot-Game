@@ -12,9 +12,10 @@ public class PlayerMovement : MonoBehaviour
     public Camera cam;
     private Vector2 mousePos;
     Animator animator;
-    private AudioSource footstepsSound;
+    private AudioSource footstepsAudioSource;
+    public AudioClip footstepsSound;
 
-    private static Dictionary<int, int> dictMoveAudioSources = new Dictionary<int, int>() { { 1, 1 }, { 2, 4 } }; // Associa o GunType ao respectivo Audio Source de movimento
+    //private static Dictionary<int, int> dictMoveAudioSources = new Dictionary<int, int>() { { 1, 1 }, { 2, 4 } }; // Associa o GunType ao respectivo Audio Source de movimento
 
     // Metodo de inicio de game.  São declarados os pontos para inicio do game
     void Start()
@@ -23,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
         //footstepsSound = GetComponent<AudioSource>();
         AudioSource[] allMyAudioSources = GetComponents<AudioSource>();
-        footstepsSound = allMyAudioSources[1];
+        footstepsAudioSource = allMyAudioSources[1];
     }
 
     // Atualiza as condições do personagem no jogo e camera
@@ -45,13 +46,13 @@ public class PlayerMovement : MonoBehaviour
         if(movement.magnitude > 0.01)
         {
             animator.SetBool("IsMoving",true);
-            if(!footstepsSound.isPlaying)
-                footstepsSound.Play();
+            if(!footstepsAudioSource.isPlaying)
+                footstepsAudioSource.PlayOneShot(footstepsSound);
         }
         else
         {
             animator.SetBool("IsMoving", false);
-            footstepsSound.Stop();
+            footstepsAudioSource.Stop();
         }
     }
 }

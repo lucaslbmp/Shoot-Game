@@ -8,9 +8,16 @@ public class Weapon : MonoBehaviour
     public int loadedAmmo;                          // Muniçao que está carregada na arma
     public int ammoCapacity;                       // Capacidade de munição da arma
     public bool isAvailable;                         // Informa se a arma está disponivel para o player ou nao
+    public bool isReloading;
     public float shootDelay;                 // tempo de espera para o proximo tiro
     protected float timeToShoot;                      // timer que contabiliza o tempo de espera para o proximo tiro
-    public float reloadSoundTime;             // delay correspondente ao tempo para executar o som de recarga
+    protected float timeToFinishReload;
+    public float reloadSoundTime;
+    public float reloadTime;             // tempo de recarga
+    public GameObject projectilePrefab;       // prefab de projetil (bala, chumbinho, etc.) da respectiva arma
+    public AudioClip shotSound;             // prefab de som de tiro da respectiva arma
+    public AudioClip reloadSound;           // prefab de som de recarga da respectiva arma
+    public Sprite icon;
     bool isSelected;
 
     //método que define os parâmetros da arma
@@ -36,6 +43,9 @@ public class Weapon : MonoBehaviour
     {
         int ammoToReload = Mathf.Min(ammoCapacity - loadedAmmo, totalAmmo - loadedAmmo);
         loadedAmmo += ammoToReload;
+        isReloading = true;
+        timeToFinishReload = reloadTime;
+        //print("timeToFinish: " + timeToFinishReload);
     }
 
     //public virtual void Reload(Animator animator)
@@ -44,7 +54,7 @@ public class Weapon : MonoBehaviour
 
     public bool CanShoot()                                                 //define se o player pode atirar com a arma
     {
-        return totalAmmo > 0 && loadedAmmo > 0 && timeToShoot <= 0;
+        return totalAmmo > 0 && loadedAmmo > 0 && timeToShoot <= 0 && timeToFinishReload <= 0;
     }
         
     public bool CanReload()                                                //define se o player pode recarregar a arma
@@ -52,7 +62,7 @@ public class Weapon : MonoBehaviour
         return totalAmmo > 0 && Mathf.Min(ammoCapacity - loadedAmmo, totalAmmo - loadedAmmo) > 0;
     }
 
-    public bool CountdownTimers()                                         //define um timer para o player poder atirar novamente
+    public bool CountdownToShoot()                                         //define um timer para o player poder atirar novamente
     {
         bool canShootAgain;
         if (timeToShoot >= 0)
@@ -65,6 +75,19 @@ public class Weapon : MonoBehaviour
         return canShootAgain;
     }
 
+    public void CountdownToFinishReload()
+    {
+        if (timeToFinishReload >= 0)
+        {
+            //print(timeToFinishReload);
+            timeToFinishReload -= Time.deltaTime;
+        }
+        else
+        {
+            isReloading = false;
+        }
+    }
+
     public int AmmoLoaded()                                                   //define a quantidade de balas carregadas na arma
     {
         return (loadedAmmo);
@@ -72,6 +95,11 @@ public class Weapon : MonoBehaviour
     public int AmmoRemaining()                                                   //define a quantidade de balas disponivel para a arma que nao está carregada
     {
         return (totalAmmo - loadedAmmo);
+    }
+
+    public float GetTimetoFinishReload() // apagar (apenas p/ testes)
+    {
+        return timeToFinishReload;
     }
 
 }

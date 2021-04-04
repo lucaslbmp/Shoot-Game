@@ -209,6 +209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   cam: {fileID: 0}
+  footstepsSound: {fileID: 8300000, guid: 7a1397d7accf1aa458b874ffdcc7b70d, type: 3}
 --- !u!50 &3721893846682999167
 Rigidbody2D:
   serializedVersion: 4
@@ -759,8 +760,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea94cf0f8c82d9d42b6a324c4206fd84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthPoints: {fileID: 11400000, guid: bf3a63c604381754387a6ff44ed479a8, type: 2}
-  maxHitpoints: 6
-  initialHealthPoints: 10
-  barraVidaPrefab: {fileID: 6384307090760027615, guid: 2ef2dbbc7febe924aa093266c3af9bf2, type: 3}
-  aGuns: 2
+  maxHitpoints: 10
+  initialHitPoints: 6
+  healthBarPrefab: {fileID: 6384307090760027615, guid: 2ef2dbbc7febe924aa093266c3af9bf2, type: 3}
+  hitpoints: {fileID: 11400000, guid: bf3a63c604381754387a6ff44ed479a8, type: 2}

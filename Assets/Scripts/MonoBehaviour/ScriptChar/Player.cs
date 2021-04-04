@@ -8,26 +8,28 @@ public class Player : Character
     //public Inventory inventoryPrefab;                         // referencia ao objeto prefab criado do Inventario
     //Inventory inventory;
 
-    public BarraVida barraVidaPrefab;                           // tem o valor da "saude" do objeto
-    BarraVida barraVida;                                        // referência ao objeto prefab criado para a healthbar
-    public int aGuns = 2;
+    public BarraVida healthBarPrefab;                           // tem o valor da "saude" do objeto
+    BarraVida healthBar;                                        // referência ao objeto prefab criado para a healthbar
+    // public int aGuns = 2;
+
+    public PontosDano hitpoints;
+
     private void Start()
     {
 
         // inventory = Instantiate(inventoryPrefab);
-        barraVida = Instantiate(barraVidaPrefab);
-        barraVida.Character = this;
-        print(barraVida);
-        HealthPoints.valor = initialHealthPoints;
+        healthBar = Instantiate(healthBarPrefab);
+        healthBar.Character = this;
+        //print(healthBar);
+        hitpoints.valor = initialHitPoints;
     }
 
-    /*
-    public override IEnumerator InflictDamage(int ammount, float interval)
+    public override IEnumerator DanoCaractere(int ammount, float interval)
     {
     while (true)
      {
-        pontosDano.valor -= ammount;
-        if (pontosDano.valor <= float.Epsilon)
+        hitpoints.valor -= ammount;
+        if (hitpoints.valor <= float.Epsilon)
         {
             KillCharacter();
             break;
@@ -46,36 +48,29 @@ public class Player : Character
     public override void ResetCharacter()
     {
         
-           inventory = Instantiate(inventoryPrefab);
+           //inventory = Instantiate(inventoryPrefab);
            healthBar = Instantiate(healthBarPrefab);
-           healthBar.caractere = this;
-           pontosDano.valor = initialHitpoints;
+           healthBar.Character = this;
+           hitpoints.valor = initialHitPoints;
         
     }
 
     public override void KillCharacter()
     {
-        
             base.KillCharacter();
             Destroy(healthBar.gameObject);
-            Destroy(inventory.gameObject);
-        
+            //Destroy(inventory.gameObject);
     }
- */
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-      
-        
        // print(collision.gameObject.tag);
         if (collision.gameObject.CompareTag("Coletavel"))
         {
             Coletaveis DanoObjeto = collision.gameObject.GetComponent<Consumiveis>().coletaveis;
             if (DanoObjeto != null)
             {
-           
-
-                    print("Acertou " + DanoObjeto.NomeColetavel);
-               
+                print("Acertou " + DanoObjeto.NomeColetavel);
                 bool toBeDestroyed = false;
 
                 switch (DanoObjeto.tipoColetavel)
@@ -84,15 +79,13 @@ public class Player : Character
 
                         if (DanoObjeto.NomeColetavel == "AK47")
                         {
-                            aGuns = 3;
+                            //GameObject.Find("AK47").GetComponent<Rifle>().isAvailable = true
                         }
                         else if (DanoObjeto.NomeColetavel == "Shootgun")
                         {
-                            aGuns = 4;
+                            GameObject.Find("Shotgun").GetComponent<Shotgun>().isAvailable = true;
                         }
-
                         toBeDestroyed = true;
-                        // toBeDestroyed = AjustePontosDano(DanoObjeto.quantidade);
                         break;
                     case Coletaveis.TipoColetavel.AMMO:
                         toBeDestroyed = true;
@@ -116,10 +109,10 @@ public class Player : Character
     //Ajuste dos pontos que o Personagem possui para a vida
     public bool AjustePontosDano(int quantidade)
     {
-        if (HealthPoints.valor < maxHitpoints)
+        if (hitpoints.valor < maxHitpoints)
         {
-            HealthPoints.valor += quantidade;
-            print("Ajustando pontos de dano por" + quantidade + " - Novo valor: " + HealthPoints.valor);
+            hitpoints.valor += quantidade;
+            print("Ajustando pontos de dano por" + quantidade + " - Novo valor: " + hitpoints.valor);
             return true;
         }
        else return false;
