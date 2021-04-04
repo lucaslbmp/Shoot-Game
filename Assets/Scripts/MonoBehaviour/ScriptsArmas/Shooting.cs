@@ -39,7 +39,7 @@ public class Shooting : MonoBehaviour
     // Variaveis das armas
     private int GunType = 0;                                                                                                    // Variavel para seleçao da arma
     public GameObject Weapons;                                                                                                    // Objeto que contem todas as armas
-    List<Weapon> WeaponList = new List<Weapon>();
+    [HideInInspector] public List<Weapon> WeaponList = new List<Weapon>();
     public int ammountOfGuns = 2;                                                                                               // quantidade de armas que o player possui 
     Weapon currentGun;
 
@@ -50,7 +50,7 @@ public class Shooting : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         allMyAudioSources = GetComponents<AudioSource>();
-        UpdateWeaponList();                                                                       // Adiciona as armas a weaponList
+        AddWeaponsToList();                                                                       // Adiciona as armas a weaponList
         currentGun = WeaponList[0];
         ammountOfGuns = WeaponList.Count;
     }
@@ -93,17 +93,16 @@ public class Shooting : MonoBehaviour
     // define as teclas utilizadas para a troca das armas
     bool UpdateGunSelection()
     {
+        AddWeaponsToList();
         if (Input.GetKeyDown(KeyCode.E))
         {
             GunType = SelectNextWeapon(GunType);
-            UpdateWeaponList();
-            //print(WeaponList[GunType]);
+            print(WeaponList[GunType]);
             return true;
         }
         if (Input.GetKeyDown(KeyCode.Q))
         {
             GunType = SelectPreviousWeapon(GunType);
-            UpdateWeaponList();
             print(WeaponList[GunType]);
             return true;
         }
@@ -114,9 +113,11 @@ public class Shooting : MonoBehaviour
     {
         GunNum++;
         //GunType %= (ammountOfGuns+1);
-        if (GunNum >= 0 && GunNum < ammountOfGuns && WeaponList[GunNum] != null)
+        if (GunNum < ammountOfGuns) 
         {
-            if (WeaponList[GunNum].isAvailable)
+            print(GunNum);
+            print(WeaponList.Find(w => w.name=="Shotgun").isAvailable);
+            if (WeaponList[GunNum] != null && WeaponList[GunNum].isAvailable)
             {
                 return GunNum;
             }
@@ -129,14 +130,17 @@ public class Shooting : MonoBehaviour
     int SelectPreviousWeapon(int GunNum)
     {
         GunNum--;
-        if (GunNum >= 0 && GunNum < ammountOfGuns && WeaponList[GunNum] != null)
+        if (GunNum >= 0)
         {
-            if (WeaponList[GunNum].isAvailable)
+            print(GunNum);
+            if (WeaponList[GunNum] != null && WeaponList[GunNum].isAvailable)
                 return GunNum;
             else
                 return ammountOfGuns - 1;
         }
-        else return ammountOfGuns - 1;
+        else if(WeaponList[ammountOfGuns - 1].isAvailable)
+            return ammountOfGuns - 1;
+        return ++GunNum;
     }
 
     void ShootWeapon(Weapon currentGun,GameObject shotPrefab)
@@ -171,7 +175,7 @@ public class Shooting : MonoBehaviour
         return currentGun;
     }
 
-    public void UpdateWeaponList()
+    public void AddWeaponsToList()
     {
         foreach (Weapon weapon in Weapons.GetComponentsInChildren<Weapon>())
         {

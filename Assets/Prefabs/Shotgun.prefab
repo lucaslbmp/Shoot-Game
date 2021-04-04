@@ -46,7 +46,7 @@ MonoBehaviour:
   totalAmmo: 12
   loadedAmmo: 4
   ammoCapacity: 7
-  isAvailable: 1
+  isAvailable: 0
   isReloading: 0
   shootDelay: 1.2
   reloadSoundTime: 0.5

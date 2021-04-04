@@ -81,9 +81,9 @@ public class Player : Character
                         {
                             //GameObject.Find("AK47").GetComponent<Rifle>().isAvailable = true
                         }
-                        else if (DanoObjeto.NomeColetavel == "Shootgun")
+                        else if (DanoObjeto.NomeColetavel == "Shotgun")
                         {
-                            GameObject.Find("Shotgun").GetComponent<Shotgun>().isAvailable = true;
+                            gameObject.GetComponentInParent<Shooting>().WeaponList.Find(w => w.name == "Shotgun").isAvailable = true;
                         }
                         toBeDestroyed = true;
                         break;

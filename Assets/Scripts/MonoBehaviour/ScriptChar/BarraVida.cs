@@ -40,7 +40,7 @@ public class BarraVida : MonoBehaviour
         {
             IconSprite = currGun.icon;
             //IconSprite.texture.Resize(100,100);
-            print(currGun.icon);
+            //print(currGun.icon);
         }
         WeaponIcon.sprite = IconSprite;
         //WeaponIcon.rectTransform.localScale = new Vector3(2,2,1);
