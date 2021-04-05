@@ -1,0 +1,708 @@
+fileFormatVersion: 2
+guid: b82cdbb2c61c4464c852bc883485f8bc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4609497698119161537
+    second: monster-walk_new_0
+  - first:
+      213: 8510379492174512682
+    second: monster-walk_new_1
+  - first:
+      213: 1493055412828807847
+    second: monster-walk_new_2
+  - first:
+      213: -2079041459574124789
+    second: monster-walk_new_3
+  - first:
+      213: -8572336449669853021
+    second: monster-walk_new_4
+  - first:
+      213: 7108531572118588049
+    second: monster-walk_new_5
+  - first:
+      213: -9012789667455004403
+    second: monster-walk_new_6
+  - first:
+      213: 8709033131890862624
+    second: monster-walk_new_7
+  - first:
+      213: -1678191722769421136
+    second: monster-walk_new_8
+  - first:
+      213: -7585753029437476444
+    second: monster-walk_new_9
+  - first:
+      213: -3604695060543845321
+    second: monster-walk_new_10
+  - first:
+      213: -8223443563796693316
+    second: monster-walk_new_11
+  - first:
+      213: 4160926132587589404
+    second: monster-walk_new_12
+  - first:
+      213: 5431103856007877356
+    second: monster-walk_new_13
+  - first:
+      213: -4757381707798639797
+    second: monster-walk_new_14
+  - first:
+      213: -3829399803499863404
+    second: monster-walk_new_15
+  - first:
+      213: -6955300095871826413
+    second: monster-walk_new_16
+  - first:
+      213: -402703768895383864
+    second: monster-walk_new_17
+  - first:
+      213: 5258007122103207192
+    second: monster-walk_new_18
+  - first:
+      213: -760304042158540452
+    second: monster-walk_new_19
+  - first:
+      213: -3085929969368925100
+    second: monster-walk_new_20
+  - first:
+      213: -5488538383312146963
+    second: monster-walk_new_21
+  - first:
+      213: -5523361310692013429
+    second: monster-walk_new_22
+  - first:
+      213: 2100830414896467190
+    second: monster-walk_new_23
+  - first:
+      213: 1982772721182252616
+    second: monster-walk_new_24
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 85
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: monster-walk_new_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1312
+        width: 372
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c69f59fbb938ff30800000000000000
+      internalID: 4609497698119161537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-walk_new_1
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 1312
+        width: 372
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a22c4d6ee01fa1670800000000000000
+      internalID: 8510379492174512682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-walk_new_2
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 1312
+        width: 372
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a2a2a7ccf568b410800000000000000
+      internalID: 1493055412828807847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-walk_new_3
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 1312
+        width: 372
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0f46c8cec2c523e0800000000000000
+      internalID: -2079041459574124789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-walk_new_4
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 1312
+        width: 372
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a09b4eca61f80980800000000000000
+      internalID: -8572336449669853021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-walk_new_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 984
+        width: 372
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19a07ce5dc396a260800000000000000
+      internalID: 7108531572118588049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-walk_new_6
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 984
+        width: 372
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d01980c9c832ce280800000000000000
+      internalID: -9012789667455004403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-walk_new_7
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 984
+        width: 372
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02a6673bd73bcd870800000000000000
+      internalID: 8709033131890862624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-walk_new_8
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 984
+        width: 372
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bce353058dd5b8e0800000000000000
+      internalID: -1678191722769421136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-walk_new_9
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 984
+        width: 372
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a1398e8fcdf9b690800000000000000
+      internalID: -7585753029437476444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-walk_new_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 656
+        width: 372
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73ccda0e0fc89fdc0800000000000000
+      internalID: -3604695060543845321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-walk_new_11
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 656
+        width: 372
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbefc6df5a570ed80800000000000000
+      internalID: -8223443563796693316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-walk_new_12
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 656
+        width: 372
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1fe585a5449eb930800000000000000
+      internalID: 4160926132587589404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-walk_new_13
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 656
+        width: 372
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce29a9b8e282f5b40800000000000000
+      internalID: 5431103856007877356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-walk_new_14
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 656
+        width: 372
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4b88bdda826afdb0800000000000000
+      internalID: -4757381707798639797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-walk_new_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 328
+        width: 372
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 492a071fa2d3bdac0800000000000000
+      internalID: -3829399803499863404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-walk_new_16
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 328
+        width: 372
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 316c15fd96fc97f90800000000000000
+      internalID: -6955300095871826413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-walk_new_17
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 328
+        width: 372
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c697494e0f496af0800000000000000
+      internalID: -402703768895383864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-walk_new_18
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 328
+        width: 372
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8158f639e9138f840800000000000000
+      internalID: 5258007122103207192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-walk_new_19
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 328
+        width: 372
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c59b8dd708bd275f0800000000000000
+      internalID: -760304042158540452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-walk_new_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 372
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45c7806fa039c25d0800000000000000
+      internalID: -3085929969368925100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-walk_new_21
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 0
+        width: 372
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ded259e7b6bc4d3b0800000000000000
+      internalID: -5488538383312146963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-walk_new_22
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 0
+        width: 372
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8a0116e6241953b0800000000000000
+      internalID: -5523361310692013429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-walk_new_23
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 0
+        width: 372
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fc8d35b126a72d10800000000000000
+      internalID: 2100830414896467190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-walk_new_24
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 0
+        width: 372
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84e1764e849348b10800000000000000
+      internalID: 1982772721182252616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -97,7 +97,7 @@ public class Shooting : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             GunType = SelectNextWeapon(GunType);
-            print(WeaponList[GunType]);
+            //print(WeaponList[GunType]);
             return true;
         }
         if (Input.GetKeyDown(KeyCode.Q))
@@ -115,8 +115,7 @@ public class Shooting : MonoBehaviour
         //GunType %= (ammountOfGuns+1);
         if (GunNum < ammountOfGuns) 
         {
-            print(GunNum);
-            print(WeaponList.Find(w => w.name=="Shotgun").isAvailable);
+            //print(GunNum);
             if (WeaponList[GunNum] != null && WeaponList[GunNum].isAvailable)
             {
                 return GunNum;

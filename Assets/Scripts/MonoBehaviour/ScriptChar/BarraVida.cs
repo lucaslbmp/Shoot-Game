@@ -9,7 +9,8 @@ public class BarraVida : MonoBehaviour
     public Player Character;                                                    //Inicia a personagem
     public PontosDano HitPoints;                                              //Pontos de vida
     public GameObject Weapons;                                                  //Armas do player
-    public Image MedidorImagem;                                                 //Medidor de Imagem
+    public Image GreenBar;                                                 //Medidor de Imagem
+    public Image RedBar;
     public Image WeaponIcon;
     public Text LoadedAmmoTxt;
     public Text RemainingAmmoTxt;
@@ -52,6 +53,16 @@ public class BarraVida : MonoBehaviour
 
     void UpdateHealthBar()
     {
-        MedidorImagem.fillAmount = HitPoints.valor / maxHitpoints;
+        //print(GreenBar);
+        GreenBar.fillAmount = HitPoints.valor / maxHitpoints;
+        if (RedBar.fillAmount - GreenBar.fillAmount > 0.01f)
+        {
+            float ammountDifference = RedBar.fillAmount - GreenBar.fillAmount;
+            RedBar.fillAmount -= ammountDifference * 0.02f;
+        }
+        else
+        {
+            RedBar.fillAmount = GreenBar.fillAmount;
+        }
     }
 }

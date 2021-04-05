@@ -70,24 +70,36 @@ public class Player : Character
             Coletaveis DanoObjeto = collision.gameObject.GetComponent<Consumiveis>().coletaveis;
             if (DanoObjeto != null)
             {
-                print("Acertou " + DanoObjeto.NomeColetavel);
+                print("Acertou " + DanoObjeto.NomeColetavel + "," + DanoObjeto.tipoColetavel);
                 bool toBeDestroyed = false;
 
                 switch (DanoObjeto.tipoColetavel)
                 {
                     case Coletaveis.TipoColetavel.ARMA:
 
-                        if (DanoObjeto.NomeColetavel == "AK47")
-                        {
-                            //GameObject.Find("AK47").GetComponent<Rifle>().isAvailable = true
-                        }
-                        else if (DanoObjeto.NomeColetavel == "Shotgun")
+                        if (DanoObjeto.NomeColetavel == "Shotgun")
                         {
                             gameObject.GetComponentInParent<Shooting>().WeaponList.Find(w => w.name == "Shotgun").isAvailable = true;
+                        }
+                        else if (DanoObjeto.NomeColetavel == "AK47")
+                        {
+                            //gameObject.GetComponentInParent<Shooting>().WeaponList.Find(w => w.name == "AK47").isAvailable = true;
                         }
                         toBeDestroyed = true;
                         break;
                     case Coletaveis.TipoColetavel.AMMO:
+                        if (DanoObjeto.NomeColetavel == "AmmoPistola")
+                        {
+                            gameObject.GetComponentInParent<Shooting>().WeaponList.Find(w => w.name == "Handgun").totalAmmo += DanoObjeto.quantidade;
+                        }
+                        else if (DanoObjeto.NomeColetavel == "AmmoShotgun")
+                        {
+                            gameObject.GetComponentInParent<Shooting>().WeaponList.Find(w => w.name == "Shotgun").totalAmmo += DanoObjeto.quantidade;
+                        }
+                        else if (DanoObjeto.NomeColetavel == "AmmoAk47")
+                        {
+                            //gameObject.GetComponentInParent<Shooting>().WeaponList.Find(w => w.name == "AK47").isAvailable = true;
+                        }
                         toBeDestroyed = true;
                         // toBeDestroyed = inventory.AddItem(DanoObjeto);
                         break;

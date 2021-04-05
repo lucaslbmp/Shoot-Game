@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9cf9abb71105c1142b9de886c796f4a6, type: 3}
-  m_Name: Ammoak47
+  m_Name: AmmoAk47
   m_EditorClassIdentifier: 
-  NomeColetavel: Ammo AK47
+  NomeColetavel: AmmoAK47
   Sprite: {fileID: -6277086929917757821, guid: 6400dbbcbf6eb9c46b9deaa16f80efc6, type: 3}
   quantidade: 30
   Empilhavel: 1

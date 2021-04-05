@@ -269,7 +269,8 @@ MonoBehaviour:
   Character: {fileID: 7247508073258868550, guid: 0fc2c9c37291fcc40a9c6eadf9034722, type: 3}
   HitPoints: {fileID: 11400000, guid: bf3a63c604381754387a6ff44ed479a8, type: 2}
   Weapons: {fileID: 6521003057220454032, guid: cdd8fdfedfc91d4418285df43dc3d84a, type: 3}
-  MedidorImagem: {fileID: 8653381821113395165}
+  GreenBar: {fileID: 8653381821113395165}
+  RedBar: {fileID: 8653381821420776336}
   WeaponIcon: {fileID: 1655668763493338831}
   LoadedAmmoTxt: {fileID: 8653381821126581929}
   RemainingAmmoTxt: {fileID: 8653381822280034585}
