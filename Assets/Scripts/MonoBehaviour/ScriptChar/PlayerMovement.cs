@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
         //footstepsSound = GetComponent<AudioSource>();
         AudioSource[] allMyAudioSources = GetComponents<AudioSource>();
-        footstepsAudioSource = allMyAudioSources[1];
+        footstepsAudioSource = allMyAudioSources[0];
     }
 
     // Atualiza as condições do personagem no jogo e camera

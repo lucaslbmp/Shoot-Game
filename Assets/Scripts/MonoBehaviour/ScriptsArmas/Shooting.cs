@@ -8,24 +8,24 @@ using System.Linq;
 //                                          PRESETS DO JOGO                                                                                                                             //
 // =====================================================================================================================================================================================//
 
-//classe que gerencia as ações de tiro, recarregamento, troca de arma e ataque com arma branca do player
+// Classe que gerencia as ações de tiro, recarregamento, troca de arma e ataque com arma branca do player
+
 [RequireComponent(typeof(AudioSource))]
 public class Shooting : MonoBehaviour
 {
-    // Audios
-    AudioSource[] allMyAudioSources;                                                                                            // Abre os audios disponíveis
-    AudioSource shotAudioSource;
-    AudioSource reloadAudioSource;
-    AudioClip shotSound;                                                                                              // Som de arma atirando é iniciado
-    AudioClip reloadSound;                                                                                            // Som de arma recarregando é iniciado
-    AudioClip MeleeSound;                                                                                             // Som da faca ao atacar é iniciado
+    // Audios                                                                                          
+    AudioSource shotAudioSource;                                            // Audio Source associado ao som de disparo da arma
+    AudioSource reloadAudioSource;                                          // Audio Source associado ao som de recarga da arma
+    AudioClip shotSound;                                                    // Clip de audio associado ao som de disparo da arma                                                                                    
+    AudioClip reloadSound;                                                  // Clip de audio associado ao som de recarga da arma                                             
+    AudioClip MeleeSound;                                                   // Clip de audio associado ao som de recarga da arma                                        
     //private static Dictionary<int, int> dictShootAudioSources = new Dictionary<int, int>() { { 0, 0 }, { 1, 3 } };              // Associa o GunType ao respectivo Audio Source de tiro
     //private static Dictionary<int, int> dictReloadAudioSources = new Dictionary<int, int>() { { 0, 2 }, { 1, 4} };             // Associa o GunType ao respectivo Audio Source de recarga
                                                                                                                                //private static Dictionary<int, int> dictMeleeAudioSources = new Dictionary<int, int>() { {1, }, { 2, 3} };               // Associa o MeleeType ao respectivo Audio Source de Facas
     // Variaveis de tiro
     public Transform firePoint;                                                                                                 // variável de posição
     public GameObject bulletPrefab;                                                                                             // prefab do projétil
-    public GameObject pelletPrefab;                                                                                             // prefab pallete
+    public GameObject pelletPrefab;                                                                                             // prefab de "chumbinho" da espingarda
     public GameObject knifePrefab;                                                                                              // prefab da sprite de movimento da Faca
     public GameObject MuzzleflashPrefab;                                                                                        // prefab do flash do tiro
     //List<String> projectilePrefabs = new List<String>() {null, "bulletPrefab", "pelletPrefab" } ;                                                             // Lista de prefabs de projeteis
@@ -39,7 +39,7 @@ public class Shooting : MonoBehaviour
     // Variaveis das armas
     private int GunType = 0;                                                                                                    // Variavel para seleçao da arma
     public GameObject Weapons;                                                                                                    // Objeto que contem todas as armas
-    [HideInInspector] public List<Weapon> WeaponList = new List<Weapon>();
+    [HideInInspector] public List<Weapon> WeaponList = new List<Weapon>();                                                      // Lista de armas que o player possui
     public int ammountOfGuns = 2;                                                                                               // quantidade de armas que o player possui 
     Weapon currentGun;
 
@@ -49,10 +49,11 @@ public class Shooting : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        allMyAudioSources = GetComponents<AudioSource>();
         AddWeaponsToList();                                                                       // Adiciona as armas a weaponList
         currentGun = WeaponList[0];
         ammountOfGuns = WeaponList.Count;
+        shotAudioSource = gameObject.AddComponent<AudioSource>();
+        reloadAudioSource = gameObject.AddComponent<AudioSource>();
     }
 
     // Atualiza as condições de jogo
@@ -142,38 +143,41 @@ public class Shooting : MonoBehaviour
         return ++GunNum;
     }
 
+    // Gerencia todos os aspectos relacionados à execução de um tiro
     void ShootWeapon(Weapon currentGun,GameObject shotPrefab)
     {
         //print(currentGun);
-        shotSound = currentGun.shotSound;
+        shotSound = currentGun.shotSound;                           // Atribui o clip de audio de tiro da arma atual ao clip de audio de tiro do player 
         //print(shotAudioSource);
-        shotAudioSource = GetComponent<AudioSource>();
+        //shotAudioSource = GetComponent<AudioSource>();
         //shotAudioSource.clip = shotSound;
-        shotAudioSource.PlayOneShot(shotSound);
-        //currentGun.Shoot(firePoint, GameObject.Find("bulletPrefab"));
-        currentGun.Shoot(firePoint, shotPrefab);
+        shotAudioSource.PlayOneShot(shotSound);                     // Executa o som de tiro da arma
+        currentGun.Shoot(firePoint, shotPrefab);                   // Chama a funçao da classe Weapon responsavel por gerenciar o disparo
         animator.SetTrigger("IsShooting");
-        //animator.SetBool("IsShooting",true); //***
+        //animator.SetBool("IsShooting",true); 
     }
 
+    // Gerencia todos os aspectos relacionados ao recarregamento da arma
     void ReloadWeapon(Weapon currentGun)
     {
         //reloadSound = allMyAudioSources[dictReloadAudioSources[GunType]];
         reloadSound = Instantiate(currentGun.reloadSound);
-        reloadAudioSource = GetComponent<AudioSource>();
+        //reloadAudioSource = GetComponent<AudioSource>();
         reloadAudioSource.clip = reloadSound;
-        reloadAudioSource.PlayDelayed(currentGun.reloadSoundTime);
-        currentGun.Reload();
+        reloadAudioSource.PlayDelayed(currentGun.reloadSoundTime);                  // Executa o som de recarga da arma com atraso dado por "reloadSoundTime", que varia com a arma 
+        currentGun.Reload();                                                        // Chama a funçao da classe Weapon responsavel por gerenciar a recarga
         animator.SetTrigger("IsReloading");
         //animator.SetBool("IsReloading",true); //**
         animator.SetInteger("GunType", GunType); // redundante?
     }
 
+    // Retorna a arma atual carregada pelo player
     public Weapon GetCurrentGun()
     {
         return currentGun;
     }
 
+    // Adicionar arma à lista de armas do player
     public void AddWeaponsToList()
     {
         foreach (Weapon weapon in Weapons.GetComponentsInChildren<Weapon>())
