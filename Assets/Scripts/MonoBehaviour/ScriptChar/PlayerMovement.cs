@@ -43,15 +43,21 @@ public class PlayerMovement : MonoBehaviour
         Vector2 lookDir = mousePos - rb.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
         rb.rotation = angle;
-        if(movement.magnitude > 0.01)
+        if(movement.magnitude > float.Epsilon)
         {
-            animator.SetBool("IsMoving",true);
-            if(!footstepsAudioSource.isPlaying)
+            //animator.SetBool("IsMoving",true);
+            //if(animator.GetFloat("Movement") == 0f)
+                animator.SetFloat("Movement", 1f);
+            //animator.SetFloat("State",.1f);
+            if (!footstepsAudioSource.isPlaying)
                 footstepsAudioSource.PlayOneShot(footstepsSound);
         }
         else
         {
-            animator.SetBool("IsMoving", false);
+            //if (animator.GetFloat("Movement") == 1f)
+                animator.SetFloat("Movement",0f);
+                //animator.SetFloat("State", 0f);
+            //animator.SetBool("IsMoving", false);
             footstepsAudioSource.Stop();
         }
     }

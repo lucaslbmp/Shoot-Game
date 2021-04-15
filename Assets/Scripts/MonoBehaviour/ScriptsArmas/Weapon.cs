@@ -7,13 +7,12 @@ public class Weapon : MonoBehaviour
     public int totalAmmo;                           // Total de muniçao que o player possui para a arma
     public int loadedAmmo;                          // Muniçao que está carregada na arma
     public int ammoCapacity;                       // Capacidade de munição da arma
-    public bool isAvailable;                         // Informa se a arma está disponivel para o player ou nao
-    public bool isReloading;
-    public float shootDelay;                 // tempo de espera para o proximo tiro
-    protected float timeToShoot;                      // timer que contabiliza o tempo de espera para o proximo tiro
-    protected float timeToFinishReload;
+    public bool isAvailable;                       // Informa se a arma está disponivel para o player ou nao
+    public float shootDelay;                       // tempo de espera para o proximo tiro
+    public float shootAnimTime;                    // duraçao da animaçao de tiro  
+    public float reloadTime;                       // tempo de recarga
+    public float reloadAnimTime;                   // duraçao da animaçao de recarga
     public float reloadSoundTime;
-    public float reloadTime;             // tempo de recarga
     public GameObject projectilePrefab;       // prefab de projetil (bala, chumbinho, etc.) da respectiva arma
     public AudioClip shotSound;             // prefab de som de tiro da respectiva arma
     public AudioClip reloadSound;           // prefab de som de recarga da respectiva arma
@@ -34,8 +33,8 @@ public class Weapon : MonoBehaviour
     {
         int ammoToReload = Mathf.Min(ammoCapacity - loadedAmmo, totalAmmo - loadedAmmo);
         loadedAmmo += ammoToReload;
-        isReloading = true;
-        timeToFinishReload = reloadTime;
+        //isReloading = true;
+        //timeToFinishReload = reloadTime;
         //print("timeToFinish: " + timeToFinishReload);
     }
 

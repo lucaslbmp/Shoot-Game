@@ -53,6 +53,7 @@ public class Shooting : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        //animator.SetFloat("State", 0.5f);
         AddWeaponsToList();                                                                       // Adiciona as armas a weaponList
         currentGun = WeaponList[0];
         ammountOfGuns = WeaponList.Count;
@@ -70,13 +71,14 @@ public class Shooting : MonoBehaviour
             currentGun = WeaponList[GunType];
         shotPrefab = currentGun.projectilePrefab;
         animator.SetInteger("GunType", GunType);
+        animator.SetFloat("GunTypeFloat", GunType/10f);
         if (Input.GetButtonDown("Fire1"))
         {
             if (currentGun.CanShoot())
             {
                 if (shootingCoroutine == null && reloadingCoroutine == null)
                 {
-                    shootingCoroutine = StartCoroutine(ShootWeapon(currentGun, shotPrefab, currentGun.shootDelay));
+                    shootingCoroutine = StartCoroutine(ShootWeapon(currentGun, shotPrefab, currentGun.shootDelay,currentGun.shootAnimTime));
                     print(shootingCoroutine);
                 }
 
@@ -88,7 +90,7 @@ public class Shooting : MonoBehaviour
             {
                 if (reloadingCoroutine == null)
                 {
-                    reloadingCoroutine = StartCoroutine(ReloadWeapon(currentGun, currentGun.reloadTime));
+                    reloadingCoroutine = StartCoroutine(ReloadWeapon(currentGun, currentGun.reloadTime,currentGun.reloadAnimTime));
                 }
             }
         }
@@ -150,17 +152,23 @@ public class Shooting : MonoBehaviour
     }
 
     // Gerencia todos os aspectos relacionados à execução de um tiro
-    public IEnumerator ShootWeapon(Weapon currentGun, GameObject shotPrefab, float timetoShootAgain)
+    public IEnumerator ShootWeapon(Weapon currentGun, GameObject shotPrefab, float timetoShootAgain,float shootAnimTime)
     {
         while (true)
         {
             shotSound = currentGun.shotSound;                           // Atribui o clip de audio de tiro da arma atual ao clip de audio de tiro do player 
             shotAudioSource.PlayOneShot(shotSound);                     // Executa o som de tiro da arma
             currentGun.Shoot(firePoint, shotPrefab);                   // Chama a funçao da classe Weapon responsavel por instanciar o(s) projetil(eis)
-            animator.SetTrigger("IsShooting");                          // Dispara o trigger para iniciar a animaçao de tiro
+            animator.SetTrigger("StartedShoot");                          // Dispara o trigger para iniciar a animaçao de tiro
+            //animator.SetFloat("State",0f);
+            if(shootAnimTime > float.Epsilon)
+            {
+                yield return new WaitForSeconds(shootAnimTime);
+                animator.SetFloat("State", .5f);
+            }
             if (timetoShootAgain > float.Epsilon)
             {
-                yield return new WaitForSeconds(timetoShootAgain);      // Executa um delay até poder atirar de novo
+                yield return new WaitForSeconds(timetoShootAgain-shootAnimTime);      // Executa um delay até poder atirar de novo
                 break;
             }
         }
@@ -169,17 +177,23 @@ public class Shooting : MonoBehaviour
     }
 
     // Gerencia todos os aspectos relacionados ao recarregamento da arma
-    public IEnumerator ReloadWeapon(Weapon currentGun, float reloadDuration)
+    public IEnumerator ReloadWeapon(Weapon currentGun, float reloadDuration,float reloadAnimTime)
     {
         while (true)
         {
             reloadSound = Instantiate(currentGun.reloadSound);
             reloadAudioSource.clip = reloadSound;
             reloadAudioSource.PlayDelayed(currentGun.reloadSoundTime);                  // Executa o som de recarga da arma com atraso dado por "reloadSoundTime", que varia com a arma 
-            animator.SetTrigger("IsReloading");                                         // Dispara o trigger para iniciar a animaçao de tiro                                   
+            animator.SetTrigger("StartedReload");                                         // Dispara o trigger para iniciar a animaçao de tiro                                   
+            //animator.SetFloat("State",1f);                                              // Estado alterado para RECARGA
+            if (reloadAnimTime > float.Epsilon)
+            {
+                yield return new WaitForSeconds(reloadAnimTime);                        // Tempo até terminar a animação de recarga
+                //animator.SetFloat("State", .5f);                                        // Estado alterado para NEUTRO
+            }
             if (reloadDuration > float.Epsilon)
             {
-                yield return new WaitForSeconds(reloadDuration);                        // Delay correspondente à animação de recarga
+                yield return new WaitForSeconds(reloadDuration-reloadAnimTime);          // Delay após a recarga
                 currentGun.Reload();                                                    // Atualiza a muniçao após a recarga
                 break;
             }
