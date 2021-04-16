@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4702453623177703385}
   - component: {fileID: 4702453623177703367}
   m_Layer: 0
-  m_Name: ZombieSpitter 1
+  m_Name: ZombieSpitter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -92,7 +92,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1144414391
-  m_SortingLayer: 4
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4609497698119161537, guid: b82cdbb2c61c4464c852bc883485f8bc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
