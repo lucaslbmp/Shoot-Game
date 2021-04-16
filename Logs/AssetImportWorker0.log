@@ -1,0 +1,666 @@
+Using pre-set license
+Built from '2020.2/staging' branch; Version is '2020.2.6f1 (8a2143876886) revision 9052483'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Education; OS build 19042.867; Version 2009; 64bit' Language: 'pt' Physical Memory: 16264 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.2.6f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/GilmarCorreia/Documents/Documentos/UFABC/17° Quad/Programação Baseada em Componentes de Jogos/Unity/Shoot-Game
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+1777
+Successfully changed project path to: C:/Users/GilmarCorreia/Documents/Documentos/UFABC/17° Quad/Programação Baseada em Componentes de Jogos/Unity/Shoot-Game
+C:/Users/GilmarCorreia/Documents/Documentos/UFABC/17° Quad/Programação Baseada em Componentes de Jogos/Unity/Shoot-Game
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 106.23 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.6f1 (8a2143876886)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.6f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/GilmarCorreia/Documents/Documentos/UFABC/17° Quad/Programação Baseada em Componentes de Jogos/Unity/Shoot-Game/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: AMD Radeon R7 M260 (ID=0x6900)
+    Vendor:   
+    VRAM:     2038 MB
+    Driver:   27.20.14501.28009
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.6f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.6f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.6f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56276
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.6f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.6f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.6f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.6f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
+Registered in 0.011505 seconds.
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 104.99 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.228 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.007101 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 101.54 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.973 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.14 seconds
+Refreshing native plugins compatible for Editor in 0.99 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3125 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 137.7 MB.
+System memory in use after: 137.9 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 3572.
+Total: 4.506300 ms (FindLiveObjects: 0.677900 ms CreateObjectMapping: 0.297700 ms MarkObjects: 3.413600 ms  DeleteObjects: 0.115000 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Prefabs/AK47_Obj.prefab
+  artifactKey: Guid(d0dd84bb66a37864f8cb840fc0218454) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/AK47_Obj.prefab using Guid(d0dd84bb66a37864f8cb840fc0218454) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce92b8b19eb2d280a16c43d875f2720f') in 0.414160 seconds
+  Import took 0.422346 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000399 seconds.
+  path: Assets/Prefabs/Blood.prefab
+  artifactKey: Guid(9dae386ba6611bc4784db08f70144f71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Blood.prefab using Guid(9dae386ba6611bc4784db08f70144f71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51f835b1485e7fa7cd984e5eafee04a1') in 0.086402 seconds
+  Import took 0.095426 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000355 seconds.
+  path: Assets/Prefabs/Bullet.prefab
+  artifactKey: Guid(3e8ed1f8a9b69b04d8ab997191208a3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Bullet.prefab using Guid(3e8ed1f8a9b69b04d8ab997191208a3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00c0f481905596180ed20839b029173e') in 0.028346 seconds
+  Import took 0.038034 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000302 seconds.
+  path: Assets/Prefabs/ZombieSpitter 1.prefab
+  artifactKey: Guid(943c660ca1b7d0a46a8de28951dd5c7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/ZombieSpitter 1.prefab using Guid(943c660ca1b7d0a46a8de28951dd5c7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7cedd71d4f5b1be731108c37cafcf421') in 0.086484 seconds
+  Import took 0.102599 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000336 seconds.
+  path: Assets/Prefabs/Shotgun.prefab
+  artifactKey: Guid(b30103c59680ead42bc4e240fb2102c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Shotgun.prefab using Guid(b30103c59680ead42bc4e240fb2102c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '131a7b749e10aeb56abb4a0a0bcd2e4e') in 0.019863 seconds
+  Import took 0.029458 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000283 seconds.
+  path: Assets/Prefabs/Player.prefab
+  artifactKey: Guid(0fc2c9c37291fcc40a9c6eadf9034722) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player.prefab using Guid(0fc2c9c37291fcc40a9c6eadf9034722) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Asset 'Player': Transition 'IdleTree -> AK47MovTree' in state 'IdleTree' doesn't have an Exit Time or any condition, transition will be ignored
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Editor/Src/Animation/StateMachine.cpp line 1847]
+
+ -> (artifact id: 'ab5afa3758f93c1e364e7819b6833adc') in 0.106381 seconds
+  Import took 0.114349 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000472 seconds.
+  path: Assets/Sprites/Tilemap/Haunted Mansion Map Pack/SSoS_Cellar_[nogrid].png
+  artifactKey: Guid(14714e0f87c9c5d4aba4bb6802e70a78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tilemap/Haunted Mansion Map Pack/SSoS_Cellar_[nogrid].png using Guid(14714e0f87c9c5d4aba4bb6802e70a78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '693327799cd6de9f5ec2adc57b9e3f33') in 0.370537 seconds
+  Import took 0.384586 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000383 seconds.
+  path: Assets/Prefabs/AmmoShotgun_Obj.prefab
+  artifactKey: Guid(c63aa0c2f0ebbaa4db989d562f23cbc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/AmmoShotgun_Obj.prefab using Guid(c63aa0c2f0ebbaa4db989d562f23cbc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52a565709f13589f42c9dfae76aaf123') in 0.040786 seconds
+  Import took 0.053485 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000317 seconds.
+  path: Assets/Prefabs/pellet.prefab
+  artifactKey: Guid(bc5bcec0f6dff2040a79005c9604ccc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/pellet.prefab using Guid(bc5bcec0f6dff2040a79005c9604ccc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f458f8dd1231919c214d3192ed7a681a') in 0.028140 seconds
+  Import took 0.036981 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000409 seconds.
+  path: Assets/Prefabs/Brick.prefab
+  artifactKey: Guid(90108af7872da8543a719885aa9be5a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Brick.prefab using Guid(90108af7872da8543a719885aa9be5a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c3f84efc1a8500befcb17204e132ec4') in 0.033687 seconds
+  Import took 0.046647 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000420 seconds.
+  path: Assets/Prefabs/Handgun.prefab
+  artifactKey: Guid(c274dbb1276042748824ed0bb15c5537) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Handgun.prefab using Guid(c274dbb1276042748824ed0bb15c5537) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '623def7663daa141df12fff45f6d643c') in 0.019588 seconds
+  Import took 0.029136 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000364 seconds.
+  path: Assets/Prefabs/AmmoAK47_Obj.prefab
+  artifactKey: Guid(74186520c40bf7140b30a4a05492d2b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/AmmoAK47_Obj.prefab using Guid(74186520c40bf7140b30a4a05492d2b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82de52d61dba0107ffae92470cdd575a') in 0.036220 seconds
+  Import took 0.046012 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000380 seconds.
+  path: Assets/Prefabs/MuzzleFlash.prefab
+  artifactKey: Guid(708e5fbac7855c342aba75f84364c031) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MuzzleFlash.prefab using Guid(708e5fbac7855c342aba75f84364c031) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72c73b813b82dea80b453e0135e76f84') in 0.073429 seconds
+  Import took 0.082350 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000378 seconds.
+  path: Assets/Prefabs/Weapons.prefab
+  artifactKey: Guid(cdd8fdfedfc91d4418285df43dc3d84a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Weapons.prefab using Guid(cdd8fdfedfc91d4418285df43dc3d84a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03f6ace310914022532dae8a443b8100') in 0.026038 seconds
+  Import took 0.034992 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000333 seconds.
+  path: Assets/Sprites/Tilemap/Haunted Mansion Map Pack/SSoS_ground_[nogrid].png
+  artifactKey: Guid(c53a44193307e6c4cbc634b89d38b951) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tilemap/Haunted Mansion Map Pack/SSoS_ground_[nogrid].png using Guid(c53a44193307e6c4cbc634b89d38b951) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a85060b1577541494948cb24fe053cd') in 3.195083 seconds
+  Import took 3.213163 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000360 seconds.
+  path: Assets/Prefabs/AmmoShotgun2_Obj.prefab
+  artifactKey: Guid(8ef96933d1e48644e949863667ec95d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/AmmoShotgun2_Obj.prefab using Guid(8ef96933d1e48644e949863667ec95d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '585ec98c6a4b1cb670d7face1df0899f') in 0.043826 seconds
+  Import took 0.056919 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000799 seconds.
+  path: Assets/Prefabs/HealthBarObj.prefab
+  artifactKey: Guid(2ef2dbbc7febe924aa093266c3af9bf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/HealthBarObj.prefab using Guid(2ef2dbbc7febe924aa093266c3af9bf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3fc8d17233283dca6a51d7cfbab48b14') in 0.131901 seconds
+  Import took 0.145796 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000319 seconds.
+  path: Assets/Prefabs/MedKit.prefab
+  artifactKey: Guid(484d2a467577c4e43bb2f68fffd03eae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MedKit.prefab using Guid(484d2a467577c4e43bb2f68fffd03eae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b78704272bbf347dc32bb50e0b4e9d88') in 0.041083 seconds
+  Import took 0.056282 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000971 seconds.
+  path: Assets/Prefabs/Shootgun_Obj.prefab
+  artifactKey: Guid(df20a00c331710d4a9c9c13f1a342ade) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Shootgun_Obj.prefab using Guid(df20a00c331710d4a9c9c13f1a342ade) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24e5ed86b840c87ee4c6fe3e1c88f3c7') in 0.037462 seconds
+  Import took 0.051132 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.496512 seconds.
+  path: Assets/Prefabs/Player.prefab
+  artifactKey: Guid(0fc2c9c37291fcc40a9c6eadf9034722) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player.prefab using Guid(0fc2c9c37291fcc40a9c6eadf9034722) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Asset 'Player': Transition 'IdleTree -> AK47MovTree' in state 'IdleTree' doesn't have an Exit Time or any condition, transition will be ignored
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Editor/Src/Animation/StateMachine.cpp line 1847]
+
+ -> (artifact id: 'ce03ef0769613bd1b75f28fe7327e28b') in 0.063734 seconds
+  Import took 0.078521 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 24.971956 seconds.
+  path: Assets/Prefabs/Player.prefab
+  artifactKey: Guid(0fc2c9c37291fcc40a9c6eadf9034722) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player.prefab using Guid(0fc2c9c37291fcc40a9c6eadf9034722) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Asset 'Player': Transition 'IdleTree -> AK47MovTree' in state 'IdleTree' doesn't have an Exit Time or any condition, transition will be ignored
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Editor/Src/Animation/StateMachine.cpp line 1847]
+
+ -> (artifact id: 'f9f6f2df5f3cca457b873dcc101ca1d2') in 0.064001 seconds
+  Import took 0.076788 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004402 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.90 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.781 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.90 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3009 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 137.1 MB.
+System memory in use after: 137.4 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 3628.
+Total: 4.492600 ms (FindLiveObjects: 0.486200 ms CreateObjectMapping: 0.386600 ms MarkObjects: 3.590600 ms  DeleteObjects: 0.027600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007151 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.91 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.054 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.07 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3009 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 137.2 MB.
+System memory in use after: 137.4 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 3632.
+Total: 5.708500 ms (FindLiveObjects: 0.778500 ms CreateObjectMapping: 0.391400 ms MarkObjects: 4.508900 ms  DeleteObjects: 0.027400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 293.747932 seconds.
+  path: Assets/Prefabs/Player.prefab
+  artifactKey: Guid(0fc2c9c37291fcc40a9c6eadf9034722) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player.prefab using Guid(0fc2c9c37291fcc40a9c6eadf9034722) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Asset 'Player': Transition 'IdleTree -> AK47MovTree' in state 'IdleTree' doesn't have an Exit Time or any condition, transition will be ignored
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Editor/Src/Animation/StateMachine.cpp line 1847]
+
+ -> (artifact id: '4d4f58a43b265b965c8ffbcfca48b6ad') in 0.362053 seconds
+  Import took 0.373839 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.119489 seconds.
+  path: Assets/Prefabs/Player.prefab
+  artifactKey: Guid(0fc2c9c37291fcc40a9c6eadf9034722) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player.prefab using Guid(0fc2c9c37291fcc40a9c6eadf9034722) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Asset 'Player': Transition 'IdleTree -> AK47MovTree' in state 'IdleTree' doesn't have an Exit Time or any condition, transition will be ignored
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Editor/Src/Animation/StateMachine.cpp line 1847]
+
+ -> (artifact id: 'd7b90cceb947ca5f1df884e23cdb6f05') in 0.062652 seconds
+  Import took 0.092992 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 29.248181 seconds.
+  path: Assets/Prefabs/Player.prefab
+  artifactKey: Guid(0fc2c9c37291fcc40a9c6eadf9034722) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player.prefab using Guid(0fc2c9c37291fcc40a9c6eadf9034722) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Asset 'Player': Transition 'IdleTree -> AK47MovTree' in state 'IdleTree' doesn't have an Exit Time or any condition, transition will be ignored
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Editor/Src/Animation/StateMachine.cpp line 1847]
+
+ -> (artifact id: '0deb8c0a3010b705572802d81b8d1052') in 0.070354 seconds
+  Import took 0.084119 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.855538 seconds.
+  path: Packages/com.unity.render-pipelines.universal/Runtime/Materials/Lit.mat
+  artifactKey: Guid(31321ba15b8f8eb4c954353edc038b1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.universal/Runtime/Materials/Lit.mat using Guid(31321ba15b8f8eb4c954353edc038b1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a54acea8f0cb5aa686ca891f9e0e8cd') in 0.085956 seconds
+  Import took 0.096747 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000403 seconds.
+  path: Packages/com.unity.render-pipelines.universal/Runtime/Materials/ParticlesUnlit.mat
+  artifactKey: Guid(e823cd5b5d27c0f4b8256e7c12ee3e6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.universal/Runtime/Materials/ParticlesUnlit.mat using Guid(e823cd5b5d27c0f4b8256e7c12ee3e6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '675f69be75c352b6f07081af8bddb42f') in 0.033842 seconds
+  Import took 0.044074 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000339 seconds.
+  path: Packages/com.unity.render-pipelines.universal/Runtime/Materials/TerrainLit.mat
+  artifactKey: Guid(594ea882c5a793440b60ff72d896021e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.universal/Runtime/Materials/TerrainLit.mat using Guid(594ea882c5a793440b60ff72d896021e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1cac0d5501a1903b0e22569b61a7d35f') in 0.029489 seconds
+  Import took 0.040329 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000392 seconds.
+  path: Packages/com.unity.render-pipelines.universal/Runtime/Materials/Sprite-Unlit-Default.mat
+  artifactKey: Guid(9dfc825aed78fcd4ba02077103263b40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.universal/Runtime/Materials/Sprite-Unlit-Default.mat using Guid(9dfc825aed78fcd4ba02077103263b40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c1c9c559abfe9b73841947429fea8fa') in 0.025528 seconds
+  Import took 0.034090 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000347 seconds.
+  path: Packages/com.unity.render-pipelines.universal/Runtime/Materials/SimpleLit.mat
+  artifactKey: Guid(6a1143ee683302f4aa628c052723efc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.universal/Runtime/Materials/SimpleLit.mat using Guid(6a1143ee683302f4aa628c052723efc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e06059bf518ad771a8126a482a47f58a') in 0.312579 seconds
+  Import took 0.323043 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000351 seconds.
+  path: Packages/com.unity.render-pipelines.universal/Runtime/Materials/Sprite-Lit-Default.mat
+  artifactKey: Guid(a97c105638bdf8b4a8650670310a4cd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.universal/Runtime/Materials/Sprite-Lit-Default.mat using Guid(a97c105638bdf8b4a8650670310a4cd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c21bdb6d2fd802123b60e333b66bf3c') in 0.029987 seconds
+  Import took 0.039769 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000378 seconds.
+  path: Packages/com.unity.render-pipelines.universal/Runtime/Materials/SimpleLit.mat
+  artifactKey: Guid(6a1143ee683302f4aa628c052723efc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.universal/Runtime/Materials/SimpleLit.mat using Guid(6a1143ee683302f4aa628c052723efc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e06059bf518ad771a8126a482a47f58a') in 0.023695 seconds
+  Import took 0.032807 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000346 seconds.
+  path: Packages/com.unity.render-pipelines.universal/Runtime/Materials/Sprite-Lit-Default.mat
+  artifactKey: Guid(a97c105638bdf8b4a8650670310a4cd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.universal/Runtime/Materials/Sprite-Lit-Default.mat using Guid(a97c105638bdf8b4a8650670310a4cd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c21bdb6d2fd802123b60e333b66bf3c') in 0.019576 seconds
+  Import took 0.030241 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 27.566917 seconds.
+  path: Assets/Prefabs/Player.prefab
+  artifactKey: Guid(0fc2c9c37291fcc40a9c6eadf9034722) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player.prefab using Guid(0fc2c9c37291fcc40a9c6eadf9034722) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Asset 'Player': Transition 'IdleTree -> AK47MovTree' in state 'IdleTree' doesn't have an Exit Time or any condition, transition will be ignored
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Editor/Src/Animation/StateMachine.cpp line 1847]
+
+ -> (artifact id: 'a768618c5edb6ca170f382dc4e7eb75c') in 0.074746 seconds
+  Import took 0.085901 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.375396 seconds.
+  path: Assets/Prefabs/Player.prefab
+  artifactKey: Guid(0fc2c9c37291fcc40a9c6eadf9034722) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player.prefab using Guid(0fc2c9c37291fcc40a9c6eadf9034722) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Asset 'Player': Transition 'IdleTree -> AK47MovTree' in state 'IdleTree' doesn't have an Exit Time or any condition, transition will be ignored
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Editor/Src/Animation/StateMachine.cpp line 1847]
+
+ -> (artifact id: '59f90d4e11d78c460632f749865fb312') in 0.075797 seconds
+  Import took 0.090827 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.576054 seconds.
+  path: Assets/Prefabs/Player.prefab
+  artifactKey: Guid(0fc2c9c37291fcc40a9c6eadf9034722) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player.prefab using Guid(0fc2c9c37291fcc40a9c6eadf9034722) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Asset 'Player': Transition 'IdleTree -> AK47MovTree' in state 'IdleTree' doesn't have an Exit Time or any condition, transition will be ignored
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Editor/Src/Animation/StateMachine.cpp line 1847]
+
+ -> (artifact id: '023da3bdadfb32effce35b211138104a') in 0.124132 seconds
+  Import took 0.135611 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004845 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.34 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.861 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.91 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3009 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 137.6 MB.
+System memory in use after: 137.9 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 3705.
+Total: 4.427000 ms (FindLiveObjects: 0.390700 ms CreateObjectMapping: 0.182800 ms MarkObjects: 3.763200 ms  DeleteObjects: 0.087400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006701 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.95 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.257 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.92 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3009 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 137.7 MB.
+System memory in use after: 137.9 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 3709.
+Total: 5.945400 ms (FindLiveObjects: 0.983500 ms CreateObjectMapping: 0.417600 ms MarkObjects: 4.510000 ms  DeleteObjects: 0.028200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 442.732072 seconds.
+  path: Assets/Sprites/Tilemap/Haunted Mansion Map Pack/SSoS_ground_[nogrid].png
+  artifactKey: Guid(c53a44193307e6c4cbc634b89d38b951) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tilemap/Haunted Mansion Map Pack/SSoS_ground_[nogrid].png using Guid(c53a44193307e6c4cbc634b89d38b951) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b123a5778a08c24efada349d59d438ae') in 6.181221 seconds
+  Import took 6.223367 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004404 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.08 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.333 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.29 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3009 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 137.8 MB.
+System memory in use after: 138.0 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 3714.
+Total: 6.197700 ms (FindLiveObjects: 1.081500 ms CreateObjectMapping: 0.422500 ms MarkObjects: 4.659800 ms  DeleteObjects: 0.031500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1195.282984 seconds.
+  path: Assets/Sprites/Tilemap/Haunted Mansion Map Pack/SSoS_ground_[nogrid].png
+  artifactKey: Guid(c53a44193307e6c4cbc634b89d38b951) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tilemap/Haunted Mansion Map Pack/SSoS_ground_[nogrid].png using Guid(c53a44193307e6c4cbc634b89d38b951) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b60210fb3fcd3b4fcaaaf511288b554') in 3.107867 seconds
+  Import took 3.121114 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 734.341603 seconds.
+  path: Assets/Sprites/Tilemap/Haunted Mansion Map Pack/SSoS_ground_[nogrid].png
+  artifactKey: Guid(c53a44193307e6c4cbc634b89d38b951) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tilemap/Haunted Mansion Map Pack/SSoS_ground_[nogrid].png using Guid(c53a44193307e6c4cbc634b89d38b951) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49f1af4ff3b7fcc9f8fc0124ea0b8024') in 3.191912 seconds
+  Import took 3.208993 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1262.502927 seconds.
+  path: Assets/Sprites/Tilemap/Haunted Mansion Map Pack/SSoS_ground_[nogrid].png
+  artifactKey: Guid(c53a44193307e6c4cbc634b89d38b951) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tilemap/Haunted Mansion Map Pack/SSoS_ground_[nogrid].png using Guid(c53a44193307e6c4cbc634b89d38b951) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6de4537a7e9f5e289905980bd4ea6b8') in 3.412849 seconds
+  Import took 3.428766 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 146.107056 seconds.
+  path: Assets/Sprites/Tilemap/Haunted Mansion Map Pack/SSoS_ground_[nogrid].png
+  artifactKey: Guid(c53a44193307e6c4cbc634b89d38b951) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tilemap/Haunted Mansion Map Pack/SSoS_ground_[nogrid].png using Guid(c53a44193307e6c4cbc634b89d38b951) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7867eb82788b4c646fbc909da20a1a5') in 3.016591 seconds
+  Import took 3.032459 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 279.449402 seconds.
+  path: Assets/Sprites/Tilemap/Haunted Mansion Map Pack/SSoS_ground_[nogrid].png
+  artifactKey: Guid(c53a44193307e6c4cbc634b89d38b951) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tilemap/Haunted Mansion Map Pack/SSoS_ground_[nogrid].png using Guid(c53a44193307e6c4cbc634b89d38b951) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a323a7b85804f32ad8ceacd0609616ed') in 3.175867 seconds
+  Import took 3.190601 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
