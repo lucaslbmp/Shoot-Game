@@ -8,24 +8,24 @@ using System.Linq;
 //                                          PRESETS DO JOGO                                                                                                                             //
 // =====================================================================================================================================================================================//
 
-//classe que gerencia as ações de tiro, recarregamento, troca de arma e ataque com arma branca do player
+// Classe que gerencia as ações de tiro, recarregamento, troca de arma e ataque com arma branca do player
+
 [RequireComponent(typeof(AudioSource))]
 public class Shooting : MonoBehaviour
 {
-    // Audios
-    AudioSource[] allMyAudioSources;                                                                                            // Abre os audios disponíveis
-    AudioSource shotAudioSource;
-    AudioSource reloadAudioSource;
-    AudioClip shotSound;                                                                                              // Som de arma atirando é iniciado
-    AudioClip reloadSound;                                                                                            // Som de arma recarregando é iniciado
-    AudioClip MeleeSound;                                                                                             // Som da faca ao atacar é iniciado
+    // Audios                                                                                          
+    AudioSource shotAudioSource;                                            // Audio Source associado ao som de disparo da arma
+    AudioSource reloadAudioSource;                                          // Audio Source associado ao som de recarga da arma
+    AudioClip shotSound;                                                    // Clip de audio associado ao som de disparo da arma                                                                                    
+    AudioClip reloadSound;                                                  // Clip de audio associado ao som de recarga da arma                                             
+    AudioClip MeleeSound;                                                   // Clip de audio associado ao som de recarga da arma                                        
     //private static Dictionary<int, int> dictShootAudioSources = new Dictionary<int, int>() { { 0, 0 }, { 1, 3 } };              // Associa o GunType ao respectivo Audio Source de tiro
     //private static Dictionary<int, int> dictReloadAudioSources = new Dictionary<int, int>() { { 0, 2 }, { 1, 4} };             // Associa o GunType ao respectivo Audio Source de recarga
                                                                                                                                //private static Dictionary<int, int> dictMeleeAudioSources = new Dictionary<int, int>() { {1, }, { 2, 3} };               // Associa o MeleeType ao respectivo Audio Source de Facas
     // Variaveis de tiro
     public Transform firePoint;                                                                                                 // variável de posição
     public GameObject bulletPrefab;                                                                                             // prefab do projétil
-    public GameObject pelletPrefab;                                                                                             // prefab pallete
+    public GameObject pelletPrefab;                                                                                             // prefab de "chumbinho" da espingarda
     public GameObject knifePrefab;                                                                                              // prefab da sprite de movimento da Faca
     public GameObject MuzzleflashPrefab;                                                                                        // prefab do flash do tiro
     //List<String> projectilePrefabs = new List<String>() {null, "bulletPrefab", "pelletPrefab" } ;                                                             // Lista de prefabs de projeteis
@@ -39,20 +39,26 @@ public class Shooting : MonoBehaviour
     // Variaveis das armas
     private int GunType = 0;                                                                                                    // Variavel para seleçao da arma
     public GameObject Weapons;                                                                                                    // Objeto que contem todas as armas
-    [HideInInspector] public List<Weapon> WeaponList = new List<Weapon>();
+    [HideInInspector] public List<Weapon> WeaponList = new List<Weapon>();                                                      // Lista de armas que o player possui
     public int ammountOfGuns = 2;                                                                                               // quantidade de armas que o player possui 
     Weapon currentGun;
 
     Animator animator;                                                                                                          // inicia um animator para carregar as animações dos projéteis
 
+    // Corrotinas das armas
+    Coroutine shootingCoroutine;
+    Coroutine reloadingCoroutine;
+
     //  Inicia o jogo e define as condições iniciais
     void Start()
     {
         animator = GetComponent<Animator>();
-        allMyAudioSources = GetComponents<AudioSource>();
+        //animator.SetFloat("State", 0.5f);
         AddWeaponsToList();                                                                       // Adiciona as armas a weaponList
         currentGun = WeaponList[0];
         ammountOfGuns = WeaponList.Count;
+        shotAudioSource = gameObject.AddComponent<AudioSource>();
+        reloadAudioSource = gameObject.AddComponent<AudioSource>();
     }
 
     // Atualiza as condições de jogo
@@ -61,31 +67,34 @@ public class Shooting : MonoBehaviour
         //currentGun = Weapons.GetComponent<Weapon>();
         GameObject shotPrefab;
         bool changeWeapon = UpdateGunSelection();
-        if(changeWeapon)
+        if (changeWeapon)
             currentGun = WeaponList[GunType];
-        if (currentGun.isReloading)
-            currentGun.CountdownToFinishReload();
         shotPrefab = currentGun.projectilePrefab;
         animator.SetInteger("GunType", GunType);
-        currentGun.CountdownToShoot();
-        //if(!canShootAgain) // Se pode nao pode executar animaçao de tiro **
-            //animator.SetBool("IsShooting", false); // entao setar a flag IsShooting para falso **
+        animator.SetFloat("GunTypeFloat", GunType/10f);
         if (Input.GetButtonDown("Fire1"))
         {
-            //Debug.Log(currentGun.CanShoot());
             if (currentGun.CanShoot())
             {
-                ShootWeapon(currentGun,shotPrefab);
+                if (shootingCoroutine == null && reloadingCoroutine == null)
+                {
+                    shootingCoroutine = StartCoroutine(ShootWeapon(currentGun, shotPrefab, currentGun.shootDelay,currentGun.shootAnimTime));
+                    print(shootingCoroutine);
+                }
+
             }
         }
         else if (Input.GetKeyDown(KeyCode.R))
         {
             if (currentGun.CanReload())
             {
-                ReloadWeapon(currentGun);
+                if (reloadingCoroutine == null)
+                {
+                    reloadingCoroutine = StartCoroutine(ReloadWeapon(currentGun, currentGun.reloadTime,currentGun.reloadAnimTime));
+                }
             }
         }
-        (loaded_ammo, remaining_ammo) = (currentGun.AmmoLoaded(),currentGun.AmmoRemaining());
+        (loaded_ammo, remaining_ammo) = (currentGun.AmmoLoaded(), currentGun.AmmoRemaining());
         //Debug.Log(loaded_ammo + "-" + remaining_ammo);
     }
 
@@ -142,38 +151,61 @@ public class Shooting : MonoBehaviour
         return ++GunNum;
     }
 
-    void ShootWeapon(Weapon currentGun,GameObject shotPrefab)
+    // Gerencia todos os aspectos relacionados à execução de um tiro
+    public IEnumerator ShootWeapon(Weapon currentGun, GameObject shotPrefab, float timetoShootAgain,float shootAnimTime)
     {
-        //print(currentGun);
-        shotSound = currentGun.shotSound;
-        //print(shotAudioSource);
-        shotAudioSource = GetComponent<AudioSource>();
-        //shotAudioSource.clip = shotSound;
-        shotAudioSource.PlayOneShot(shotSound);
-        //currentGun.Shoot(firePoint, GameObject.Find("bulletPrefab"));
-        currentGun.Shoot(firePoint, shotPrefab);
-        animator.SetTrigger("IsShooting");
-        //animator.SetBool("IsShooting",true); //***
+        while (true)
+        {
+            shotSound = currentGun.shotSound;                           // Atribui o clip de audio de tiro da arma atual ao clip de audio de tiro do player 
+            shotAudioSource.PlayOneShot(shotSound);                     // Executa o som de tiro da arma
+            currentGun.Shoot(firePoint, shotPrefab);                   // Chama a funçao da classe Weapon responsavel por instanciar o(s) projetil(eis)
+            animator.SetTrigger("StartedShoot");                          // Dispara o trigger para iniciar a animaçao de tiro
+            //animator.SetFloat("State",0f);
+            if(shootAnimTime > float.Epsilon)
+            {
+                yield return new WaitForSeconds(shootAnimTime);
+                animator.SetFloat("State", .5f);
+            }
+            if (timetoShootAgain > float.Epsilon)
+            {
+                yield return new WaitForSeconds(timetoShootAgain-shootAnimTime);      // Executa um delay até poder atirar de novo
+                break;
+            }
+        }
+        StopCoroutine(shootingCoroutine);                               // Encerra a corrotina de tiro
+        shootingCoroutine = null;                                       // Atribui null à corrotina de tiro
     }
 
-    void ReloadWeapon(Weapon currentGun)
+    // Gerencia todos os aspectos relacionados ao recarregamento da arma
+    public IEnumerator ReloadWeapon(Weapon currentGun, float reloadDuration,float reloadAnimTime)
     {
-        //reloadSound = allMyAudioSources[dictReloadAudioSources[GunType]];
-        reloadSound = Instantiate(currentGun.reloadSound);
-        reloadAudioSource = GetComponent<AudioSource>();
-        reloadAudioSource.clip = reloadSound;
-        reloadAudioSource.PlayDelayed(currentGun.reloadSoundTime);
-        currentGun.Reload();
-        animator.SetTrigger("IsReloading");
-        //animator.SetBool("IsReloading",true); //**
-        animator.SetInteger("GunType", GunType); // redundante?
+        while (true)
+        {
+            reloadSound = Instantiate(currentGun.reloadSound);
+            reloadAudioSource.clip = reloadSound;
+            reloadAudioSource.PlayDelayed(currentGun.reloadSoundTime);                  // Executa o som de recarga da arma com atraso dado por "reloadSoundTime", que varia com a arma 
+            animator.SetTrigger("StartedReload");                                         // Dispara o trigger para iniciar a animaçao de tiro                                   
+            //animator.SetFloat("State",1f);                                              // Estado alterado para RECARGA
+            if (reloadAnimTime > float.Epsilon)
+            {
+                yield return new WaitForSeconds(reloadAnimTime);                        // Tempo até terminar a animação de recarga
+                //animator.SetFloat("State", .5f);                                        // Estado alterado para NEUTRO
+            }
+            if (reloadDuration > float.Epsilon)
+            {
+                yield return new WaitForSeconds(reloadDuration-reloadAnimTime);          // Delay após a recarga
+                currentGun.Reload();                                                    // Atualiza a muniçao após a recarga
+                break;
+            }
+        }
+        StopCoroutine(reloadingCoroutine);                                              // Encerra a corrotina de recarga
+        reloadingCoroutine = null;                                                      // Atribui null à corrotina de recarga
     }
 
-    public Weapon GetCurrentGun()
-    {
-        return currentGun;
-    }
+    // Retorna a arma atual carregada pelo player
+    public Weapon GetCurrentGun()   {return currentGun;}
 
+    // Adicionar arma à lista de armas do player
     public void AddWeaponsToList()
     {
         foreach (Weapon weapon in Weapons.GetComponentsInChildren<Weapon>())
