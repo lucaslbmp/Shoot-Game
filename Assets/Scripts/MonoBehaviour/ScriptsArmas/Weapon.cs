@@ -9,17 +9,18 @@ public class Weapon : MonoBehaviour
     public int ammoCapacity;                       // Capacidade de munição da arma
     public bool isAvailable;                       // Informa se a arma está disponivel para o player ou nao
     public float shootDelay;                       // tempo de espera para o proximo tiro
-    public float shootAnimTime;                    // duraçao da animaçao de tiro  
+    public float shootAnimTime;                    // duraçao da animaçao de tiro 
+    public float shotSoundTime;                    // duraçao do audio de tiro
     public float reloadTime;                       // tempo de recarga
     public float reloadAnimTime;                   // duraçao da animaçao de recarga
-    public float reloadSoundTime;
-    public GameObject projectilePrefab;       // prefab de projetil (bala, chumbinho, etc.) da respectiva arma
-    public AudioClip shotSound;             // prefab de som de tiro da respectiva arma
-    public AudioClip reloadSound;           // prefab de som de recarga da respectiva arma
+    public float reloadSoundTime;                  // duraçao do audio de recarga
+    public GameObject projectilePrefab;            // prefab de projetil (bala, chumbinho, etc.) da arma
+    public AudioClip shotSound;                    // prefab de som de tiro da arma
+    public AudioClip reloadSound;                  // prefab de som de recarga da arma
     public Sprite icon;
     bool isSelected;
 
-    public virtual void Shoot()                                          //matemática de suibtração das armas no paint clip da arma
+    public virtual void Shoot()                                          //matemática de subtração das armas no paint clip da arma
     {
         totalAmmo--;
         loadedAmmo--;

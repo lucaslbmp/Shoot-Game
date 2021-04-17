@@ -76,15 +76,15 @@ public class Player : Character
                 switch (DanoObjeto.tipoColetavel)
                 {
                     case Coletaveis.TipoColetavel.ARMA:
-
-                        if (DanoObjeto.NomeColetavel == "Shotgun")
-                        {
-                            gameObject.GetComponentInParent<Shooting>().WeaponList.Find(w => w.name == "Shotgun").isAvailable = true;
-                        }
-                        else if (DanoObjeto.NomeColetavel == "AK47")
-                        {
-                            //gameObject.GetComponentInParent<Shooting>().WeaponList.Find(w => w.name == "AK47").isAvailable = true;
-                        }
+                        gameObject.GetComponentInParent<Shooting>().WeaponList.Find(w => w.name == DanoObjeto.NomeColetavel).isAvailable = true;
+                        //if (DanoObjeto.NomeColetavel == "Shotgun")
+                        //{
+                        //    gameObject.GetComponentInParent<Shooting>().WeaponList.Find(w => w.name == "Shotgun").isAvailable = true;
+                        //}
+                        //else if (DanoObjeto.NomeColetavel == "AK47")
+                        //{
+                        //    gameObject.GetComponentInParent<Shooting>().WeaponList.Find(w => w.name == "AK47").isAvailable = true;
+                        //}
                         toBeDestroyed = true;
                         break;
                     case Coletaveis.TipoColetavel.AMMO:
