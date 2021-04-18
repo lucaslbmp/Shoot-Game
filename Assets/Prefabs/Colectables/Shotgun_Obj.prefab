@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 2654522041390851055}
   - component: {fileID: 2011493856359944378}
   - component: {fileID: 4934473924614123865}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: Shotgun_Obj
-  m_TagString: Arma
+  m_TagString: Coletavel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52,7 +52,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -70,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1247754541
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0304b9cc98792aa4bbe66901a0b4b923, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -112,4 +112,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 804e5fe485478f2478d7e51eac9a72d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coletaveis: {fileID: 0}
+  coletaveis: {fileID: 11400000, guid: b3c85d7e89846a142aaac81e13221d85, type: 2}
