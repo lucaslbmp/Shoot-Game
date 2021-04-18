@@ -174,7 +174,7 @@ MonoBehaviour:
   hingeJoint2D: {fileID: 199582078}
   FrontTrigger: {fileID: 3527652247166855287}
   BackTrigger: {fileID: 1641006586197093108}
-  speed: 0
+  speed: 200
 --- !u!1 &8713195607227862816
 GameObject:
   m_ObjectHideFlags: 0
