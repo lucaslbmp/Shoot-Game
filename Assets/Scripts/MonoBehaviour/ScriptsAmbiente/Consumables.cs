@@ -4,8 +4,8 @@ using UnityEngine;
 
 
 
-public class Consumiveis: MonoBehaviour
+public class Consumables: MonoBehaviour
 {
     //cria-se um objeto publico do tipo Coletavel, chamado Coletavel
-    public Coletaveis coletaveis;       // cria-se um objeto coletavel com nome coletavel
+    public Item item;       // cria-se um objeto coletavel com nome coletavel
 }

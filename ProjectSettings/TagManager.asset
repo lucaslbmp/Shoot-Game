@@ -7,9 +7,10 @@ TagManager:
   - Arma
   - Ammo
   - Vida
-  - Coletavel
   - Door
   - Enemy
+  - Colectable
+  - Coletavel
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - Water
   - UI
   - MenuBtn
-  - Consumiveis
+  - Consumables
   - Chao
   - Doors
   - 

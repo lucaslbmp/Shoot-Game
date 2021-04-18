@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -6621446236066514521}
   m_Layer: 7
   m_Name: AmmoShotgun_Obj
-  m_TagString: Ammo
+  m_TagString: Colectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70,10 +70,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1247754541
+  m_SortingLayer: 8
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6277086929917757821, guid: 6400dbbcbf6eb9c46b9deaa16f80efc6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0adf2c748b7c781458e93713b2f2a65f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 804e5fe485478f2478d7e51eac9a72d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coletaveis: {fileID: 11400000, guid: 427402b1e3375fc43940de463bffd084, type: 2}
+  item: {fileID: 11400000, guid: 5354225292a9a6d4e9e03155277f4349, type: 2}
 --- !u!61 &-6621446236066514521
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -107,19 +107,19 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.00000037252903, y: 0.00000017881393}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.09, y: 1.56}
+    oldSize: {x: 0.96666664, y: 0.55}
     newSize: {x: 2.09, y: 1.56}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.09, y: 1.56}
+  m_Size: {x: 0.9821459, y: 0.6476499}
   m_EdgeRadius: 0

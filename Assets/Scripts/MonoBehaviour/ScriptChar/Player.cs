@@ -65,9 +65,9 @@ public class Player : Character
     private void OnTriggerEnter2D(Collider2D collision)
     {
        // print(collision.gameObject.tag);
-        if (collision.gameObject.CompareTag("Coletavel"))
+        if (collision.gameObject.CompareTag("Colectable"))
         {
-            Coletaveis DanoObjeto = collision.gameObject.GetComponent<Consumiveis>().coletaveis;
+            Item DanoObjeto = collision.gameObject.GetComponent<Consumables>().item;
             if (DanoObjeto != null)
             {
                 print("Acertou " + DanoObjeto.NomeColetavel + "," + DanoObjeto.tipoColetavel);
@@ -75,7 +75,7 @@ public class Player : Character
 
                 switch (DanoObjeto.tipoColetavel)
                 {
-                    case Coletaveis.TipoColetavel.ARMA:
+                    case Item.TipoColetavel.ARMA:
                         gameObject.GetComponentInParent<Shooting>().WeaponList.Find(w => w.name == DanoObjeto.NomeColetavel).isAvailable = true;
                         //if (DanoObjeto.NomeColetavel == "Shotgun")
                         //{
@@ -87,7 +87,9 @@ public class Player : Character
                         //}
                         toBeDestroyed = true;
                         break;
-                    case Coletaveis.TipoColetavel.AMMO:
+                    case Item.TipoColetavel.AMMO:
+                        //string weaponName = ;
+                        //gameObject.GetComponentInParent<Shooting>().WeaponList.Find(w => w.name == DanoObjeto.NomeColetavel).totalAmmo += DanoObjeto.quantidade;
                         if (DanoObjeto.NomeColetavel == "AmmoPistola")
                         {
                             gameObject.GetComponentInParent<Shooting>().WeaponList.Find(w => w.name == "Handgun").totalAmmo += DanoObjeto.quantidade;
@@ -96,14 +98,15 @@ public class Player : Character
                         {
                             gameObject.GetComponentInParent<Shooting>().WeaponList.Find(w => w.name == "Shotgun").totalAmmo += DanoObjeto.quantidade;
                         }
-                        else if (DanoObjeto.NomeColetavel == "AmmoAk47")
+                        else if (DanoObjeto.NomeColetavel == "AmmoAK47")
                         {
-                            //gameObject.GetComponentInParent<Shooting>().WeaponList.Find(w => w.name == "AK47").isAvailable = true;
+                            print("Aqui");
+                            gameObject.GetComponentInParent<Shooting>().WeaponList.Find(w => w.name == "AK47").totalAmmo += DanoObjeto.quantidade;
                         }
                         toBeDestroyed = true;
                         // toBeDestroyed = inventory.AddItem(DanoObjeto);
                         break;
-                    case Coletaveis.TipoColetavel.VIDA:
+                    case Item.TipoColetavel.VIDA:
                         toBeDestroyed = AjustePontosDano(DanoObjeto.quantidade);
                         break;
               

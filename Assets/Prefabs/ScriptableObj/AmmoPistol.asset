@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cf9abb71105c1142b9de886c796f4a6, type: 3}
   m_Name: AmmoPistol
   m_EditorClassIdentifier: 
-  NomeColetavel: AmmoPistola
+  NomeColetavel: AmmoHandgun
   Sprite: {fileID: -580410723161114119, guid: 9ea6bb7f93e40c24cbc5ada6684037c6, type: 3}
   quantidade: 15
   Empilhavel: 1

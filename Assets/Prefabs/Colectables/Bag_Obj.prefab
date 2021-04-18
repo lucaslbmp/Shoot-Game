@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 4624860213061408381}
   - component: {fileID: 361800094160136790}
   m_Layer: 7
-  m_Name: AmmoShotgun2_Obj
-  m_TagString: Ammo
+  m_Name: Bag_Obj
+  m_TagString: Colectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,4 +95,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 804e5fe485478f2478d7e51eac9a72d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coletaveis: {fileID: 11400000, guid: 5354225292a9a6d4e9e03155277f4349, type: 2}
+  item: {fileID: 0}

@@ -5,7 +5,7 @@ using UnityEngine;
 
 //classe que Herda da classe ScriptableObject
 
-public class Coletaveis : ScriptableObject
+public class Item : ScriptableObject
 {
 
     public string NomeColetavel;                    //Variável com o nome do coletável
