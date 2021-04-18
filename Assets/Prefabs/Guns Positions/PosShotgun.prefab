@@ -102,10 +102,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4934473924614123865, guid: df20a00c331710d4a9c9c13f1a342ade, type: 3}
-      propertyPath: coletaveis
-      value: 
-      objectReference: {fileID: 11400000, guid: b3c85d7e89846a142aaac81e13221d85, type: 2}
     - target: {fileID: 5197389749783053036, guid: df20a00c331710d4a9c9c13f1a342ade, type: 3}
       propertyPath: m_Name
       value: Shotgun_Obj

@@ -6,9 +6,10 @@ TagManager:
   tags:
   - Arma
   - Ammo
-  - Inimigo
   - Vida
   - Coletavel
+  - Door
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - MenuBtn
   - Consumiveis
   - Chao
-  - 
+  - Doors
   - 
   - 
   - 

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7699514059767034837
+--- !u!1 &5197389749783053036
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,38 +8,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 9044167313547785330}
-  - component: {fileID: 6237117361666663598}
-  - component: {fileID: 4668592107639459393}
-  - component: {fileID: 1291834834771680669}
-  m_Layer: 7
-  m_Name: AK47_Obj
-  m_TagString: Coletavel
+  - component: {fileID: 956594754534705628}
+  - component: {fileID: 2654522041390851055}
+  - component: {fileID: 2011493856359944378}
+  - component: {fileID: 4934473924614123865}
+  m_Layer: 8
+  m_Name: Shootgun_Obj
+  m_TagString: Arma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &9044167313547785330
+--- !u!4 &956594754534705628
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7699514059767034837}
+  m_GameObject: {fileID: 5197389749783053036}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.61, y: -1.97, z: 0}
-  m_LocalScale: {x: 0.45, y: 0.35, z: 1}
+  m_LocalPosition: {x: 4.6875, y: 3.2386, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &6237117361666663598
+--- !u!212 &2654522041390851055
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7699514059767034837}
+  m_GameObject: {fileID: 5197389749783053036}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -52,7 +52,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -70,10 +70,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1247754541
-  m_SortingLayer: 8
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f5c82e920cbaf3b45938cda8a1eeebc1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0304b9cc98792aa4bbe66901a0b4b923, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -84,32 +84,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!70 &4668592107639459393
+--- !u!70 &2011493856359944378
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7699514059767034837}
+  m_GameObject: {fileID: 5197389749783053036}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 4, y: 1}
+  m_Size: {x: 5.12, y: 1.5}
   m_Direction: 1
---- !u!114 &1291834834771680669
+--- !u!114 &4934473924614123865
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7699514059767034837}
+  m_GameObject: {fileID: 5197389749783053036}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 804e5fe485478f2478d7e51eac9a72d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coletaveis: {fileID: 11400000, guid: 163f12ec1f09d564ba65d8b62e400c69, type: 2}
+  coletaveis: {fileID: 0}
