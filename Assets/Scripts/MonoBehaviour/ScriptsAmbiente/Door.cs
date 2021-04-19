@@ -4,27 +4,49 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
+    // Variaveis associadas à dobradiça (Hinge) da porta
     public HingeJoint2D hingeJoint2D;                           // Componente Hinge (junta) que articula a porta
     JointAngleLimits2D openDoorLimits;                          // Limites angulares da porta aberta
     JointAngleLimits2D closedDoorLimits;                        // Limites angulares da porta fechada
     JointMotor2D motor;
 
+    // Triggers da porta
     public Transform FrontTrigger;                              // Transform do trigger frontal da porta
     public Transform BackTrigger;                               // Transform do trigger traseiro da porta
     Vector3 characterPos;                                       // Posição do character
 
+    public DoorFeatures doorFeatures;                           // Scriptable Object que contem as caracteristicas da porta
+
+    // Variavies associadas à abertura/fechamento da porta
     bool startedToOpen;                                         // Flag que indica se a porta já começou a abrir
-    public float speed;                                         // Constante que indica a velocidade de abertura da porta
+    float speed;                                         // Constante que indica a velocidade de abertura da porta
     float currentOpeningSpeed;                                  // Variável que armazena a velocidade de abertura atual da porta
     bool playerIsInInterior;                                    // Flag que indica se o player está em um ambiente interior
+    bool doorLocked;                                            // Flag que indica se a porta esta trancada
+    bool doorClosed;
+    Item keyItem;
+
+    // Audios
+    AudioSource doorMoveAudioSource;
+    AudioSource doorLockAudioSource;
+    AudioClip doorLockSound;
+
+    //Player
+    Player player;
 
     private void Awake()
     {
         //hingeJoint2D = transform.Find("Hinge").GetComponent<HingeJoint2D>();
         openDoorLimits = hingeJoint2D.limits;
         closedDoorLimits = new JointAngleLimits2D { min = 0f, max = 0f };
+        doorLocked = doorFeatures.locked;
+        doorClosed = true;
+        speed = doorFeatures.doorSpeed;
         currentOpeningSpeed = 0f;
         motor = hingeJoint2D.motor;
+        keyItem = doorFeatures.keyItem;
+        doorMoveAudioSource = gameObject.AddComponent<AudioSource>();
+        doorLockAudioSource = gameObject.AddComponent<AudioSource>();
         CloseDoor();
         startedToOpen = false;
     }
@@ -32,14 +54,41 @@ public class Door : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
         //print("Entrei --> " +  collision.gameObject.CompareTag("Player"));
-        if(collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Enemy"))
+        if(collision.gameObject.CompareTag("Player"))
         {
+            player = collision.gameObject.GetComponent<Player>();
             characterPos = collision.gameObject.transform.position;
-            if (Input.GetKey(KeyCode.Space) && !startedToOpen)
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                playerIsInInterior = CheckPlayerPos();                          // Checa a posição do player e retorna true se ele está em um ambiente interior 
-                UpdateHingeMotorSpeed();                                        // Atualiza a direção de rotação da porta
-                OpenDoor();                                                     // Move o rigidbody fazendo a abertura da porta
+
+                if (doorLocked)
+                {
+                    doorLockSound = doorFeatures.lockSound;
+                    if(keyItem != null)
+                    {
+                        if (CheckInventory())
+                        {
+                            doorLocked = false;
+                            doorLockSound = doorFeatures.unlockSound;
+                        }
+                    }
+                    doorLockAudioSource.PlayOneShot(doorLockSound);
+                }
+                else
+                {
+                    if (doorClosed)
+                    {
+                        playerIsInInterior = CheckPlayerPos();                          // Checa a posição do player e retorna true se ele está em um ambiente interior 
+                        UpdateHingeMotorSpeed();                                        // Atualiza a direção de rotação da porta
+                        OpenDoor();                                                     // Move o rigidbody fazendo a abertura da porta
+                        doorClosed = false;
+                        doorLockSound = doorFeatures.unlockSound;
+                        doorMoveAudioSource.PlayOneShot(doorFeatures.doorOpenSound);
+                        doorLockAudioSource.PlayOneShot(doorLockSound);
+                    }
+                }
+                //doorLockAudioSource.clip = doorLockSound;
+                //doorLockAudioSource.PlayDelayed(0.2f);
             }
         }
     }
@@ -48,7 +97,12 @@ public class Door : MonoBehaviour
     {
         if (collision.CompareTag("Player") || collision.CompareTag("Enemy"))
         {
+            if (!doorClosed)
+            {
+                doorMoveAudioSource.PlayOneShot(doorFeatures.doorCloseSound);
+            }
             CloseDoor();                                                        // Retorna o rigidbody da porta à posição fechada
+            doorClosed = true;
         }
     }
 
@@ -59,7 +113,7 @@ public class Door : MonoBehaviour
         hingeJoint2D.motor = motor;                             // Atribui o motor do Hinge atualizado ao Hinge
         //print(hingeJoint2D.motor.motorSpeed);
         hingeJoint2D.useMotor = true;                           // Utiliza o motor do Hinge para abrir a porta
-        startedToOpen = true;                                   // Altera a flag startedToOpen para verdadeiro
+        //startedToOpen = true;                                   // Altera a flag startedToOpen para verdadeiro
     }
 
     public void CloseDoor()
@@ -76,6 +130,24 @@ public class Door : MonoBehaviour
         float frontDistance = (characterPos - FrontTrigger.transform.position).magnitude;       // Calcula distancia até o trigger da parte frontral da porta
         float backDistance = (characterPos - BackTrigger.transform.position).magnitude;         // Calcula distancia até o trigger da parte traseira da porta
         return frontDistance - backDistance > float.Epsilon;                                    // Retorna true se o player está mais proximo do trigger traseiro (INTERIOR)
+    }
+
+    public bool CheckInventory()
+    {
+        Item[] playerItems = player.inventory.itens;
+        //print(playerItems[0].NomeColetavel);
+        //print(keyItem.NomeColetavel);
+        foreach (Item i in playerItems)
+        {
+            if (i != null)
+            {
+                if (i.NomeColetavel == keyItem.NomeColetavel)
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     // Modifica a velocidade do motor do Hinge para alterar a direção de rotaçao da porta

@@ -12,7 +12,7 @@ public class Player : Character
     BarraVida healthBar;                                        // referência ao objeto prefab criado para a healthbar
 
     public Inventory inventoryPrefab;
-    Inventory inventory;
+    [HideInInspector]public Inventory inventory;
 
     public PontosDano hitpoints;
 
