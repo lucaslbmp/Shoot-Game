@@ -14,8 +14,8 @@ public class Door : MonoBehaviour
     Vector3 characterPos;                                       // Posição do character
 
     bool startedToOpen;                                         // Flag que indica se a porta já começou a abrir
-    public float speed;                                         // Constante que indica a velocidade de apertura da porta
-    float currentOpeningSpeed;                                  // Variável que armazena a velocidade atual da porta
+    public float speed;                                         // Constante que indica a velocidade de abertura da porta
+    float currentOpeningSpeed;                                  // Variável que armazena a velocidade de abertura atual da porta
     bool playerIsInInterior;                                    // Flag que indica se o player está em um ambiente interior
 
     private void Awake()
@@ -31,7 +31,7 @@ public class Door : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        print("Entrei --> " +  collision.gameObject.CompareTag("Player"));
+        //print("Entrei --> " +  collision.gameObject.CompareTag("Player"));
         if(collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Enemy"))
         {
             characterPos = collision.gameObject.transform.position;
@@ -78,7 +78,7 @@ public class Door : MonoBehaviour
         return frontDistance - backDistance > float.Epsilon;                                    // Retorna true se o player está mais proximo do trigger traseiro (INTERIOR)
     }
 
-    // CModifica a velocidade do motor do Hinge para alterar a direção de rotaçao da porta
+    // Modifica a velocidade do motor do Hinge para alterar a direção de rotaçao da porta
     public void UpdateHingeMotorSpeed()
     {
         if (playerIsInInterior)                                 // Se o player está no interior...           
