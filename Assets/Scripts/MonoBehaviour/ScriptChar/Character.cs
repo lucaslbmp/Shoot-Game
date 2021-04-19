@@ -11,7 +11,6 @@ public abstract class Character : MonoBehaviour
     public abstract void ResetCharacter();
     public abstract IEnumerator DanoCaractere(int ammount, float interval);
 
-      
     public virtual void KillCharacter()
     {
         Destroy(gameObject);

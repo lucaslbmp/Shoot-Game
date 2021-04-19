@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AmmoPistol
   m_EditorClassIdentifier: 
   NomeColetavel: AmmoHandgun
-  Sprite: {fileID: -580410723161114119, guid: 9ea6bb7f93e40c24cbc5ada6684037c6, type: 3}
+  Sprite: {fileID: 21300000, guid: 72fc7032724cf454fa8fecb423b9926c, type: 3}
   quantidade: 15
   Empilhavel: 1
   tipoColetavel: 1

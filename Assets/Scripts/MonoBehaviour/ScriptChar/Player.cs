@@ -10,14 +10,15 @@ public class Player : Character
 
     public BarraVida healthBarPrefab;                           // tem o valor da "saude" do objeto
     BarraVida healthBar;                                        // referência ao objeto prefab criado para a healthbar
-    // public int aGuns = 2;
+
+    public Inventory inventoryPrefab;
+    Inventory inventory;
 
     public PontosDano hitpoints;
 
     private void Start()
     {
-
-        // inventory = Instantiate(inventoryPrefab);
+        inventory = Instantiate(inventoryPrefab);
         healthBar = Instantiate(healthBarPrefab);
         healthBar.Character = this;
         //print(healthBar);
@@ -44,11 +45,10 @@ public class Player : Character
         }
       }
      }
-    
+
     public override void ResetCharacter()
     {
-        
-           //inventory = Instantiate(inventoryPrefab);
+           inventory = Instantiate(inventoryPrefab);
            healthBar = Instantiate(healthBarPrefab);
            healthBar.Character = this;
            hitpoints.valor = initialHitPoints;
@@ -59,7 +59,7 @@ public class Player : Character
     {
             base.KillCharacter();
             Destroy(healthBar.gameObject);
-            //Destroy(inventory.gameObject);
+            Destroy(inventory.gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -90,7 +90,7 @@ public class Player : Character
                     case Item.TipoColetavel.AMMO:
                         //string weaponName = ;
                         //gameObject.GetComponentInParent<Shooting>().WeaponList.Find(w => w.name == DanoObjeto.NomeColetavel).totalAmmo += DanoObjeto.quantidade;
-                        if (DanoObjeto.NomeColetavel == "AmmoPistola")
+                        if (DanoObjeto.NomeColetavel == "AmmoHandgun")
                         {
                             gameObject.GetComponentInParent<Shooting>().WeaponList.Find(w => w.name == "Handgun").totalAmmo += DanoObjeto.quantidade;
                         }
@@ -100,16 +100,18 @@ public class Player : Character
                         }
                         else if (DanoObjeto.NomeColetavel == "AmmoAK47")
                         {
-                            print("Aqui");
                             gameObject.GetComponentInParent<Shooting>().WeaponList.Find(w => w.name == "AK47").totalAmmo += DanoObjeto.quantidade;
                         }
+                        inventory.AddItem(DanoObjeto);
                         toBeDestroyed = true;
                         // toBeDestroyed = inventory.AddItem(DanoObjeto);
                         break;
                     case Item.TipoColetavel.VIDA:
                         toBeDestroyed = AjustePontosDano(DanoObjeto.quantidade);
                         break;
-              
+                    case Item.TipoColetavel.KEYITEM:
+                        toBeDestroyed = inventory.AddItem(DanoObjeto);
+                        break;
                     default:
                         break;
                }

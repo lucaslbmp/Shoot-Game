@@ -17,7 +17,8 @@ public class Item : ScriptableObject
     {
         ARMA,                                       //COLETAVEL ARMA
         AMMO,                                       //COLETAVEL MUNIÇÃO
-        VIDA                                        //COLETAVEL VIDA
+        VIDA,                                        //COLETAVEL VIDA
+        KEYITEM                                      // COLETAVEL ITEM-CHAVE
     }
     public TipoColetavel tipoColetavel;             //Cria um objeto chamado Coletavel de nome tipoColetavel
 }
