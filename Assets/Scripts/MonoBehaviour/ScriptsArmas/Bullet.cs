@@ -12,9 +12,11 @@ public class Bullet : MonoBehaviour
     //método que define como que a bala interage com os objetos
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.Euler(0,0,90));
-        Destroy(effect,0.4f);
-        Destroy(gameObject);
+        if (collision.gameObject.CompareTag("Enemy")) {
+            GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.Euler(0, 0, 90));
+            Destroy(effect, 0.4f);
+            Destroy(gameObject);
+        }
     }
 
     //atualiza periódicamente a velocidade da bala e se algum objeto colidiu com a mesma

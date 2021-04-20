@@ -10,7 +10,7 @@ TagManager:
   - Door
   - Enemy
   - Colectable
-  - Coletavel
+  - Virtual Camera
   layers:
   - Default
   - TransparentFX

@@ -8,7 +8,9 @@ public class DialogManager : MonoBehaviour
     public Text nameText;
     public Text dialogText;
 
+    [HideInInspector]
     public Player player;
+
     public Animator animator;
 
     public bool dialogueHasEnded = true;
@@ -26,6 +28,11 @@ public class DialogManager : MonoBehaviour
 
         AudioSource[] allMyAudioSources = GetComponents<AudioSource>();
         dialogueSound = allMyAudioSources[0];
+    }
+
+    void Update()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
 
     public void StartDialogue(Dialogue dialogue)

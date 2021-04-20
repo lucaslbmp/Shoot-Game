@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 3f;
     private Rigidbody2D rb;
     private Vector2 movement;
-    public Camera cam;
+    Camera cameraLocal;
     private Vector2 mousePos;
     Animator animator;
     private AudioSource footstepsAudioSource;
@@ -33,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        cameraLocal = Camera.main;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         //AudioSource[] allMyAudioSources = GetComponents<AudioSource>();
@@ -67,7 +68,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if (movement.magnitude > 0.01)
         {
-            print("Aqui");
             animator.SetFloat("Movement", 1f);
             if (!footstepsAudioSource.isPlaying)
                 footstepsAudioSource.PlayOneShot(footstepsSound);
@@ -81,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
 
     void UpdatePlayerRotation()
     {
-        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        mousePos = cameraLocal.ScreenToWorldPoint(Input.mousePosition);
         Vector2 lookDir = mousePos - rb.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
         rb.rotation = angle;
@@ -93,6 +93,5 @@ public class PlayerMovement : MonoBehaviour
         movement.y = Input.GetAxisRaw("Vertical");
         movement.Normalize();
         rb.velocity = movement * moveSpeed;
-        print(rb.velocity);
     }
 }
