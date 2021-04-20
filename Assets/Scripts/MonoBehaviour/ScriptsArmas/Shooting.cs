@@ -10,7 +10,6 @@ using System.Linq;
 
 // Classe que gerencia as ações de tiro, recarregamento, troca de arma e ataque com arma branca do player
 
-[RequireComponent(typeof(AudioSource))]
 public class Shooting : MonoBehaviour
 {
     // Audios                                                                                          
@@ -51,6 +50,19 @@ public class Shooting : MonoBehaviour
     Coroutine MachinegunShootCoroutine;
     float time;
 
+    // Bool para a execução das ações relacionadas a arma
+    private bool dialogueIsShowing = false;
+
+    public void showDialogue()
+    {
+        dialogueIsShowing = true;
+    }
+
+    public void stopDialogue()
+    {
+        dialogueIsShowing = false;
+    }
+
     //  Inicia o jogo e define as condições iniciais
     void Start()
     {
@@ -66,73 +78,76 @@ public class Shooting : MonoBehaviour
     // Atualiza as condições de jogo
     void Update()
     {
-        //currentGun = Weapons.GetComponent<Weapon>();
-        GameObject shotPrefab;
-        bool changeWeapon = UpdateGunSelection();
-        if (changeWeapon)
-            currentGun = WeaponList[GunType];
-        shotPrefab = currentGun.projectilePrefab;
-        animator.SetInteger("GunType", GunType);
-        animator.SetFloat("GunTypeFloat", GunType / 10f);
-        if (Input.GetButtonDown("Fire1"))
+        if (!dialogueIsShowing)
         {
-            if (currentGun.CanShoot())
-            {
-                if (shootingCoroutine == null && reloadingCoroutine == null)
-                {
-                    shootingCoroutine = StartCoroutine(ShootWeapon(currentGun, shotPrefab, currentGun.shootDelay, currentGun.shootAnimTime));
-                    print(shootingCoroutine);
-                }
-
-            }
-        }
-        else if (Input.GetButton("Fire1"))
-        {
-            if(currentGun.name == "AK47")
+            //currentGun = Weapons.GetComponent<Weapon>();
+            GameObject shotPrefab;
+            bool changeWeapon = UpdateGunSelection();
+            if (changeWeapon)
+                currentGun = WeaponList[GunType];
+            shotPrefab = currentGun.projectilePrefab;
+            animator.SetInteger("GunType", GunType);
+            animator.SetFloat("GunTypeFloat", GunType / 10f);
+            if (Input.GetButtonDown("Fire1"))
             {
                 if (currentGun.CanShoot())
                 {
-                    if (reloadingCoroutine == null)
+                    if (shootingCoroutine == null && reloadingCoroutine == null)
                     {
-                        if (shootingCoroutine == null)
-                            shootingCoroutine = StartCoroutine(ShootMachinegun(currentGun, shotPrefab, currentGun.shootAnimTime));
-                        if (MachinegunShootCoroutine == null && shootingCoroutine != null)
-                            MachinegunShootCoroutine = StartCoroutine(PlayMachinegunSound(currentGun.shotSoundTime));
-                        //print(shootingCoroutine);
+                        shootingCoroutine = StartCoroutine(ShootWeapon(currentGun, shotPrefab, currentGun.shootDelay, currentGun.shootAnimTime));
+                        print(shootingCoroutine);
                     }
 
                 }
-                else
-                {
-                    if (MachinegunShootCoroutine == null && shootingCoroutine != null)
-                        MachinegunShootCoroutine = StartCoroutine(StopPlayingMachinegunSound(currentGun.shotSoundTime));
-                }
             }
-        }
-        else if (Input.GetButtonUp("Fire1"))
-        {
-            if (currentGun.name == "AK47")
+            else if (Input.GetButton("Fire1"))
             {
-                if (MachinegunShootCoroutine != null)
+                if (currentGun.name == "AK47")
                 {
-                    StopCoroutine(MachinegunShootCoroutine);
-                }
-                MachinegunShootCoroutine = StartCoroutine(StopPlayingMachinegunSound(currentGun.shotSoundTime));
-            }
+                    if (currentGun.CanShoot())
+                    {
+                        if (reloadingCoroutine == null)
+                        {
+                            if (shootingCoroutine == null)
+                                shootingCoroutine = StartCoroutine(ShootMachinegun(currentGun, shotPrefab, currentGun.shootAnimTime));
+                            if (MachinegunShootCoroutine == null && shootingCoroutine != null)
+                                MachinegunShootCoroutine = StartCoroutine(PlayMachinegunSound(currentGun.shotSoundTime));
+                            //print(shootingCoroutine);
+                        }
 
-        }
-        else if (Input.GetKeyDown(KeyCode.R))
-        {
-            if (currentGun.CanReload())
-            {
-                if (reloadingCoroutine == null)
-                {
-                    reloadingCoroutine = StartCoroutine(ReloadWeapon(currentGun, currentGun.reloadTime, currentGun.reloadAnimTime));
+                    }
+                    else
+                    {
+                        if (MachinegunShootCoroutine == null && shootingCoroutine != null)
+                            MachinegunShootCoroutine = StartCoroutine(StopPlayingMachinegunSound(currentGun.shotSoundTime));
+                    }
                 }
             }
+            else if (Input.GetButtonUp("Fire1"))
+            {
+                if (currentGun.name == "AK47")
+                {
+                    if (MachinegunShootCoroutine != null)
+                    {
+                        StopCoroutine(MachinegunShootCoroutine);
+                    }
+                    MachinegunShootCoroutine = StartCoroutine(StopPlayingMachinegunSound(currentGun.shotSoundTime));
+                }
+
+            }
+            else if (Input.GetKeyDown(KeyCode.R))
+            {
+                if (currentGun.CanReload())
+                {
+                    if (reloadingCoroutine == null)
+                    {
+                        reloadingCoroutine = StartCoroutine(ReloadWeapon(currentGun, currentGun.reloadTime, currentGun.reloadAnimTime));
+                    }
+                }
+            }
+            (loaded_ammo, remaining_ammo) = (currentGun.AmmoLoaded(), currentGun.AmmoRemaining());
+            //Debug.Log(loaded_ammo + "-" + remaining_ammo);
         }
-        (loaded_ammo, remaining_ammo) = (currentGun.AmmoLoaded(), currentGun.AmmoRemaining());
-        //Debug.Log(loaded_ammo + "-" + remaining_ammo);
     }
 
 
