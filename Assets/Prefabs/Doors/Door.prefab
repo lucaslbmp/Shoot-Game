@@ -26,11 +26,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 199582076}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.181, y: 0.047, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7865801352719663957}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &199582079
 Rigidbody2D:
@@ -63,12 +63,12 @@ HingeJoint2D:
   m_Enabled: 1
   serializedVersion: 4
   m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 3142447338219838587}
+  m_ConnectedRigidBody: {fileID: 9071554432314663971}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
+  m_Anchor: {x: -0.8092351, y: -0.05179119}
+  m_ConnectedAnchor: {x: 0.17176461, y: 0.016007423}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: -200
@@ -101,7 +101,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5759991069094617650}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.83, y: 0.2, z: 0}
+  m_LocalPosition: {x: 0.247, y: 0.182, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7865801352719663957}
@@ -136,8 +136,8 @@ Transform:
   m_LocalPosition: {x: 4, y: -7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 5794562949197276627}
   - {fileID: 199582077}
+  - {fileID: 437686751914384779}
   - {fileID: 3527652247166855287}
   - {fileID: 1641006586197093108}
   m_Father: {fileID: 0}
@@ -156,9 +156,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.82, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 3
+  m_Radius: 0.5
 --- !u!114 &5441600091477443343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,13 +199,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8713195607227862816}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.83, y: -0.2, z: 0}
+  m_LocalPosition: {x: 0.26, y: -0.219, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7865801352719663957}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &3142447337996226656
+--- !u!1001 &9071554431998781496
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -216,17 +216,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door_Obj
       objectReference: {fileID: 0}
+    - target: {fileID: 8932427488284915122, guid: 24057c651de695d408730e377a380c6a, type: 3}
+      propertyPath: m_TagString
+      value: Door
+      objectReference: {fileID: 0}
     - target: {fileID: 8932427488284915123, guid: 24057c651de695d408730e377a380c6a, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8932427488284915123, guid: 24057c651de695d408730e377a380c6a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.8
       objectReference: {fileID: 0}
     - target: {fileID: 8932427488284915123, guid: 24057c651de695d408730e377a380c6a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.024
       objectReference: {fileID: 0}
     - target: {fileID: 8932427488284915123, guid: 24057c651de695d408730e377a380c6a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -262,13 +266,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24057c651de695d408730e377a380c6a, type: 3}
---- !u!4 &5794562949197276627 stripped
+--- !u!4 &437686751914384779 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8932427488284915123, guid: 24057c651de695d408730e377a380c6a, type: 3}
-  m_PrefabInstance: {fileID: 3142447337996226656}
+  m_PrefabInstance: {fileID: 9071554431998781496}
   m_PrefabAsset: {fileID: 0}
---- !u!50 &3142447338219838587 stripped
+--- !u!50 &9071554432314663971 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 1028918299, guid: 24057c651de695d408730e377a380c6a, type: 3}
-  m_PrefabInstance: {fileID: 3142447337996226656}
+  m_PrefabInstance: {fileID: 9071554431998781496}
   m_PrefabAsset: {fileID: 0}

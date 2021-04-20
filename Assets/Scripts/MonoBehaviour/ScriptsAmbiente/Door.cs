@@ -27,7 +27,7 @@ public class Door : MonoBehaviour
     bool doorClosed;
     Item keyItem;
 
-    Coroutine InputCoroutine;
+    Coroutine DoorCoroutine;
 
     // Audios
     AudioSource doorMoveAudioSource;
@@ -54,54 +54,18 @@ public class Door : MonoBehaviour
         startedToOpen = false;
     }
 
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    InputCoroutine = StartCoroutine(GetInput());
-    //}
 
     private void OnTriggerStay2D(Collider2D collision)
     {
         if(collision.gameObject.CompareTag("Player"))
         {
-            GetInput();
+            actionButtonPressed = GetInput();
             player = collision.gameObject.GetComponent<Player>();
             characterPos = collision.gameObject.transform.position;
-            print(actionButtonPressed);
-            if(actionButtonPressed)
-            //if (Input.GetKeyDown(KeyCode.Space))
+            if (actionButtonPressed)
             {
-
-                if (doorLocked)
-                {
-                    doorLockSound = doorFeatures.lockSound;
-                    if(keyItem != null)
-                    {
-                        if (CheckInventory())
-                        {
-                            doorLocked = false;
-                            doorLockSound = doorFeatures.unlockSound;
-                        }
-                    }
-                    doorLockAudioSource.PlayOneShot(doorLockSound);
-                }
-                else
-                {
-                    print("Unlocked");
-                    if (doorClosed)
-                    {
-                        print("Open");
-                        playerIsInInterior = CheckPlayerPos();                          // Checa a posição do player e retorna true se ele está em um ambiente interior 
-                        UpdateHingeMotorSpeed();                                        // Atualiza a direção de rotação da porta
-                        OpenDoor();                                                     // Move o rigidbody fazendo a abertura da porta
-                        doorClosed = false;
-                        doorLockSound = doorFeatures.unlockSound;
-                        doorMoveAudioSource.PlayOneShot(doorFeatures.doorOpenSound);
-                        doorLockAudioSource.PlayOneShot(doorLockSound);
-                    }
-                }
-                actionButtonPressed = false;
-                //doorLockAudioSource.clip = doorLockSound;
-                //doorLockAudioSource.PlayDelayed(0.2f);
+                if(DoorCoroutine == null)
+                    DoorCoroutine = StartCoroutine(DoorAction());
             }
         }
     }
@@ -119,20 +83,51 @@ public class Door : MonoBehaviour
         }
     }
 
-    //public IEnumerator GetInput()
-    //{
-    //    while (true)
-    //    {
-    //        if(Input.GetKey(KeyCode.Space))
-    //            actionButtonPressed = true;
-    //        yield return new WaitForSeconds(0.5f);
-    //    }
-    //}
+    public IEnumerator DoorAction()
+    {
+        //if (actionButtonPressed)
+        ////if (Input.GetKeyDown(KeyCode.Space))
+        //{
 
-    public void GetInput()
+            if (doorLocked)
+            {
+                doorLockSound = doorFeatures.lockSound;
+                if (keyItem != null)
+                {
+                    if (CheckInventory())
+                    {
+                        doorLocked = false;
+                        doorLockSound = doorFeatures.unlockSound;
+                    }
+                }
+                doorLockAudioSource.PlayOneShot(doorLockSound);
+            }
+            else
+            {
+                print("Unlocked");
+                if (doorClosed)
+                {
+                    print("Open");
+                    playerIsInInterior = CheckPlayerPos();                          // Checa a posição do player e retorna true se ele está em um ambiente interior 
+                    UpdateHingeMotorSpeed();                                        // Atualiza a direção de rotação da porta
+                    OpenDoor();                                                     // Move o rigidbody fazendo a abertura da porta
+                    doorClosed = false;
+                    doorLockSound = doorFeatures.unlockSound;
+                    doorMoveAudioSource.PlayOneShot(doorFeatures.doorOpenSound);
+                    doorLockAudioSource.PlayOneShot(doorLockSound);
+                }
+            }
+            yield return new WaitForSeconds(0.5f);
+            actionButtonPressed = false;
+            DoorCoroutine = null;
+        //}
+    }
+
+    public bool GetInput()
     {
         if (Input.GetKey(KeyCode.Space))
-            actionButtonPressed = true;
+            return true;
+        return false;
     }
 
     public void OpenDoor()
