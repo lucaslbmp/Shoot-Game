@@ -8,7 +8,13 @@ public class DialogManager : MonoBehaviour
     public Text nameText;
     public Text dialogText;
 
+    public Player player;
     public Animator animator;
+
+    public bool dialogueHasEnded = true;
+
+    private AudioSource dialogueSound;
+    public AudioClip beepSound;
 
     //FIFO
     private Queue<string> sentences;
@@ -17,11 +23,19 @@ public class DialogManager : MonoBehaviour
     void Start()
     {
         sentences = new Queue<string>();
+
+        AudioSource[] allMyAudioSources = GetComponents<AudioSource>();
+        dialogueSound = allMyAudioSources[0];
     }
 
     public void StartDialogue(Dialogue dialogue)
     {
         animator.SetBool("IsOpen", true);
+
+        dialogueHasEnded = false;
+
+        player.GetComponent<PlayerMovement>().showDialogue();
+        player.GetComponent<Shooting>().showDialogue();
 
         nameText.text = dialogue.name;
 
@@ -52,6 +66,9 @@ public class DialogManager : MonoBehaviour
 
     IEnumerator TypeSentence (string sentence)
     {
+        if (!dialogueSound.isPlaying)
+            dialogueSound.PlayOneShot(beepSound);
+
         dialogText.text = "";
 
         foreach (char letter in sentence.ToCharArray())
@@ -64,5 +81,10 @@ public class DialogManager : MonoBehaviour
     void EndDialogue()
     {
         animator.SetBool("IsOpen", false);
+
+        player.GetComponent<PlayerMovement>().stopDialogue();
+        player.GetComponent<Shooting>().stopDialogue();
+
+        dialogueHasEnded = true;
     }
 }

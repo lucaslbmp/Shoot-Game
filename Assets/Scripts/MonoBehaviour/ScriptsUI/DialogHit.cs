@@ -8,7 +8,10 @@ public class DialogHit : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            FindObjectOfType<DialogueTrigger>().TriggerDialogue();
+            DialogueTrigger dt = FindObjectOfType<DialogueTrigger>();
+            if (dt.enabled) { 
+                dt.TriggerDialogue();
+            }
         }
     }
 
