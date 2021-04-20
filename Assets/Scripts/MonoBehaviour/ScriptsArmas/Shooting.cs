@@ -10,7 +10,6 @@ using System.Linq;
 
 // Classe que gerencia as ações de tiro, recarregamento, troca de arma e ataque com arma branca do player
 
-[RequireComponent(typeof(AudioSource))]
 public class Shooting : MonoBehaviour
 {
     // Audios                                                                                          

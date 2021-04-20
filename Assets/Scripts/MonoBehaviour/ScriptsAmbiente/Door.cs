@@ -18,6 +18,7 @@ public class Door : MonoBehaviour
     public DoorFeatures doorFeatures;                           // Scriptable Object que contem as caracteristicas da porta
 
     // Variavies associadas à abertura/fechamento da porta
+    bool actionButtonPressed;
     bool startedToOpen;                                         // Flag que indica se a porta já começou a abrir
     float speed;                                         // Constante que indica a velocidade de abertura da porta
     float currentOpeningSpeed;                                  // Variável que armazena a velocidade de abertura atual da porta
@@ -25,6 +26,8 @@ public class Door : MonoBehaviour
     bool doorLocked;                                            // Flag que indica se a porta esta trancada
     bool doorClosed;
     Item keyItem;
+
+    Coroutine InputCoroutine;
 
     // Audios
     AudioSource doorMoveAudioSource;
@@ -40,7 +43,6 @@ public class Door : MonoBehaviour
         openDoorLimits = hingeJoint2D.limits;
         closedDoorLimits = new JointAngleLimits2D { min = 0f, max = 0f };
         doorLocked = doorFeatures.locked;
-        doorClosed = true;
         speed = doorFeatures.doorSpeed;
         currentOpeningSpeed = 0f;
         motor = hingeJoint2D.motor;
@@ -48,17 +50,25 @@ public class Door : MonoBehaviour
         doorMoveAudioSource = gameObject.AddComponent<AudioSource>();
         doorLockAudioSource = gameObject.AddComponent<AudioSource>();
         CloseDoor();
+        doorClosed = true;
         startedToOpen = false;
     }
 
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    InputCoroutine = StartCoroutine(GetInput());
+    //}
+
     private void OnTriggerStay2D(Collider2D collision)
     {
-        //print("Entrei --> " +  collision.gameObject.CompareTag("Player"));
         if(collision.gameObject.CompareTag("Player"))
         {
+            GetInput();
             player = collision.gameObject.GetComponent<Player>();
             characterPos = collision.gameObject.transform.position;
-            if (Input.GetKeyDown(KeyCode.Space))
+            print(actionButtonPressed);
+            if(actionButtonPressed)
+            //if (Input.GetKeyDown(KeyCode.Space))
             {
 
                 if (doorLocked)
@@ -76,8 +86,10 @@ public class Door : MonoBehaviour
                 }
                 else
                 {
+                    print("Unlocked");
                     if (doorClosed)
                     {
+                        print("Open");
                         playerIsInInterior = CheckPlayerPos();                          // Checa a posição do player e retorna true se ele está em um ambiente interior 
                         UpdateHingeMotorSpeed();                                        // Atualiza a direção de rotação da porta
                         OpenDoor();                                                     // Move o rigidbody fazendo a abertura da porta
@@ -87,6 +99,7 @@ public class Door : MonoBehaviour
                         doorLockAudioSource.PlayOneShot(doorLockSound);
                     }
                 }
+                actionButtonPressed = false;
                 //doorLockAudioSource.clip = doorLockSound;
                 //doorLockAudioSource.PlayDelayed(0.2f);
             }
@@ -104,6 +117,22 @@ public class Door : MonoBehaviour
             CloseDoor();                                                        // Retorna o rigidbody da porta à posição fechada
             doorClosed = true;
         }
+    }
+
+    //public IEnumerator GetInput()
+    //{
+    //    while (true)
+    //    {
+    //        if(Input.GetKey(KeyCode.Space))
+    //            actionButtonPressed = true;
+    //        yield return new WaitForSeconds(0.5f);
+    //    }
+    //}
+
+    public void GetInput()
+    {
+        if (Input.GetKey(KeyCode.Space))
+            actionButtonPressed = true;
     }
 
     public void OpenDoor()
