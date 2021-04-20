@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 7521238394991024069}
   m_Layer: 0
   m_Name: BasicZombie
-  m_TagString: Inimigo
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

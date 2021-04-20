@@ -18,22 +18,17 @@ public class Shooting : MonoBehaviour
     AudioClip shotSound;                                                    // Clip de audio associado ao som de disparo da arma                                                                                    
     AudioClip reloadSound;                                                  // Clip de audio associado ao som de recarga da arma                                             
     AudioClip MeleeSound;                                                   // Clip de audio associado ao som de recarga da arma                                        
-                                                                            //private static Dictionary<int, int> dictShootAudioSources = new Dictionary<int, int>() { { 0, 0 }, { 1, 3 } };              // Associa o GunType ao respectivo Audio Source de tiro
-                                                                            //private static Dictionary<int, int> dictReloadAudioSources = new Dictionary<int, int>() { { 0, 2 }, { 1, 4} };             // Associa o GunType ao respectivo Audio Source de recarga
-                                                                            //private static Dictionary<int, int> dictMeleeAudioSources = new Dictionary<int, int>() { {1, }, { 2, 3} };               // Associa o MeleeType ao respectivo Audio Source de Facas
-                                                                            // Variaveis de tiro
+
+   // Variaveis de tiro
     public Transform firePoint;                                                                                                 // variável de posição
     public GameObject bulletPrefab;                                                                                             // prefab do projétil
     public GameObject pelletPrefab;                                                                                             // prefab de "chumbinho" da espingarda
     public GameObject knifePrefab;                                                                                              // prefab da sprite de movimento da Faca
-    public GameObject MuzzleflashPrefab;                                                                                        // prefab do flash do tiro
-    //List<String> projectilePrefabs = new List<String>() {null, "bulletPrefab", "pelletPrefab" } ;                                                             // Lista de prefabs de projeteis
+    public GameObject MuzzleflashPrefab;                                                                                        // prefab do flash do tiro                                                          // Lista de prefabs de projeteis
 
     //public float bulletForce = 20f;
     public int loaded_ammo;                                                                                                      // variavel que calcula o quanto de projeteis foram carregados para a arma
     public int remaining_ammo;                                                                                                   // variavel que calcula o quanto de projeteis ainda existem no paint da arma
-
-    //List<BulletType> BulletTypes = new List<BulletType>() { new BulletType(1, "bulletPrefab") };
 
     // Variaveis das armas
     private int GunType = 0;                                                                                                    // Variavel para seleçao da arma
@@ -48,7 +43,7 @@ public class Shooting : MonoBehaviour
     Coroutine shootingCoroutine;
     Coroutine reloadingCoroutine;
     Coroutine MachinegunShootCoroutine;
-    float time;
+    //float time;
 
     // Bool para a execução das ações relacionadas a arma
     private bool dialogueIsShowing = false;
@@ -249,8 +244,8 @@ public class Shooting : MonoBehaviour
 
     public IEnumerator PlayMachinegunSound(float duration)
     {
-        print(time - Time.time);
-        time = Time.time;
+        //print(time - Time.time);
+        //time = Time.time;
         shotAudioSource.Stop();
         shotAudioSource.PlayOneShot(shotSound);                     // Executa o som de tiro da arma
         //shotAudioSource.Play();

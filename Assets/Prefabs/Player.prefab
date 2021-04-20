@@ -297,9 +297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  cam: {fileID: 0}
   footstepsSound: {fileID: 8300000, guid: 7a1397d7accf1aa458b874ffdcc7b70d, type: 3}
-  dialogueIsShowing: 0
 --- !u!50 &470435266415897639
 Rigidbody2D:
   serializedVersion: 4
@@ -338,12 +336,11 @@ MonoBehaviour:
   pelletPrefab: {fileID: 719934178707733658, guid: bc5bcec0f6dff2040a79005c9604ccc9, type: 3}
   knifePrefab: {fileID: 5874420412728840410, guid: 480b4de661fe2b14ca86d7a20099ade4, type: 3}
   MuzzleflashPrefab: {fileID: 8255090412985035355, guid: 708e5fbac7855c342aba75f84364c031, type: 3}
-  loaded_ammo: 5
+  loaded_ammo: 10
   remaining_ammo: 25
   Weapons: {fileID: 6521003057220454032, guid: cdd8fdfedfc91d4418285df43dc3d84a, type: 3}
   WeaponList: []
   ammountOfGuns: 2
-  dialogueIsShowing: 0
 --- !u!70 &470435266415897634
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
