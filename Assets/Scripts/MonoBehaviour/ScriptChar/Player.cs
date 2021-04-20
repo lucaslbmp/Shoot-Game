@@ -16,6 +16,8 @@ public class Player : Character
 
     public PontosDano hitpoints;
 
+    AudioSource itemAudioSource;
+
     private void Start()
     {
         inventory = Instantiate(inventoryPrefab);
@@ -23,6 +25,7 @@ public class Player : Character
         healthBar.Character = this;
         //print(healthBar);
         hitpoints.valor = initialHitPoints;
+        itemAudioSource = gameObject.AddComponent<AudioSource>();
     }
 
     public override IEnumerator DanoCaractere(int ammount, float interval)
@@ -76,7 +79,8 @@ public class Player : Character
                 switch (DanoObjeto.tipoColetavel)
                 {
                     case Item.TipoColetavel.ARMA:
-                        gameObject.GetComponentInParent<Shooting>().WeaponList.Find(w => w.name == DanoObjeto.NomeColetavel).isAvailable = true;
+                        List<Weapon> WeaponList = gameObject.GetComponentInParent<Shooting>().Weapons.WeaponList;
+                        WeaponList.Find(w => w.name == DanoObjeto.NomeColetavel).isAvailable = true;
                         //if (DanoObjeto.NomeColetavel == "Shotgun")
                         //{
                         //    gameObject.GetComponentInParent<Shooting>().WeaponList.Find(w => w.name == "Shotgun").isAvailable = true;
@@ -92,15 +96,15 @@ public class Player : Character
                         //gameObject.GetComponentInParent<Shooting>().WeaponList.Find(w => w.name == DanoObjeto.NomeColetavel).totalAmmo += DanoObjeto.quantidade;
                         if (DanoObjeto.NomeColetavel == "AmmoHandgun")
                         {
-                            gameObject.GetComponentInParent<Shooting>().WeaponList.Find(w => w.name == "Handgun").totalAmmo += DanoObjeto.quantidade;
+                            gameObject.GetComponentInParent<Shooting>().Weapons.WeaponList.Find(w => w.name == "Handgun").totalAmmo += DanoObjeto.quantidade;
                         }
                         else if (DanoObjeto.NomeColetavel == "AmmoShotgun")
                         {
-                            gameObject.GetComponentInParent<Shooting>().WeaponList.Find(w => w.name == "Shotgun").totalAmmo += DanoObjeto.quantidade;
+                            gameObject.GetComponentInParent<Shooting>().Weapons.WeaponList.Find(w => w.name == "Shotgun").totalAmmo += DanoObjeto.quantidade;
                         }
                         else if (DanoObjeto.NomeColetavel == "AmmoAK47")
                         {
-                            gameObject.GetComponentInParent<Shooting>().WeaponList.Find(w => w.name == "AK47").totalAmmo += DanoObjeto.quantidade;
+                            gameObject.GetComponentInParent<Shooting>().Weapons.WeaponList.Find(w => w.name == "AK47").totalAmmo += DanoObjeto.quantidade;
                         }
                         inventory.AddItem(DanoObjeto);
                         toBeDestroyed = true;
@@ -115,6 +119,10 @@ public class Player : Character
                     default:
                         break;
                }
+                if(DanoObjeto.SomColetavel != null)
+                {
+                    itemAudioSource.PlayOneShot(DanoObjeto.SomColetavel);
+                }
                 if (toBeDestroyed)
                 {
                     collision.gameObject.SetActive(false);

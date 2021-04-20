@@ -32,8 +32,9 @@ public class Shooting : MonoBehaviour
 
     // Variaveis das armas
     private int GunType = 0;                                                                                                    // Variavel para seleçao da arma
-    public GameObject Weapons;                                                                                                    // Objeto que contem todas as armas
-    [HideInInspector] public List<Weapon> WeaponList = new List<Weapon>();                                                      // Lista de armas que o player possui
+    public Weapons WeaponsPrefab;                                                                                                    // Objeto que contem todas as armas
+    [HideInInspector] public Weapons Weapons;
+    //[HideInInspector] public List<Weapon> WeaponList = new List<Weapon>();                                                      // Lista de armas que o player possui
     public int ammountOfGuns = 2;                                                                                               // quantidade de armas que o player possui 
     Weapon currentGun;
 
@@ -62,10 +63,13 @@ public class Shooting : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        //animator.SetFloat("State", 0.5f);
-        AddWeaponsToList();                                                                       // Adiciona as armas a weaponList
-        currentGun = WeaponList[0];
-        ammountOfGuns = WeaponList.Count;
+        Weapons = Instantiate(WeaponsPrefab);
+        Weapons.AddWeaponsToList();                                                                       // Adiciona as armas a weaponList
+        //WeaponList = Weapons.WeaponList;
+        //currentGun = WeaponList[0];
+        currentGun = Weapons.GetWeapon(0);
+        //ammountOfGuns = WeaponList.Count;
+        //ammountOfGuns = Weapons.ammountOfGuns;
         shotAudioSource = gameObject.AddComponent<AudioSource>();
         reloadAudioSource = gameObject.AddComponent<AudioSource>();
     }
@@ -79,7 +83,8 @@ public class Shooting : MonoBehaviour
             GameObject shotPrefab;
             bool changeWeapon = UpdateGunSelection();
             if (changeWeapon)
-                currentGun = WeaponList[GunType];
+                //currentGun = WeaponList[GunType];
+                currentGun = Weapons.GetWeapon(GunType);
             shotPrefab = currentGun.projectilePrefab;
             animator.SetInteger("GunType", GunType);
             animator.SetFloat("GunTypeFloat", GunType / 10f);
@@ -149,53 +154,20 @@ public class Shooting : MonoBehaviour
     // define as teclas utilizadas para a troca das armas
     bool UpdateGunSelection()
     {
-        AddWeaponsToList();
+        //Weapons.AddWeaponsToList();
         if (Input.GetKeyDown(KeyCode.E))
         {
-            GunType = SelectNextWeapon(GunType);
+            GunType = Weapons.SelectNextWeapon(GunType);
             //print(WeaponList[GunType]);
             return true;
         }
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            GunType = SelectPreviousWeapon(GunType);
-            print(WeaponList[GunType]);
+            GunType = Weapons.SelectPreviousWeapon(GunType);
+            //print(WeaponList[GunType]);
             return true;
         }
         return false;
-    }
-
-    int SelectNextWeapon(int GunNum)
-    {
-        GunNum++;
-        //GunType %= (ammountOfGuns+1);
-        if (GunNum < ammountOfGuns)
-        {
-            //print(GunNum);
-            if (WeaponList[GunNum] != null && WeaponList[GunNum].isAvailable)
-            {
-                return GunNum;
-            }
-            else
-                return 0;
-        }
-        else return 0;
-    }
-
-    int SelectPreviousWeapon(int GunNum)
-    {
-        GunNum--;
-        if (GunNum >= 0)
-        {
-            print(GunNum);
-            if (WeaponList[GunNum] != null && WeaponList[GunNum].isAvailable)
-                return GunNum;
-            else
-                return ammountOfGuns - 1;
-        }
-        else if (WeaponList[ammountOfGuns - 1].isAvailable)
-            return ammountOfGuns - 1;
-        return ++GunNum;
     }
 
     // Gerencia todos os aspectos relacionados à execução de um tiro
@@ -291,14 +263,15 @@ public class Shooting : MonoBehaviour
     public Weapon GetCurrentGun() { return currentGun; }
 
     // Adicionar arma à lista de armas do player
-    public void AddWeaponsToList()
-    {
-        foreach (Weapon weapon in Weapons.GetComponentsInChildren<Weapon>())
-        {
-            if (!WeaponList.Contains(weapon))
-            {
-                WeaponList.Add(weapon);
-            }
-        }
-    }
+    //    public void AddWeaponsToList()
+    //    {
+    //        //foreach (Weapon weapon in Weapons.GetComponentsInChildren<Weapon>())
+    //        foreach (Weapon weapon in WeaponList)
+    //        {
+    //            if (!WeaponList.Contains(weapon))
+    //            {
+    //                WeaponList.Add(weapon);
+    //            }
+    //        }
+    //    }
 }

@@ -12,6 +12,7 @@ public class Item : ScriptableObject
     public Sprite Sprite;                           //Variável para iniciar Sprites
     public int quantidade;                          //Quantidade do item
     public bool Empilhavel;                         //Variável para verificar se o item pode ser somado com um item de mesma natureza
+    public AudioClip SomColetavel;
 
     public enum TipoColetavel                       //método para determinar TAGs aos coletáveis
     {

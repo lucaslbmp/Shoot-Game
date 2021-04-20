@@ -338,8 +338,8 @@ MonoBehaviour:
   MuzzleflashPrefab: {fileID: 8255090412985035355, guid: 708e5fbac7855c342aba75f84364c031, type: 3}
   loaded_ammo: 10
   remaining_ammo: 25
-  Weapons: {fileID: 6521003057220454032, guid: cdd8fdfedfc91d4418285df43dc3d84a, type: 3}
-  WeaponList: []
+  WeaponsPrefab: {fileID: 5947494295479508343, guid: cdd8fdfedfc91d4418285df43dc3d84a, type: 3}
+  Weapons: {fileID: 5947494295479508343, guid: cdd8fdfedfc91d4418285df43dc3d84a, type: 3}
   ammountOfGuns: 2
 --- !u!70 &470435266415897634
 CapsuleCollider2D:

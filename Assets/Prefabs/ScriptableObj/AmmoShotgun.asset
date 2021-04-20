@@ -16,4 +16,5 @@ MonoBehaviour:
   Sprite: {fileID: 21300000, guid: 0adf2c748b7c781458e93713b2f2a65f, type: 3}
   quantidade: 4
   Empilhavel: 1
+  SomColetavel: {fileID: 8300000, guid: b9d41e883a985884eb1e1cff2b24b1d3, type: 3}
   tipoColetavel: 1
