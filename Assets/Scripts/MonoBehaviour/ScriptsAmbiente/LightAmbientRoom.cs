@@ -14,16 +14,21 @@ public class LightAmbientRoom : MonoBehaviour
 
     void Start()
     {
-        floor.GetComponent<Tilemap>().color = apagado;
-        objects.GetComponent<Tilemap>().color = apagado;
+        if(floor != null)
+            floor.GetComponent<Tilemap>().color = apagado;
+
+        if (objects != null)
+            objects.GetComponent<Tilemap>().color = apagado;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            floor.GetComponent<Tilemap>().color = iluminado;
-            objects.GetComponent<Tilemap>().color = iluminado;
+            if (floor != null)
+                floor.GetComponent<Tilemap>().color = iluminado;
+            if (objects != null)
+                objects.GetComponent<Tilemap>().color = iluminado;
         }
     }
 
@@ -31,8 +36,10 @@ public class LightAmbientRoom : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            floor.GetComponent<Tilemap>().color = apagado;
-            objects.GetComponent<Tilemap>().color = apagado;
+            if (floor != null)
+                floor.GetComponent<Tilemap>().color = apagado;
+            if (objects != null)
+                objects.GetComponent<Tilemap>().color = apagado;
         }
     }
 }

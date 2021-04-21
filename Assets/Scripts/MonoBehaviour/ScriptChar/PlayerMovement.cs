@@ -79,7 +79,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void UpdatePlayerRotation()
+    public void UpdatePlayerRotation()
     {
         mousePos = cameraLocal.ScreenToWorldPoint(Input.mousePosition);
         Vector2 lookDir = mousePos - rb.position;
