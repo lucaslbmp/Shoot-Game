@@ -9,11 +9,11 @@ public class DialogManager : MonoBehaviour
     public Text dialogText;
 
     [HideInInspector]
-    public Player player;
+    public static Player player;
 
     public Animator animator;
 
-    public bool dialogueHasEnded = true;
+    public static bool dialogueHasEnded = true;
 
     private AudioSource dialogueSound;
     public AudioClip beepSound;
@@ -30,17 +30,12 @@ public class DialogManager : MonoBehaviour
         dialogueSound = allMyAudioSources[0];
     }
 
-    void Update()
-    {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-    }
-
     public void StartDialogue(Dialogue dialogue)
     {
-        animator.SetBool("IsOpen", true);
-
         dialogueHasEnded = false;
-
+       
+        animator.SetBool("IsOpen", true); 
+        
         player.GetComponent<PlayerMovement>().showDialogue();
         player.GetComponent<Shooting>().showDialogue();
 
@@ -58,7 +53,10 @@ public class DialogManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
-        if(sentences.Count == 0)
+        if (!dialogueSound.isPlaying)
+            dialogueSound.PlayOneShot(beepSound);
+
+        if (sentences.Count == 0)
         {
             EndDialogue();
             return;
@@ -73,8 +71,6 @@ public class DialogManager : MonoBehaviour
 
     IEnumerator TypeSentence (string sentence)
     {
-        if (!dialogueSound.isPlaying)
-            dialogueSound.PlayOneShot(beepSound);
 
         dialogText.text = "";
 
@@ -87,7 +83,9 @@ public class DialogManager : MonoBehaviour
 
     void EndDialogue()
     {
+
         animator.SetBool("IsOpen", false);
+        dialogueSound.Stop();
 
         player.GetComponent<PlayerMovement>().stopDialogue();
         player.GetComponent<Shooting>().stopDialogue();

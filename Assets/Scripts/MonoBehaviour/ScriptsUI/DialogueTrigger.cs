@@ -6,22 +6,22 @@ public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
 
-    public DialogManager dialogManager;
+    [HideInInspector]
+    public static DialogManager dialogManager;
 
-    void Start()
-    {
-        //dialogManager = FindObjectOfType<DialogManager>();
-    }
+    bool hasStarted = false;
 
     void Update()
     {
-        if (!dialogManager.dialogueHasEnded)
-        {
-            Destroy(this);
+
+        if (hasStarted && !DialogManager.dialogueHasEnded)
+        {    
+            Destroy(gameObject);
         }
     }
     public void TriggerDialogue()
     {
+        hasStarted = true;
         dialogManager.StartDialogue(dialogue);        
     }
 }
