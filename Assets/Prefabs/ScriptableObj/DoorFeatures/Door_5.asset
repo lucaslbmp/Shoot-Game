@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41e73104b9993bf40bbda99983943e29, type: 3}
+  m_Name: Door_5
+  m_EditorClassIdentifier: 
+  keyItem: {fileID: 11400000, guid: 317a2caa307a6ca4ea71642f1f66b479, type: 2}
+  doorSpeed: 100
+  locked: 1
+  doorOpenSound: {fileID: 8300000, guid: a4c0d0eb33beb8a47b4ec67d788ccd00, type: 3}
+  doorCloseSound: {fileID: 8300000, guid: 1dbe2d7619f12a449b069cecc0b1ac27, type: 3}
+  lockSound: {fileID: 8300000, guid: 53e2936c761b86f4fb8ed80a8884e78a, type: 3}
+  unlockSound: {fileID: 8300000, guid: 3b0b5305efbc2a8489d2f0131cbc6d04, type: 3}
