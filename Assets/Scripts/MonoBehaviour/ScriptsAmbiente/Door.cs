@@ -17,6 +17,8 @@ public class Door : MonoBehaviour
 
     public DoorFeatures doorFeatures;                           // Scriptable Object que contem as caracteristicas da porta
 
+    public DialogueTrigger dialogueTriggerDoorLockedPrefab;
+
     // Variavies associadas à abertura/fechamento da porta
     bool actionButtonPressed;
     bool startedToOpen;                                         // Flag que indica se a porta já começou a abrir
@@ -99,6 +101,24 @@ public class Door : MonoBehaviour
                         doorLocked = false;
                         doorLockSound = doorFeatures.unlockSound;
                     }
+                    else
+                    {
+                        DialogueTrigger dialogueTriggerDoorLocked = (DialogueTrigger) Instantiate(dialogueTriggerDoorLockedPrefab);
+                        dialogueTriggerDoorLocked.dialogManager = FindObjectOfType<DialogManager>();
+
+                        dialogueTriggerDoorLocked.dialogue.sentences[0] = "Porta trancada. Procure " +keyItem.NomeColetavel+" para abrir." ;
+                        dialogueTriggerDoorLocked.TriggerDialogue();
+
+                    }                
+                }
+                else
+                {
+                    DialogueTrigger dialogueTriggerDoorLocked = Instantiate<DialogueTrigger>(dialogueTriggerDoorLockedPrefab);
+                    dialogueTriggerDoorLocked.dialogManager = FindObjectOfType<DialogManager>();
+
+                    dialogueTriggerDoorLocked.dialogue.sentences[0] = "Porta bloqueada. Procure outro acesso";
+                    dialogueTriggerDoorLocked.TriggerDialogue();
+
                 }
                 doorLockAudioSource.PlayOneShot(doorLockSound);
             }

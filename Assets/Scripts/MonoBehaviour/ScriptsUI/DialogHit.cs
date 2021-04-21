@@ -8,12 +8,10 @@ public class DialogHit : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            DialogueTrigger dt = FindObjectOfType<DialogueTrigger>();
+            DialogueTrigger dt = gameObject.GetComponent<DialogueTrigger>();
             if (dt.enabled) { 
                 dt.TriggerDialogue();
             }
         }
     }
-
-
 }

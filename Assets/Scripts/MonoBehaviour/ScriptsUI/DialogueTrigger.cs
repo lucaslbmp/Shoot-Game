@@ -6,18 +6,18 @@ public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
 
-    DialogManager dialogManager;
+    public DialogManager dialogManager;
 
     void Start()
     {
-        dialogManager = FindObjectOfType<DialogManager>();
+        //dialogManager = FindObjectOfType<DialogManager>();
     }
 
     void Update()
     {
         if (!dialogManager.dialogueHasEnded)
         {
-            this.enabled = false;
+            Destroy(this);
         }
     }
     public void TriggerDialogue()
