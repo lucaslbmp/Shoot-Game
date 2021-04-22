@@ -256,8 +256,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 158f239f0033cae4dbc21f48fd47b4ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitpoints: 10
-  initialHitPoints: 10
+  maxHitpoints: 5
+  initialHitPoints: 5
   forcaDano: 1
   intervalAttack: 1.5
   PunchSound: {fileID: 8300000, guid: 987758fd23c80b149aba9775b05fe011, type: 3}

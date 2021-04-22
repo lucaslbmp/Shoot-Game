@@ -115,6 +115,8 @@ public class Player : Character
                         break;
                     case Item.TipoColetavel.VIDA:
                         toBeDestroyed = AjustePontosDano(DanoObjeto.quantidade);
+                        if(toBeDestroyed)
+                            itemAudioSource.PlayOneShot(DanoObjeto.SomColetavel);
                         break;
                     case Item.TipoColetavel.KEYITEM:
                         toBeDestroyed = inventory.AddItem(DanoObjeto);
@@ -122,7 +124,7 @@ public class Player : Character
                     default:
                         break;
                }
-                if(DanoObjeto.SomColetavel != null)
+                if(DanoObjeto.SomColetavel != null && DanoObjeto.tipoColetavel != Item.TipoColetavel.VIDA)
                 {
                     itemAudioSource.PlayOneShot(DanoObjeto.SomColetavel);
                 }

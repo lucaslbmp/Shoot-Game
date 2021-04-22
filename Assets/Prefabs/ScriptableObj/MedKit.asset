@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NomeColetavel: MedKit
   Sprite: {fileID: 1778083927079924619, guid: 6400dbbcbf6eb9c46b9deaa16f80efc6, type: 3}
-  quantidade: 2
+  quantidade: 1
   Empilhavel: 0
+  SomColetavel: {fileID: 8300000, guid: 16217e07c82311645a3afe92200fe7db, type: 3}
   tipoColetavel: 2
