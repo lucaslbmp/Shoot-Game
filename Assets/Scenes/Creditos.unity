@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0, y: -764}
-  m_SizeDelta: {x: 418.3915, y: 991.094}
+  m_AnchoredPosition: {x: 9.570007, y: -865.61694}
+  m_SizeDelta: {x: 438.4408, y: 1194.3276}
   m_Pivot: {x: 0.47732577, y: 0.5}
 --- !u!95 &45339405
 Animator:
@@ -213,16 +213,17 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "CR\xC9DITO\nDesenvolvido na UNITY GAME ENGINE, Vers\xE3o 2020.2.6f1\n\nDESENVOLVEDORES\n\nGilmar
+  m_Text: "CR\xC9DITOS\n\nDesenvolvido na UNITY GAME ENGINE, Vers\xE3o 2020.2.6f1\n\nDESENVOLVEDORES\n\nGilmar
     Correia Jeronimo........RA: 11014515\nIvan Correia Lima Coqueiro...RA: 11026416\nLucas
-    Barboza Moreira..........RA: 11017015\nOPEN GAME ART COMMUNITY ASSETS\n\nAssets
-    menu ..........................Osmic\nBasic Zombie............Riley Gombart \nBasic
-    Zombie.......ChessMasterRiley\n\xCDcones de armas ............... knik1985\nSpite
-    Player ...............Riley Gombart\nSFX \"The Woods\"..........TinyWorlds\nZombie
-    Sound............Catalin Pavel\nSplash Sound..........Independent.nu\n\nUNITY
-    ASSET STORE\n\nGUI Parts..............................PONETI\n\nYOUTUBE MUSIC\n\nEternal
-    Night......................White Bat Studio\nPane of Darkness.......Two Steps
-    From Hell\n\nSOUND EFFECTS - YOUTUBE MUSIC\n\nDialogue Blip.........................................................B
+    Barboza Moreira..........RA: 11017015\n\nITCH.IO\n\nFree Pixel Art Forest.........edermunizz\n\nOPEN
+    GAME ART COMMUNITY ASSETS\n\nAssets menu ..........................Osmic\nBasic
+    Zombie............Riley Gombart \nBasic Zombie.......ChessMasterRiley\nFog Effect.............................Santoniche\n\xCDcones
+    de armas ............... knik1985\nSFX \"The Woods\"..........TinyWorlds\nSplash
+    Sound..........Independent.nu\nSprite Player ...............Riley Gombart\nZombie
+    Sound............Catalin Pavel\nSprite Treadmetal........nublet\n\nCRAFTPIX.NET\n\nZombie
+    Spitter Assets\n\nUNITY ASSET STORE\n\nGUI Parts..............................PONETI\n\nYOUTUBE
+    MUSIC\n\nEternal Night......................White Bat Studio\nPane of Darkness.......Two
+    Steps From Hell\n\nSOUND EFFECTS - YOUTUBE MUSIC\n\nDialogue Blip.........................................................B
     Tris\nKnife....................................................Kermit the sound\nDoor
     Sound Effects...........\rEveryday Cinematic Sounds\n\nFREESOUND - SOUND EFFECTS\n\nPistol
     Reload....................................Bunny_Clark\nPistol Sound...................................Cedar
@@ -479,8 +480,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 333, y: -235}
-  m_SizeDelta: {x: 121.582, y: 36.466}
+  m_AnchoredPosition: {x: 478.5276, y: -295.0689}
+  m_SizeDelta: {x: 232.5268, y: 44.3282}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &997080110
 Animator:
@@ -523,7 +524,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 12
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
