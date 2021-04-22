@@ -31,6 +31,7 @@ public class GerenciadorDeLuz : MonoBehaviour
         exteriorCasa.GetComponent<Tilemap>().color = iluminado;
         paredesExternas.GetComponent<Tilemap>().color = iluminado;
         objetosExternos.GetComponent<Tilemap>().color = iluminado;
+
     }
 
     // Update is called once per frame

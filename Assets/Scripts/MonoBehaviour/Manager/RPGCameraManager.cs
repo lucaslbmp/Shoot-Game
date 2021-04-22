@@ -8,6 +8,9 @@ public class RPGCameraManager : MonoBehaviour
     [HideInInspector]
     public CinemachineVirtualCamera virtualCamera;
 
+    [HideInInspector]
+    public CinemachineConfiner cameraConfiner;
+
     private void Awake()
     {
         if(instanciaCompartilhada != null && instanciaCompartilhada != this)
@@ -21,6 +24,7 @@ public class RPGCameraManager : MonoBehaviour
 
         GameObject vCamGameObject = GameObject.FindWithTag("Virtual Camera");
         virtualCamera = vCamGameObject.GetComponent<CinemachineVirtualCamera>();
+        cameraConfiner = vCamGameObject.GetComponent<CinemachineConfiner>();
     }
 
 

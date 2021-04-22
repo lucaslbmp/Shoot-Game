@@ -103,21 +103,23 @@ public class Door : MonoBehaviour
                     }
                     else
                     {
-                        DialogueTrigger dialogueTriggerDoorLocked = (DialogueTrigger) Instantiate(dialogueTriggerDoorLockedPrefab);
-                        dialogueTriggerDoorLocked.dialogManager = FindObjectOfType<DialogManager>();
-
-                        dialogueTriggerDoorLocked.dialogue.sentences[0] = "Porta trancada. Procure " +keyItem.NomeColetavel+" para abrir." ;
-                        dialogueTriggerDoorLocked.TriggerDialogue();
+                        if (dialogueTriggerDoorLockedPrefab != null)
+                        {
+                            DialogueTrigger dialogueTriggerDoorLocked = Instantiate<DialogueTrigger>(dialogueTriggerDoorLockedPrefab);
+                            dialogueTriggerDoorLocked.dialogue.sentences[0] = "Porta trancada. Procure " + keyItem.NomeColetavel + " para abrir.";
+                            dialogueTriggerDoorLocked.TriggerDialogue();
+                        }
 
                     }                
                 }
                 else
                 {
-                    DialogueTrigger dialogueTriggerDoorLocked = Instantiate<DialogueTrigger>(dialogueTriggerDoorLockedPrefab);
-                    dialogueTriggerDoorLocked.dialogManager = FindObjectOfType<DialogManager>();
-
-                    dialogueTriggerDoorLocked.dialogue.sentences[0] = "Porta bloqueada. Procure outro acesso";
-                    dialogueTriggerDoorLocked.TriggerDialogue();
+                    if (dialogueTriggerDoorLockedPrefab != null)
+                    {
+                        DialogueTrigger dialogueTriggerDoorLocked = Instantiate<DialogueTrigger>(dialogueTriggerDoorLockedPrefab);
+                        dialogueTriggerDoorLocked.dialogue.sentences[0] = "Porta bloqueada. Procure outro acesso";
+                        dialogueTriggerDoorLocked.TriggerDialogue();
+                    }
 
                 }
                 doorLockAudioSource.PlayOneShot(doorLockSound);

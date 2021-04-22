@@ -26,7 +26,8 @@ public class Player : Character
         //print(healthBar);
         hitpoints.valor = initialHitPoints;
         itemAudioSource = gameObject.AddComponent<AudioSource>();
-
+        DialogueTrigger.dialogManager = FindObjectOfType<DialogManager>();
+        DialogManager.player = this;
     }
 
     public override IEnumerator DanoCaractere(float ammount, float interval)
