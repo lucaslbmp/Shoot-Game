@@ -47,7 +47,7 @@ public class BZWander : MonoBehaviour
         walkSpeed = walkerIdle_Speed;
         rb2D = GetComponent<Rigidbody2D>();
         VoiceAudioSource = gameObject.AddComponent<AudioSource>();
-        VoiceAudioSource.clip = IdleSound;
+        SetAudioSources();
         LazyWalkCoroutine = StartCoroutine(LazyWalk());
         circleCollider = GetComponent<CircleCollider2D>();
         enemyScript = gameObject.GetComponent<Enemy>();
@@ -63,6 +63,13 @@ public class BZWander : MonoBehaviour
     }
 
     // define o modo como o player se movimenta quando não está perseguindo o player
+    
+    public void SetAudioSources()
+    {
+        VoiceAudioSource.spatialBlend = 1f;
+        VoiceAudioSource.clip = IdleSound;
+    }
+    
     public IEnumerator LazyWalk()
     {
         while (true)

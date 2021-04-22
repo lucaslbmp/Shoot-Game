@@ -23,7 +23,7 @@ public class Enemy : Character
     AudioSource PunchAudioSource;
     [HideInInspector] public AudioSource PainAudioSource;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         PunchAudioSource = gameObject.AddComponent<AudioSource>();
         PainAudioSource = gameObject.AddComponent<AudioSource>();
@@ -34,8 +34,7 @@ public class Enemy : Character
     {
         animator = gameObject.GetComponent<Animator>();
         bZWander = gameObject.GetComponent<BZWander>();
-        PainAudioSource.clip = PainSound;
-        PunchAudioSource.clip = PunchSound;
+        SetAudioSources();
         //PunchAudioSource.clip = PunchSound;
     }
 
@@ -96,6 +95,14 @@ public class Enemy : Character
             attackCoroutine = null;
         }
         bZWander.StartLazyWalkCoroutine();
+    }
+
+    public void SetAudioSources()
+    {
+        PainAudioSource.spatialBlend = 1f;
+        PunchAudioSource.spatialBlend = 1f; 
+        PainAudioSource.clip = PainSound;
+        PunchAudioSource.clip = PunchSound;
     }
 
     public IEnumerator Attack()

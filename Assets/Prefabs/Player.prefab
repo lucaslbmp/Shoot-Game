@@ -370,7 +370,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHitpoints: 10
-  initialHitPoints: 6
+  initialHitPoints: 10
   healthBarPrefab: {fileID: 6384307090760027615, guid: 2ef2dbbc7febe924aa093266c3af9bf2, type: 3}
   inventoryPrefab: {fileID: 7197525139704263369, guid: 9e27a742afb7fc74abd5932160ca265a, type: 3}
   inventory: {fileID: 0}
