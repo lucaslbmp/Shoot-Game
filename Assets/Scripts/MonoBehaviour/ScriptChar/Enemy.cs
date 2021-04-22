@@ -6,13 +6,37 @@ public class Enemy : Character
 {
     float pontosVida; //equivalente à saude do inimigo
     public int forcaDano; // poder de dano
+    public float intervalAttack;
+
+    Player player;
+
+    Animator animator;
 
     Coroutine danoCoroutine;
+    Coroutine attackCoroutine;
+    Coroutine attackSoundCoroutine;
+
+    BZWander bZWander;
+
+    public AudioClip PunchSound;
+    public AudioClip PainSound;
+    AudioSource PunchAudioSource;
+    [HideInInspector] public AudioSource PainAudioSource;
+
+    private void Awake()
+    {
+        PunchAudioSource = gameObject.AddComponent<AudioSource>();
+        PainAudioSource = gameObject.AddComponent<AudioSource>();
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-
+        animator = gameObject.GetComponent<Animator>();
+        bZWander = gameObject.GetComponent<BZWander>();
+        PainAudioSource.clip = PainSound;
+        PunchAudioSource.clip = PunchSound;
+        //PunchAudioSource.clip = PunchSound;
     }
 
     private void OnEnable()
@@ -20,59 +44,81 @@ public class Enemy : Character
         ResetCharacter();
     }
 
-
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        print(other);
-        if (other.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Projectile"))
         {
-            Player player = other.gameObject.GetComponent<Player>();
-            if (danoCoroutine == null)
-            {
-                danoCoroutine = StartCoroutine(player.DanoCaractere(forcaDano, 1.0f));
-            }
+            PainAudioSource.Play();
         }
     }
 
-    // =============== Entrada de Colisao original (RPG) =========================
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (collision.gameObject.CompareTag("Player"))
-    //    {
-    //        Player player = collision.gameObject.GetComponent<Player>();
-    //        if (danoCoroutine == null)
-    //        {
-    //            danoCoroutine = StartCoroutine(player.DanoCaractere(forcaDano, 1.0f));
-    //        }
-    //    }
-    //}
-
-    private void OnTriggerExit2D(Collider2D other)
+    private void OnCollisionStay2D(Collision2D collision)
     {
-        if (other.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            if (danoCoroutine != null)
-            {
-                StopCoroutine(danoCoroutine);
-                danoCoroutine = null;
-            }
+            player = collision.gameObject.GetComponent<Player>();
+            StartAttack();
         }
     }
 
-    // =============== Saida de Colisao original (RPG) =========================
-    //private void OnCollisionExit2D(Collision2D collision)
-    //{
-    //    if (collision.gameObject.CompareTag("Player"))
-    //    {
-    //        if (danoCoroutine != null)
-    //        {
-    //            StopCoroutine(danoCoroutine);
-    //            danoCoroutine = null;
-    //        }
-    //    }
-    //}
 
-    public override IEnumerator DanoCaractere(int dano, float intervalo)
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        //bZWander = gameObject.GetComponent<BZWander>();
+        if (other.gameObject.CompareTag("Player"))
+        {
+            FinishAttack();
+        }
+    }
+
+    public virtual void StartAttack()
+    {
+        if (attackCoroutine == null)
+        {
+            attackCoroutine = StartCoroutine(Attack());
+        }
+        if (danoCoroutine == null)
+        {
+            danoCoroutine = StartCoroutine(player.DanoCaractere(forcaDano, 1.0f));
+        }
+    }
+
+    public void FinishAttack()
+    {
+        if (danoCoroutine != null)
+        {
+            StopCoroutine(danoCoroutine);
+            danoCoroutine = null;
+        }
+        if (attackCoroutine != null)
+        {
+            StopCoroutine(attackCoroutine);
+            attackCoroutine = null;
+        }
+        bZWander.StartLazyWalkCoroutine();
+    }
+
+    public IEnumerator Attack()
+    {
+        while (true)
+        {
+            bZWander = gameObject.GetComponent<BZWander>();
+            bZWander.StopLazyWalkCoroutine();
+            animator.SetBool("Caminhando", false);
+            animator.SetTrigger("Ataque");
+            if(!PunchAudioSource.isPlaying)
+                PunchAudioSource.Play();
+            if (attackSoundCoroutine != null)
+                attackSoundCoroutine = StartCoroutine(PlayAttackSound());
+            yield return new WaitForFixedUpdate();
+            //yield return new WaitForSeconds(intervalAttack);
+            //attackCoroutine = null;
+            //bZWander.StartLazyWalkCoroutine();
+            yield return null;
+        }
+    }
+
+    public override IEnumerator DanoCaractere(float dano, float intervalo)
     {
         while (true)
         {
@@ -94,6 +140,17 @@ public class Enemy : Character
                 break;
             }
         }
+    }
+
+    public IEnumerator PlayAttackSound()
+    {
+        while (true)
+        {
+            PunchAudioSource.PlayOneShot(PunchSound);
+            yield return new WaitForSeconds(1f);
+            break;
+        }
+        yield return null;
     }
 
     public override void ResetCharacter()

@@ -5,7 +5,7 @@ using UnityEngine;
 // Classe que rege o comportamento da AK47
 public class AK47 : Weapon
 {
-    private float bulletForce = 30f;                                            // Dano da pistola
+    private float bulletForce = 10f;                                            // Força da bala da AK47
 
     //Método responsável por instanciar os projeteis da handgun
     public override void Shoot(Transform firePoint, GameObject bulletPrefab)

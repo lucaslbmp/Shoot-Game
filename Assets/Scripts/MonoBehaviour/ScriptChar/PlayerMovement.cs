@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
     {
         cameraLocal = Camera.main;
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
+        animator = gameObject.GetComponent<Animator>();
         //AudioSource[] allMyAudioSources = GetComponents<AudioSource>();
         //footstepsAudioSource = allMyAudioSources[0];
         footstepsAudioSource = gameObject.AddComponent<AudioSource>();

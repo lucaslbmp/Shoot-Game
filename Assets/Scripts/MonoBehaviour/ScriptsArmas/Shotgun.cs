@@ -5,7 +5,7 @@ using UnityEngine;
 //Classe da espingarda. Ela possui as ações da espingarda assim que o player a coletar e poder usá-la
 public class Shotgun : Weapon                         
 {
-    private float bulletForce = 30f;                                                                    // Dano causado pela bala da espingarda
+    private float bulletForce = 10f;                                                                    // Força da bala da AK47
 
     // Método responsável por instanciar os projeteis da shotgun
     public override void Shoot(Transform firePoint, GameObject pelletPrefab)

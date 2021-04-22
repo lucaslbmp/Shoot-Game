@@ -30,7 +30,7 @@ public class Player : Character
         DialogManager.player = this;
     }
 
-    public override IEnumerator DanoCaractere(int ammount, float interval)
+    public override IEnumerator DanoCaractere(float ammount, float interval)
     {
     while (true)
      {

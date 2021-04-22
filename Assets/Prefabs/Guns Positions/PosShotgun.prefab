@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3310890165357835836}
   m_Layer: 0
   m_Name: PosShotgun
-  m_TagString: Coletavel
+  m_TagString: Colectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

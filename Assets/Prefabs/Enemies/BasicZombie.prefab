@@ -15,7 +15,8 @@ GameObject:
   - component: {fileID: 4000503544005122074}
   - component: {fileID: 8485239907599034594}
   - component: {fileID: 7521238394991024069}
-  m_Layer: 0
+  - component: {fileID: -8149210486512514694}
+  m_Layer: 10
   m_Name: BasicZombie
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -200,8 +201,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDrag: 20
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -223,7 +224,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.5
+  m_Radius: 5
 --- !u!114 &7521238394991024069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,8 +237,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc1c2a4078934334394fdef5c0fb4057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pathFind_Speed: 1.4
+  pathFind_Speed: 1.1
   walkerIdle_Speed: 0.8
-  walkSpeed: 0.82
-  changeDirectionTimeRange: 1
+  turningSpeed: 10
+  changeDirectionTimeRange: 2
   FollowPlayer: 1
+  IdleSound: {fileID: 8300000, guid: 3bc8b1b35e8747e47814f171f6e7eeb8, type: 3}
+  PursuitSound: {fileID: 8300000, guid: 6371db4bc5c78fc45a2f2d862c49549e, type: 3}
+--- !u!114 &-8149210486512514694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166390103093252169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 158f239f0033cae4dbc21f48fd47b4ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHitpoints: 10
+  initialHitPoints: 10
+  forcaDano: 1
+  intervalAttack: 1.5
+  PunchSound: {fileID: 8300000, guid: 987758fd23c80b149aba9775b05fe011, type: 3}
+  PainSound: {fileID: 8300000, guid: 712bc9c88c8729f418b73ed3b6e69fea, type: 3}
+  PainAudioSource: {fileID: 0}

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Handgun : Weapon
 {
-    private float bulletForce = 30f;                                            // Dano da pistola
+    private float bulletForce = 10f;                                           // Força da bala da pistola
 
     //Método responsável por instanciar os projeteis da handgun
     public override void Shoot(Transform firePoint, GameObject bulletPrefab)
