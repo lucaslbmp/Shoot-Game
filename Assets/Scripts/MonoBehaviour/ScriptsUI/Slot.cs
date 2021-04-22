@@ -4,4 +4,5 @@ using UnityEngine.UI;
 public class Slot : MonoBehaviour
 {
     public Text qtdTexto;
+    public Text itemName;
 }

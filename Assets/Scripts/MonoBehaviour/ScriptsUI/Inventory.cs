@@ -46,6 +46,7 @@ public class Inventory : MonoBehaviour
                 //itens[i].quantidade = itens[i].quantidade + 1;
                 itens[i].quantidade += itemToAdd.quantidade;
                 Slot slotScript = slots[i].gameObject.GetComponent<Slot>();
+                slotScript.itemName.text = itens[i].NomeColetavel;
                 Text quantidadeTexto = slotScript.qtdTexto;
                 quantidadeTexto.enabled = true;
                 quantidadeTexto.text = itens[i].quantidade.ToString("00");
@@ -59,6 +60,8 @@ public class Inventory : MonoBehaviour
                 itemImagens[i].sprite = itemToAdd.Sprite;
                 itemImagens[i].enabled = true;
                 Slot slotScript = slots[i].gameObject.GetComponent<Slot>();
+                //print(slotScript.itemName.text);
+                slotScript.itemName.text = itens[i].NomeColetavel;
                 Text quantidadeTexto = slotScript.qtdTexto;
                 quantidadeTexto.enabled = true;
                 if (itemToAdd.Empilhavel)
@@ -74,6 +77,25 @@ public class Inventory : MonoBehaviour
             }
         }
         return false;
+    }
+
+    public void RemoveItem(Item itemToRemove)
+    {
+        for(int i = 0; i < itens.Length; i++ )
+        {
+            if(itens[i] != null) { 
+                if (itens[i].NomeColetavel == itemToRemove.NomeColetavel)
+                {
+                    itens[i] = null;
+                    itemImagens[i].enabled = false;
+                    itemImagens[i].sprite = null;
+
+                    Slot slotScript = slots[i].gameObject.GetComponent<Slot>();
+
+                    slotScript.itemName.text = "";
+                }
+            }
+        }
     }
 
     public void Imprimir(Item[] itens)  //Funçao para testes
