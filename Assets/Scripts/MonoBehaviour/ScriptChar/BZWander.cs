@@ -70,7 +70,7 @@ public class BZWander : MonoBehaviour
         VoiceAudioSource.spatialBlend = 1f;
         VoiceAudioSource.rolloffMode = AudioRolloffMode.Linear;
         VoiceAudioSource.minDistance = 3f;
-        VoiceAudioSource.maxDistance = 20f; 
+        VoiceAudioSource.maxDistance = 15f; 
         VoiceAudioSource.clip = IdleSound;
     }
 
