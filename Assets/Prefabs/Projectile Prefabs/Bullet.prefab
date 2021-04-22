@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -5499543106542203234}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2099212999
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9ca23aab5bce3e9409d65e8d567911cb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -97,8 +97,8 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0.05
+  m_Mass: 0.4
+  m_LinearDrag: 0.5
   m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -145,4 +145,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  damage: 1
   hitEffect: {fileID: 1495015153418459138, guid: 9dae386ba6611bc4784db08f70144f71, type: 3}
+  hitSound: {fileID: 8300000, guid: 0e79146e4b11dcb429a9164e7a83d68e, type: 3}

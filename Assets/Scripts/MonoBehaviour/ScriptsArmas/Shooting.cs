@@ -62,7 +62,7 @@ public class Shooting : MonoBehaviour
     //  Inicia o jogo e define as condições iniciais
     void Start()
     {
-        animator = GetComponent<Animator>();
+        animator = gameObject.GetComponent<Animator>();
         Weapons = Instantiate(WeaponsPrefab);
         Weapons.AddWeaponsToList();                                                                       // Adiciona as armas a weaponList
         //WeaponList = Weapons.WeaponList;

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5309543008986201614}
   m_Layer: 0
   m_Name: PosAK
-  m_TagString: Untagged
+  m_TagString: Colectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58,6 +58,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5309543008986201615}
     m_Modifications:
+    - target: {fileID: 6237117361666663598, guid: d0dd84bb66a37864f8cb840fc0218454, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6237117361666663598, guid: d0dd84bb66a37864f8cb840fc0218454, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 2099212999
+      objectReference: {fileID: 0}
     - target: {fileID: 7699514059767034837, guid: d0dd84bb66a37864f8cb840fc0218454, type: 3}
       propertyPath: m_Name
       value: AK47_Obj
