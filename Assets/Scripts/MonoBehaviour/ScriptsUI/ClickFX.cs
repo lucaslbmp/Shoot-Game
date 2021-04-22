@@ -2,6 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// DEV: IVAN CORREIA LIMA COQUEIRO
+/// V.01
+/// ATUALIZADO NO DIA 22-04-2021
+/// </summary>
+
+
 //Executa sons de Menu
 public class ClickFX : MonoBehaviour
 {
