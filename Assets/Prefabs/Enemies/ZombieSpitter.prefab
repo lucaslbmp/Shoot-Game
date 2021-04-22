@@ -17,6 +17,9 @@ GameObject:
   - component: {fileID: 4686640966643222842}
   - component: {fileID: -8763987431161073643}
   - component: {fileID: 2518489439892543918}
+  - component: {fileID: 4702453623177703386}
+  - component: {fileID: 4702453623177703385}
+  - component: {fileID: 4702453623177703367}
   m_Layer: 10
   m_Name: ZombieSpitter
   m_TagString: Enemy

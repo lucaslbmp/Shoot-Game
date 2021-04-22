@@ -137,6 +137,7 @@ public class Door : MonoBehaviour
                     doorLockSound = doorFeatures.unlockSound;
                     doorMoveAudioSource.PlayOneShot(doorFeatures.doorOpenSound);
                     doorLockAudioSource.PlayOneShot(doorLockSound);
+                    player.inventory.RemoveItem(keyItem);
                 }
             }
             yield return new WaitForSeconds(0.5f);

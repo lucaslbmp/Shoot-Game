@@ -6,6 +6,9 @@ public class PontoSpawn : MonoBehaviour
 {
     public GameObject prefabParaSpawn;
 
+    [HideInInspector]
+    public GameObject SpawnObj;
+
     public float intervaloRepeticao;
     // Start is called before the first frame update
     void Start()
@@ -25,7 +28,8 @@ public class PontoSpawn : MonoBehaviour
     {
         if(prefabParaSpawn != null)
         {
-            return Instantiate(prefabParaSpawn, transform.position, Quaternion.identity);
+            SpawnObj = Instantiate(prefabParaSpawn, transform.position, Quaternion.identity);
+            return SpawnObj;
         }
         return null;
     }
