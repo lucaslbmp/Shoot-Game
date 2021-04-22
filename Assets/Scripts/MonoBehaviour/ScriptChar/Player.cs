@@ -62,9 +62,16 @@ public class Player : Character
 
     public override void KillCharacter()
     {
-            base.KillCharacter();
-            Destroy(healthBar.gameObject);
-            Destroy(inventory.gameObject);
+        //GameObject hallSecondFloor = GameObject.Find("Layer_HallFloor(Second)");
+        //hallSecondFloor.GetComponent<Tilemap>().color = iluminado;
+
+        GameObject playerSpawn = GameObject.Find("PlayerSpawn");
+        gameObject.transform.position = new Vector3(playerSpawn.transform.position.x, playerSpawn.transform.position.y);
+
+        hitpoints.valor = 3;
+        //base.KillCharacter();
+        //Destroy(healthBar.gameObject);
+        //Destroy(inventory.gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
