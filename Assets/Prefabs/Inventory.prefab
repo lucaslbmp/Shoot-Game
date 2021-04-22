@@ -265,3 +265,4 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  pistol: {fileID: 11400000, guid: 2a515e6280c1a904cae7816b24a644da, type: 2}

@@ -2,6 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Autor: Lucas Barboza
+/// Data: 03/04/2020
+/// Subclasse herdada de Weapon que gerencia os atributos, tiro e recarga da pistola
+/// </summary>
 
 public class Handgun : Weapon
 {

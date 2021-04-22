@@ -60,6 +60,9 @@ TagManager:
   - name: Objects
     uniqueID: 2099212999
     locked: 0
+  - name: Colectables
+    uniqueID: 268521301
+    locked: 0
   - name: Doors
     uniqueID: 2465171945
     locked: 0
@@ -69,12 +72,6 @@ TagManager:
   - name: Enemies
     uniqueID: 1499118515
     locked: 0
-  - name: Buttons
-    uniqueID: 2076627593
-    locked: 0
   - name: Guns
     uniqueID: 1247754541
-    locked: 0
-  - name: Colectables
-    uniqueID: 268521301
     locked: 0

@@ -39072,6 +39072,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundTrack
       objectReference: {fileID: 0}
+    - target: {fileID: 7361629614899095690, guid: 8fad589a3205fd14999cdc14092fa9da, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7361629614899095732, guid: 8fad589a3205fd14999cdc14092fa9da, type: 3}
       propertyPath: m_RootOrder
       value: 1

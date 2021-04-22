@@ -91,6 +91,7 @@ public class Player : Character
                         //{
                         //    gameObject.GetComponentInParent<Shooting>().WeaponList.Find(w => w.name == "AK47").isAvailable = true;
                         //}
+                        toBeDestroyed = inventory.AddItem(DanoObjeto);
                         toBeDestroyed = true;
                         break;
                     case Item.TipoColetavel.AMMO:
@@ -108,7 +109,7 @@ public class Player : Character
                         {
                             gameObject.GetComponentInParent<Shooting>().Weapons.WeaponList.Find(w => w.name == "AK47").totalAmmo += DanoObjeto.quantidade;
                         }
-                        inventory.AddItem(DanoObjeto);
+                        //inventory.AddItem(DanoObjeto);
                         toBeDestroyed = true;
                         // toBeDestroyed = inventory.AddItem(DanoObjeto);
                         break;
