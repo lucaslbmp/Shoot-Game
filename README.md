@@ -16,7 +16,7 @@ Lucas Barboza Moreira Pinheiro - RA: 11017015
 Se prepare para imergir neste TopDown Shooter como um Agente policial que busca provas de um crime, mas se depara com algo muito pior.
 
 **Banner:**
-![image](QZ_POSTER.pdf)
+![image](QZ_POSTER.jpeg)
 
 **Link YouTube:**
 
