@@ -38,8 +38,7 @@ Se prepare para imergir neste TopDown Shooter como um Agente policial que busca 
 
 - Design do Som.
 - Folder para o Jogo.
-- Menu do Jogo.
-- Créditos do Jogo.
+- Menus do jogo e cena de Créditos.
 - Animações dos objetos.
 - Programação do jogo.
 
