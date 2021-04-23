@@ -1,11 +1,13 @@
 
 
-#QUARENTINE ZONE
+# QUARENTINE ZONE
 
 **Criadores**
 
 Gilmar Correia Jeronimo        - RA: 11014515
+
 Ivan Correia Lima Coqueiro     - RA: 11014515
+
 Lucas Barboza Moreira Pinheiro - RA: 11017015
 
 
