@@ -17,9 +17,6 @@ GameObject:
   - component: {fileID: 4686640966643222842}
   - component: {fileID: -8763987431161073643}
   - component: {fileID: 2518489439892543918}
-  - component: {fileID: 4702453623177703386}
-  - component: {fileID: 4702453623177703385}
-  - component: {fileID: 4702453623177703367}
   m_Layer: 10
   m_Name: ZombieSpitter
   m_TagString: Enemy
@@ -98,7 +95,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1499118515
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: -39399482038312064, guid: b82cdbb2c61c4464c852bc883485f8bc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -165,7 +162,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.9047618, y: 4.428571}
+    oldSize: {x: 3.8714287, y: 4.3952384}
     newSize: {x: 4.3619046, y: 3.8095238}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -237,8 +234,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 158f239f0033cae4dbc21f48fd47b4ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitpoints: 10
-  initialHitPoints: 10
+  maxHitpoints: 20
+  initialHitPoints: 20
   forcaDano: 1
   intervalAttack: 1.5
   PunchSound: {fileID: 8300000, guid: 63e8e2c032c9cbd4b81d49372452bcbc, type: 3}
@@ -256,7 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc1c2a4078934334394fdef5c0fb4057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pathFind_Speed: 1.1
+  pathFind_Speed: 2
   walkerIdle_Speed: 1
   turningSpeed: 0
   changeDirectionTimeRange: 2
