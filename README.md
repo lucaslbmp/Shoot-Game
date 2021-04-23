@@ -1,8 +1,9 @@
 
 
-# QUARENTINE ZONE
+# QUARANTINE ZONE
 
-**Criadores**
+
+## **Criadores**
 
 Gilmar Correia Jeronimo        - RA: 11014515
 
@@ -14,7 +15,7 @@ Lucas Barboza Moreira Pinheiro - RA: 11017015
 
 ## **Descrição:** 
 
-Se prepare para imergir neste TopDown Shooter como um Agente policial que busca provas de um crime, mas se depara com algo muito pior.
+Se prepare para imergir neste TopDown Shooter como um Agente policial que busca provas de um crime, mas se depara com algo muito pior. Baixe o jogo em: https://github.com/lucaslbmp/Shoot-Game/releases/tag/v.1
 
 
 ## **Banner:**
@@ -22,6 +23,15 @@ Se prepare para imergir neste TopDown Shooter como um Agente policial que busca 
 
 
 ## **Link YouTube:**
+
+### Gameplay 1
+
+[![](http://img.youtube.com/vi/zp9GMUkbVlY/0.jpg)](http://www.youtube.com/watch?v=zp9GMUkbVlY "")
+
+### Gameplay 2
+
+[![](http://img.youtube.com/vi/TT4wgaOrorA/0.jpg)](http://www.youtube.com/watch?v=TT4wgaOrorA "")
+
 
 ## DESCRIÇÃO DE ATIVIDADES
 
