@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9.570007, y: -865.61694}
-  m_SizeDelta: {x: 438.4408, y: 1194.3276}
+  m_AnchoredPosition: {x: 11.0444, y: -939.749}
+  m_SizeDelta: {x: 441.5297, y: 1342.5918}
   m_Pivot: {x: 0.47732577, y: 0.5}
 --- !u!95 &45339405
 Animator:
@@ -225,12 +225,14 @@ MonoBehaviour:
     MUSIC\n\nEternal Night......................White Bat Studio\nPane of Darkness.......Two
     Steps From Hell\n\nSOUND EFFECTS - YOUTUBE MUSIC\n\nDialogue Blip.........................................................B
     Tris\nKnife....................................................Kermit the sound\nDoor
-    Sound Effects...........\rEveryday Cinematic Sounds\n\nFREESOUND - SOUND EFFECTS\n\nPistol
-    Reload....................................Bunny_Clark\nPistol Sound...................................Cedar
-    Studios\nShotgun Reload.....................FilmmakersManual\nShotgun Sound......................FilmmakersManual\nZombie
-    getting Hit................................efectirijillo\n\nVIDEVO SOUND EFFECTS\n\nAK47
-    sounds..........................................videvo\n\nWIKIMEDIA COMMONS\n\nMouse\nTeclado\n\n\nAgradecemos
-    por ter jogado!"
+    Sound Effects...........\rEveryday Cinematic Sounds\nLight Bulb..........................BerlinAtmosphere\n\nFREESOUND
+    - SOUND EFFECTS\n\nPistol Reload....................................Bunny_Clark\nPistol
+    Sound...................................Cedar Studios\nShotgun Reload.....................FilmmakersManual\nShotgun
+    Sound......................FilmmakersManual\nZombie getting Hit................................efectirijillo\n\nVIDEVO
+    SOUND EFFECTS\n\nAK47 sounds..........................................videvo\n\nWIKIMEDIA
+    COMMONS\n\nMouse\nTeclado\n\nFONTE DE TEXTO\n\nNIGHTMARE.................cloutier
+    fontes\nCreepsville................Big Tony O'Farrell\n\n\n\nAgradecemos por
+    ter jogado!"
 --- !u!222 &45339407
 CanvasRenderer:
   m_ObjectHideFlags: 0
