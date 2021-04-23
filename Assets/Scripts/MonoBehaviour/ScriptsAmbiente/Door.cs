@@ -2,13 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Autor: Lucas Barboza
+/// Data: 19/04/2020
+/// Classe que gerencia as portas
+/// </summary>
+
 public class Door : MonoBehaviour
 {
     // Variaveis associadas à dobradiça (Hinge) da porta
     public HingeJoint2D hingeJoint2D;                           // Componente Hinge (junta) que articula a porta
-    JointAngleLimits2D openDoorLimits;                          // Limites angulares da porta aberta
-    JointAngleLimits2D closedDoorLimits;                        // Limites angulares da porta fechada
-    JointMotor2D motor;
+    JointAngleLimits2D openDoorLimits;                          // Armazena limites angulares da porta aberta
+    JointAngleLimits2D closedDoorLimits;                        // Armazena limites angulares da porta fechada
+    JointMotor2D motor;                                         // Armazena um motor de junta
 
     // Triggers da porta
     public Transform FrontTrigger;                              // Transform do trigger frontal da porta
@@ -17,49 +23,49 @@ public class Door : MonoBehaviour
 
     public DoorFeatures doorFeatures;                           // Scriptable Object que contem as caracteristicas da porta
 
-    public DialogueTrigger dialogueTriggerDoorLockedPrefab;
+    public DialogueTrigger dialogueTriggerDoorLockedPrefab;     // Prefab de trigger de diálogo (Para mostar uma mensagem)
 
     // Variavies associadas à abertura/fechamento da porta
-    bool actionButtonPressed;
+    bool actionButtonPressed;                                   // Flag que indica se o botao "espaço" foi pressionado
     bool startedToOpen;                                         // Flag que indica se a porta já começou a abrir
     float speed;                                         // Constante que indica a velocidade de abertura da porta
     float currentOpeningSpeed;                                  // Variável que armazena a velocidade de abertura atual da porta
     bool playerIsInInterior;                                    // Flag que indica se o player está em um ambiente interior
     bool doorLocked;                                            // Flag que indica se a porta esta trancada
-    bool doorClosed;
-    Item keyItem;
+    bool doorClosed;                                            // Flag que indica se a porta esta fechada
+    Item keyItem;                                               // Item que abre a porta
 
-    Coroutine DoorCoroutine;
+    Coroutine DoorCoroutine;                                    // Armazena corrotina da porta 
 
     // Audios
-    AudioSource doorMoveAudioSource;
-    AudioSource doorLockAudioSource;
-    AudioClip doorLockSound;
+    AudioSource doorMoveAudioSource;                            // AudioSource que executa o som de movimento da porta
+    AudioSource doorLockAudioSource;                            // AudioSource que executa o som da tranca da porta
+    AudioClip doorLockSound;                                    // Armazena o audio de tranca da porta
 
     //Player
-    Player player;
+    Player player;                                              // Armazena player
 
     private void Awake()
     {
         //hingeJoint2D = transform.Find("Hinge").GetComponent<HingeJoint2D>();
-        openDoorLimits = hingeJoint2D.limits;
-        closedDoorLimits = new JointAngleLimits2D { min = 0f, max = 0f };
-        doorLocked = doorFeatures.locked;
-        speed = doorFeatures.doorSpeed;
-        currentOpeningSpeed = 0f;
-        motor = hingeJoint2D.motor;
-        keyItem = doorFeatures.keyItem;
-        doorMoveAudioSource = gameObject.AddComponent<AudioSource>();
-        doorLockAudioSource = gameObject.AddComponent<AudioSource>();
-        CloseDoor();
-        doorClosed = true;
-        startedToOpen = false;
+        openDoorLimits = hingeJoint2D.limits;                                   // Define os limites de porta aberta como aqueles do prefab
+        closedDoorLimits = new JointAngleLimits2D { min = 0f, max = 0f };       // Define os limites de porta fechada
+        doorLocked = doorFeatures.locked;                                       // Pega a flag de porta fechada do Scriptable Object associado
+        speed = doorFeatures.doorSpeed;                                         // Pega a velocidade da porta do Scriptable Object associado
+        currentOpeningSpeed = 0f;                                               // Inicializa a velocidade atual da porta
+        motor = hingeJoint2D.motor;                                             // Pega o motor da porta
+        keyItem = doorFeatures.keyItem;                                         // Atribui o item-chave à porta usando o Scriptable Object
+        doorMoveAudioSource = gameObject.AddComponent<AudioSource>();           // Adiciona o AudioSource de mov. da porta
+        doorLockAudioSource = gameObject.AddComponent<AudioSource>();           // Adiciona o AudioSource de tranca da porta
+        CloseDoor();                                                            // Fecha a porta           
+        doorClosed = true;                                                      // Flag passa a indicar porta fechada
+        //startedToOpen = false;                                                  // Inicializa startedTo
     }
 
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Player"))
+        if(collision.gameObject.CompareTag("Player"))                   // Se a porta colidir com o player...
         {
             actionButtonPressed = GetInput();
             player = collision.gameObject.GetComponent<Player>();
