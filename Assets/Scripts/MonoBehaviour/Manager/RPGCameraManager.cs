@@ -1,6 +1,12 @@
 using UnityEngine;
 using Cinemachine;
 
+/// <summary>
+/// Autor: Gilmar Jeronimo
+/// Data: 
+/// Classe utilizada para encontrar o CinemachineConfiner
+/// </summary>
+
 public class RPGCameraManager : MonoBehaviour
 {
     public static RPGCameraManager instanciaCompartilhada = null;

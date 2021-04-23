@@ -62,9 +62,16 @@ public class Player : Character
 
     public override void KillCharacter()
     {
-            base.KillCharacter();
-            Destroy(healthBar.gameObject);
-            Destroy(inventory.gameObject);
+        //GameObject hallSecondFloor = GameObject.Find("Layer_HallFloor(Second)");
+        //hallSecondFloor.GetComponent<Tilemap>().color = iluminado;
+
+        GameObject playerSpawn = GameObject.Find("PlayerSpawn");
+        gameObject.transform.position = new Vector3(playerSpawn.transform.position.x, playerSpawn.transform.position.y);
+
+        hitpoints.valor = 3;
+        //base.KillCharacter();
+        //Destroy(healthBar.gameObject);
+        //Destroy(inventory.gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -91,6 +98,7 @@ public class Player : Character
                         //{
                         //    gameObject.GetComponentInParent<Shooting>().WeaponList.Find(w => w.name == "AK47").isAvailable = true;
                         //}
+                        toBeDestroyed = inventory.AddItem(DanoObjeto);
                         toBeDestroyed = true;
                         break;
                     case Item.TipoColetavel.AMMO:
@@ -108,12 +116,14 @@ public class Player : Character
                         {
                             gameObject.GetComponentInParent<Shooting>().Weapons.WeaponList.Find(w => w.name == "AK47").totalAmmo += DanoObjeto.quantidade;
                         }
-                        inventory.AddItem(DanoObjeto);
+                        //inventory.AddItem(DanoObjeto);
                         toBeDestroyed = true;
                         // toBeDestroyed = inventory.AddItem(DanoObjeto);
                         break;
                     case Item.TipoColetavel.VIDA:
                         toBeDestroyed = AjustePontosDano(DanoObjeto.quantidade);
+                        if(toBeDestroyed)
+                            itemAudioSource.PlayOneShot(DanoObjeto.SomColetavel);
                         break;
                     case Item.TipoColetavel.KEYITEM:
                         toBeDestroyed = inventory.AddItem(DanoObjeto);
@@ -121,7 +131,7 @@ public class Player : Character
                     default:
                         break;
                }
-                if(DanoObjeto.SomColetavel != null)
+                if(DanoObjeto.SomColetavel != null && DanoObjeto.tipoColetavel != Item.TipoColetavel.VIDA)
                 {
                     itemAudioSource.PlayOneShot(DanoObjeto.SomColetavel);
                 }

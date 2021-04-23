@@ -43,12 +43,16 @@ public class IluminandoGameObjects : MonoBehaviour
         {
             foreach(GameObject obj in objectsOnRoom)
             {
-                obj.GetComponent<SpriteRenderer>().color = iluminado;
+                if(obj != null)
+                    obj.GetComponent<SpriteRenderer>().color = iluminado;
             }
             foreach (GameObject spawn in spawnOnRoom)
             {
-                GameObject spawnObj = spawn.GetComponent<PontoSpawn>().SpawnObj;
-                spawnObj.GetComponent<SpriteRenderer>().color = iluminado;
+                if (spawn != null)
+                {
+                    GameObject spawnObj = spawn.GetComponent<PontoSpawn>().SpawnObj;
+                    spawnObj.GetComponent<SpriteRenderer>().color = iluminado;
+                }
             }
         }
     }
@@ -59,12 +63,16 @@ public class IluminandoGameObjects : MonoBehaviour
         {
             foreach (GameObject obj in objectsOnRoom)
             {
-                obj.GetComponent<SpriteRenderer>().color = apagado;
+                if(obj != null)
+                    obj.GetComponent<SpriteRenderer>().color = apagado;
             }
             foreach (GameObject spawn in spawnOnRoom)
             {
-                GameObject spawnObj = spawn.GetComponent<PontoSpawn>().SpawnObj;
-                spawnObj.GetComponent<SpriteRenderer>().color = apagado;
+                if (spawn != null)
+                {
+                    GameObject spawnObj = spawn.GetComponent<PontoSpawn>().SpawnObj;
+                    spawnObj.GetComponent<SpriteRenderer>().color = apagado;
+                }
             }
         }
     }

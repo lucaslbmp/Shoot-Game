@@ -48,8 +48,9 @@ MonoBehaviour:
   loadedAmmo: 5
   ammoCapacity: 12
   isAvailable: 1
-  shootDelay: 0.8
+  shootDelay: 0.5
   shootAnimTime: 0.25
+  shotSoundTime: 0
   reloadTime: 0.9
   reloadAnimTime: 0.75
   reloadSoundTime: 0.2

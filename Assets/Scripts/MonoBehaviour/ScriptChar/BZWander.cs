@@ -1,101 +1,107 @@
 using System.Collections;
 using UnityEngine;
 
+/// <summary>
+/// Classe que gerencia a movimentação do inimigo e os audios emeitidos por ele ao se movimentar
+/// </summary>
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(CircleCollider2D))]
 [RequireComponent(typeof(Animator))]
 
-// define o modo como o player irá ser encontrado pelo mob
+
 public class BZWander : MonoBehaviour
 {
    
-    public float pathFind_Speed;                            // velocidade do inimigo na área de "spot"
+    public float pathFind_Speed;                            // velocidade do inimigo quando o player cruza a área de "spot"
     public float walkerIdle_Speed;                          // velocidade do inimigo em estado idle, ''procurando'' pelo player
-    float walkSpeed;                                 // velocidade do inimigo atribuída
+    float walkSpeed;                                        // velocidade atual do inimigo 
     public float turningSpeed;                              // velocidade de giro do inimigo
 
     public float changeDirectionTimeRange;                  // intervalo de mudança de direção do inimigo
     public bool FollowPlayer;                               // decisão em Verdadeiro/Falso se o inimigo persegue o player
 
-    public Coroutine LazyWalkCoroutine;
-    Coroutine MoveEnemies;                                  // corrotina para movimentar os inimigos no mapa
-    Coroutine VoiceSoundCoroutine;
+    public Coroutine LazyWalkCoroutine;                     // armazenará a corrotina de perambular do inimigo
+    Coroutine MoveEnemies;                                  // armazenará a corrotina de mover do inimigo
+    Coroutine VoiceSoundCoroutine;                          // armazenará a corrotina de emitir sons do inimigo
 
     Rigidbody2D rb2D;                                       // Declara um corpo rígido
-    Animator animator;                                      // Armazena o componente animator
+    Animator animator;                                      // Armazenará o componente animator
 
-    Transform transformTarget = null;                       // Armazena o componente transform do alvo
+    Transform transformTarget = null;                       // Armazenará o componente transform do alvo
 
-    Vector3 FinalPos;                                       // Armazena a posição final do inimigo
-    Vector2 lookDir;
-    float firstAngle = 0;                                   // Armazena o valor do angulo atual do inimigo
-    float playerAngle = 0f;
+    Vector3 FinalPos;                                       // Armazenará a posição final do inimigo
+    Vector2 lookDir;                                        // Armazenará a direção do inimigo
+    float firstAngle = 0;                                   // Armazenará o valor do angulo calculado pela corrotina de perambular do inimigo
+    float playerAngle = 0f;                                 // Armazenará o valor do angulo do vetor até a posição do player
 
-    CircleCollider2D circleCollider;                        //Armazena o componente de spot
+    CircleCollider2D circleCollider;                        // Armazenará o collider de spot
 
-    public AudioClip IdleSound;
-    public AudioClip PursuitSound;
-    AudioSource VoiceAudioSource;
+    public AudioClip IdleSound;                             // Som executado do estado idle do inimigo
+    public AudioClip PursuitSound;                          // Som executado do estado de perseguição do inimigo
+    AudioSource VoiceAudioSource;                           // AudioSource que executa a o som da voz do inimigo durante a movimentação
 
-    Enemy enemyScript;
+    Enemy enemyScript;                                      // Amazenará o script Enemy do inimigo
 
     // Start is called before the first frame update
     void Start()
     {
-        animator = GetComponent<Animator>();
-        walkSpeed = walkerIdle_Speed;
-        rb2D = GetComponent<Rigidbody2D>();
-        VoiceAudioSource = gameObject.AddComponent<AudioSource>();
-        SetAudioSources();
-        LazyWalkCoroutine = StartCoroutine(LazyWalk());
-        circleCollider = GetComponent<CircleCollider2D>();
-        enemyScript = gameObject.GetComponent<Enemy>();
+        animator = GetComponent<Animator>();                                        // Recebe o componente Animator
+        walkSpeed = walkerIdle_Speed;                                               // Ajusta a velocidade para velocidade em estado idle
+        rb2D = GetComponent<Rigidbody2D>();                                         // Recebe o componente rigidBody2D do inimigo
+        VoiceAudioSource = gameObject.AddComponent<AudioSource>();                  // Adiciona o AudioSource de voz do inimigo 
+        SetAudioSources();                                                          // Chama função que configura os AudioSources
+        LazyWalkCoroutine = StartCoroutine(LazyWalk());                             // Inicia corrotina de perambular
+        circleCollider = GetComponent<CircleCollider2D>();                          // Recebe o componente CircleCollider2D responsável pelo spot
+        enemyScript = gameObject.GetComponent<Enemy>();                             // Recebe o componente Enemy do inimigo
     }
 
-
+    // Função que desenha na tela do game para debug
     private void OnDrawGizmos()
     {
-        if(circleCollider != null)
+        if(circleCollider != null)                                                          // Se o circleCollider nao é nulo
         {
-            Gizmos.DrawWireSphere(transform.position, circleCollider.radius);
+            Gizmos.DrawWireSphere(transform.position, circleCollider.radius);               // Desenhar o collider na tela
         }
     }
 
-    // define o modo como o player se movimenta quando não está perseguindo o player
-    
     public void SetAudioSources()
     {
         VoiceAudioSource.spatialBlend = 1f;
+        VoiceAudioSource.rolloffMode = AudioRolloffMode.Linear;
+        VoiceAudioSource.minDistance = 3f;
+        VoiceAudioSource.maxDistance = 15f; 
         VoiceAudioSource.clip = IdleSound;
     }
-    
+
+    // Corrotina que calcula as novas posições para as quais o inimigo se moverá no modo de perambular e chava a corrotina de movimento (Move)
     public IEnumerator LazyWalk()
     {
         while (true)
         {
             //print("LazyWalk");
-            PathFind_NewEndPoint();
-            if (MoveEnemies != null)
+            PathFind_NewEndPoint();                                               // Calcula a nova posição de destino do inimigo no modo de perambular
+            if (MoveEnemies != null)                                              // Se a corrotina de movimento do inimigo está sendo executada
             {
-                StopCoroutine(MoveEnemies);
+                StopCoroutine(MoveEnemies);                                       // Para a corrotina de movimento do inimigo
             }
-            MoveEnemies = StartCoroutine(Move(rb2D, walkSpeed));
+            MoveEnemies = StartCoroutine(Move(rb2D, walkSpeed));                  // Inicia a corrotina de movimento do inimigo
             //VoiceAudioSource.Play();
-            yield return new WaitForSeconds(changeDirectionTimeRange);
+            yield return new WaitForSeconds(changeDirectionTimeRange);            // Aguardar tempo dado por "changeDirectionTimeRange"
         }
     }
 
-    // define novo ponto final ao inimigo
+    // Função que calcula o novo ponto final ao inimigo no modo de perambular
     void PathFind_NewEndPoint()
     {
         //firstAngle += Random.Range(0, 360);
-        firstAngle += Random.Range(0, 60);
+        firstAngle += Random.Range(0, 60);                                      // Adicionar um angulo de 0 a 60°
         //firstAngle = Mathf.Repeat(firstAngle, 360);
-        firstAngle %= 360;
-        FinalPos = rb2D.position + AngleToVector2(firstAngle);
+        firstAngle %= 360;                                                      // Limitar o ângulo a 360°
+        FinalPos = rb2D.position + AngleToVector2(firstAngle);                  // Posição final recebe a posição do rigidbody2D do inimigo adicionada de um vetor cuja direção é dado pelo angulo calculado
     }
 
+    // Retorna um vetor com o ângulo dado
     Vector2 AngleToVector2(float angleInDegrees)
     {
         float angleInRadians = angleInDegrees * Mathf.Deg2Rad;
@@ -111,20 +117,20 @@ public class BZWander : MonoBehaviour
 
     }
 
-    // Inimigo vai em direção ao player
+    // Corrotina que gerencia o movimento linear e rotação do inimigo e executa os sons emitidos dutante o movimento
     public IEnumerator Move(Rigidbody2D rbToMove, float walkSpeed)
     {
-        if(VoiceSoundCoroutine == null)
-            VoiceSoundCoroutine = StartCoroutine(PlayEnemyVoice());
-        float LeastDistance = (transform.position - FinalPos).sqrMagnitude;
+        if(VoiceSoundCoroutine == null)                                             // Se a corrotina de voz nao iniciou...
+            VoiceSoundCoroutine = StartCoroutine(PlayEnemyVoice());                 // Inicie a corrotina de voz
+        float LeastDistance = (transform.position - FinalPos).sqrMagnitude;         // Calcula a distancia faltante até o alvo
 
-        while (LeastDistance > 0.01f)
+        while (LeastDistance > 0.01f)                                               // Enquanto não chegou no alvo
         {
-            if(transformTarget != null)
+            if(transformTarget != null)                                             // Se o alvo nao é nulo (player foi detectado)
             {
-                FinalPos = transformTarget.position;
+                FinalPos = transformTarget.position;                                // Atribui a posiçao do player à posiçao final
             }
-            if(rbToMove != null)
+            if(rbToMove != null)                                    
             {
                 //posição que o inimigo irá ir em direção
                 animator.SetBool("Caminhando",true);

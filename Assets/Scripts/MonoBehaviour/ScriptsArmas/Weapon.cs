@@ -2,6 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Autor: Lucas Barboza
+/// Data: 14/02/2020
+/// Superclasse que gerencia os atributos, tiro e recarga de todas as armas
+/// </summary>
+
 public class Weapon : MonoBehaviour
 {
     public int totalAmmo;                           // Total de muniçao que o player possui para a arma
@@ -20,16 +26,19 @@ public class Weapon : MonoBehaviour
     public Sprite icon;
     bool isSelected;
 
-    public virtual void Shoot()                                          //matemática de subtração das armas no paint clip da arma
+    // Funçao base que gerencia a matematica da recarga da arma
+    public virtual void Shoot()                                         
     {
         totalAmmo--;
         loadedAmmo--;
     }
 
+    // Funçao virtual que implementará a instanciação dos tiros da arma
     public virtual void Shoot(Transform firePoint, GameObject bulletPrefab)
     {
     }
 
+    // Funçao que gerencia a recarga da arma
     public void Reload()                                                 //método de contagem de balas para recarregamento da arma
     {
         int ammoToReload = Mathf.Min(ammoCapacity - loadedAmmo, totalAmmo - loadedAmmo);
@@ -39,16 +48,18 @@ public class Weapon : MonoBehaviour
         //print("timeToFinish: " + timeToFinishReload);
     }
 
+    // Funçao que retorna se o player pode atirar
     public bool CanShoot()                                                 //define se o player pode atirar com a arma
     {
         return totalAmmo > 0 && loadedAmmo > 0;
     }
-        
+    
+    // Funçao que retorna se o player pode recaregar a arma
     public bool CanReload()                                                //define se o player pode recarregar a arma
     {
         return totalAmmo > 0 && Mathf.Min(ammoCapacity - loadedAmmo, totalAmmo - loadedAmmo) > 0;
     }
 
-    public int AmmoLoaded() {return loadedAmmo; }                           //define a quantidade de balas carregadas na arma
-    public int AmmoRemaining()  {return (totalAmmo - loadedAmmo); }         //define a quantidade de balas disponivel para a arma que nao estao carregadas
+    public int AmmoLoaded() {return loadedAmmo; }                           // Funçao que retorna a quantidade de balas carregadas na arma
+    public int AmmoRemaining()  {return (totalAmmo - loadedAmmo); }         // Funçao de retorna a quantidade de balas disponivel para a arma que nao estao carregadas
 }

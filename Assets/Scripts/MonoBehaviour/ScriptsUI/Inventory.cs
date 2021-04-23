@@ -11,6 +11,8 @@ public class Inventory : MonoBehaviour
     [HideInInspector] public Item[] itens = new Item[numSlots]; // array de itens
     GameObject[] slots = new GameObject[numSlots]; // array de Slots
 
+    public Item pistol;
+
     private void Awake()
     {
         //DontDestroyOnLoad(this.gameObject);
@@ -20,6 +22,7 @@ public class Inventory : MonoBehaviour
     {
         CreateSlots();
         ResetInventory();
+        AddItem(pistol);
     }
     public void CreateSlots()
     {
