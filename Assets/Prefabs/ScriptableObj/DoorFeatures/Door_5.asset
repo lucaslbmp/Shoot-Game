@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Door_5
   m_EditorClassIdentifier: 
   keyItem: {fileID: 0}
-  doorSpeed: 0
+  doorSpeed: 100
   locked: 0
   doorOpenSound: {fileID: 8300000, guid: a4c0d0eb33beb8a47b4ec67d788ccd00, type: 3}
   doorCloseSound: {fileID: 8300000, guid: 1dbe2d7619f12a449b069cecc0b1ac27, type: 3}
