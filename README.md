@@ -6,7 +6,7 @@
 
 Gilmar Correia Jeronimo        - RA: 11014515
 
-Ivan Correia Lima Coqueiro     - RA: 11014515
+Ivan Correia Lima Coqueiro     - RA: 11026416
 
 Lucas Barboza Moreira Pinheiro - RA: 11017015
 
@@ -37,15 +37,16 @@ Se prepare para imergir neste TopDown Shooter como um Agente policial que busca 
 ### Ivan
 
 - Design do Som.
+- Folder para o Jogo.
 - Menu do Jogo.
 - Créditos do Jogo.
-- Animações dos inimigos.
+- Animações dos objetos.
 - Programação do jogo.
 
 ### Lucas
 
 - Game design.
 - Animações dos player.
-- Animações dos animigos.
+- Animações dos inimigos.
 - Lógica do jogo.
 - Programação do jogo. 
