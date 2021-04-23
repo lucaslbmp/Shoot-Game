@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8485239907599034594}
   - component: {fileID: 7521238394991024069}
   - component: {fileID: -8149210486512514694}
+  - component: {fileID: 8248064983664293779}
   m_Layer: 10
   m_Name: BasicZombie
   m_TagString: Enemy
@@ -31,7 +32,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 166390103093252169}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.11, y: 0.11, z: 0}
+  m_LocalPosition: {x: 7.11, y: 0.11, z: 50}
   m_LocalScale: {x: 0.65, y: 0.65, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -263,3 +264,19 @@ MonoBehaviour:
   PunchSound: {fileID: 8300000, guid: 987758fd23c80b149aba9775b05fe011, type: 3}
   PainSound: {fileID: 8300000, guid: 712bc9c88c8729f418b73ed3b6e69fea, type: 3}
   PainAudioSource: {fileID: 0}
+--- !u!70 &8248064983664293779
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166390103093252169}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.29123893, y: -0.09944735}
+  m_Size: {x: 1.1740098, y: 1.6712471}
+  m_Direction: 0
