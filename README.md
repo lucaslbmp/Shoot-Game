@@ -11,14 +11,17 @@ Ivan Correia Lima Coqueiro     - RA: 11014515
 Lucas Barboza Moreira Pinheiro - RA: 11017015
 
 
-**Descrição:** 
+
+## **Descrição:** 
 
 Se prepare para imergir neste TopDown Shooter como um Agente policial que busca provas de um crime, mas se depara com algo muito pior.
 
-**Banner:**
+
+## **Banner:**
 ![image](QZ_POSTER.jpeg)
 
-**Link YouTube:**
+
+## **Link YouTube:**
 
 ## DESCRIÇÃO DE ATIVIDADES
 
