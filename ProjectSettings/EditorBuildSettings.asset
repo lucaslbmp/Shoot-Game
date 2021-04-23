@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Creditos.unity
     guid: 1dcdc3fdc2865ea429981f8dd8f13a68
+  - enabled: 1
+    path: Assets/Scenes/Venceu.unity
+    guid: be0a22a920578e843930cfeac9b1c8dc
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
