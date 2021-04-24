@@ -2,10 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Autor: Ivan Correia
+/// Data: 02/04/2021
+/// Classe usada para objetos que armazenam um item
+/// </summary>
 
 
 public class Consumables: MonoBehaviour
 {
-    //cria-se um objeto publico do tipo Coletavel, chamado Coletavel
-    public Item item;       // cria-se um objeto coletavel com nome coletavel
+    public Item item;       // Armazena um objeto do tipo Item
 }

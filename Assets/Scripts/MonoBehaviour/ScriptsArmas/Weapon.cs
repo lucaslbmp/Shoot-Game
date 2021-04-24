@@ -4,7 +4,7 @@ using UnityEngine;
 
 /// <summary>
 /// Autor: Lucas Barboza
-/// Data: 14/02/2020
+/// Data: 14/02/2021
 /// Superclasse que gerencia os atributos, tiro e recarga de todas as armas
 /// </summary>
 
@@ -23,10 +23,10 @@ public class Weapon : MonoBehaviour
     public GameObject projectilePrefab;            // prefab de projetil (bala, chumbinho, etc.) da arma
     public AudioClip shotSound;                    // prefab de som de tiro da arma
     public AudioClip reloadSound;                  // prefab de som de recarga da arma
-    public Sprite icon;
-    bool isSelected;
+    public Sprite icon;                            // Sprite do icone da arma
+    //bool isSelected;
 
-    // Funçao base que gerencia a matematica da recarga da arma
+    // Funçao base que gerencia a matematica do tiro da arma
     public virtual void Shoot()                                         
     {
         totalAmmo--;
@@ -38,14 +38,11 @@ public class Weapon : MonoBehaviour
     {
     }
 
-    // Funçao que gerencia a recarga da arma
-    public void Reload()                                                 //método de contagem de balas para recarregamento da arma
+    // Funçao que gerencia a matrematica da recarga da arma
+    public void Reload()                                                 
     {
-        int ammoToReload = Mathf.Min(ammoCapacity - loadedAmmo, totalAmmo - loadedAmmo);
-        loadedAmmo += ammoToReload;
-        //isReloading = true;
-        //timeToFinishReload = reloadTime;
-        //print("timeToFinish: " + timeToFinishReload);
+        int ammoToReload = Mathf.Min(ammoCapacity - loadedAmmo, totalAmmo - loadedAmmo); // Calcula muniçao a ser carregada na arma
+        loadedAmmo += ammoToReload;                                     // Adiciona a muniçao calculada 
     }
 
     // Funçao que retorna se o player pode atirar
@@ -54,7 +51,7 @@ public class Weapon : MonoBehaviour
         return totalAmmo > 0 && loadedAmmo > 0;
     }
     
-    // Funçao que retorna se o player pode recaregar a arma
+    // Funçao que retorna se o player pode recarregar a arma
     public bool CanReload()                                                //define se o player pode recarregar a arma
     {
         return totalAmmo > 0 && Mathf.Min(ammoCapacity - loadedAmmo, totalAmmo - loadedAmmo) > 0;

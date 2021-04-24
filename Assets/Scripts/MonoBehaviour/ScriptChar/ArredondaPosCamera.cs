@@ -5,10 +5,10 @@ using Cinemachine;
 
 public class ArredondaPosCamera : CinemachineExtension
 {
-    public float PixelsPerUnit = 32;
+    public float PixelsPerUnit = 32;                                        // Recebe a quantidade de pixels por unidade
 
     protected override void PostPipelineStageCallback(
-        CinemachineVirtualCameraBase vcam, 
+        CinemachineVirtualCameraBase vcam,
         CinemachineCore.Stage stage, ref CameraState state, 
         float deltaTime)
     {
@@ -20,6 +20,7 @@ public class ArredondaPosCamera : CinemachineExtension
         }
     }
 
+    // Funçao que arredonda um float de acordo com a quantidade de pixels por unidade
     float Round(float x)
     {
         return Mathf.Round(x * PixelsPerUnit) / PixelsPerUnit;

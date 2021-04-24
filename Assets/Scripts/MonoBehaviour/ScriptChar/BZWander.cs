@@ -2,6 +2,8 @@ using System.Collections;
 using UnityEngine;
 
 /// <summary>
+/// Autor: Ivan Correia, Lucas Barboza
+/// Data: 21/04/2021
 /// Classe que gerencia a movimentação do inimigo e os audios emeitidos por ele ao se movimentar
 /// </summary>
 
@@ -153,78 +155,81 @@ public class BZWander : MonoBehaviour
         animator.SetBool("Caminhando", false);
     }
 
+    // Corrotina que gerencia os sons emitodos pelo inimigo ao se movimentar
     public IEnumerator PlayEnemyVoice()
     {
         while (true)
         {
-            AudioSource[] allAudioSources = gameObject.GetComponents<AudioSource>();
+            AudioSource[] allAudioSources = gameObject.GetComponents<AudioSource>();  // Encontra todos os AudioSorces do inimigo
             foreach (AudioSource Asource in allAudioSources)
             {
-                Asource.Stop();
+                Asource.Stop();                                        // Interrompe todos os AudioSorces do inimigo
             }
-            if (!VoiceAudioSource.isPlaying) {
-                VoiceAudioSource.Play();
+            if (!VoiceAudioSource.isPlaying) {                          // Se o AudioSource de voz nao esta tocando...
+                VoiceAudioSource.Play();                                // Executa o AudioSource de voz
             }
-            yield return new WaitForSeconds(1.5f);
-            yield return null;
+            yield return new WaitForSeconds(1.5f);                      // Aguarda 1.5 seg
+            yield return null;                                          // Retorna null
         }
     }
 
+    // Na "borda de subida" colisão
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") && FollowPlayer)      //segue o player
+        if (collision.gameObject.CompareTag("Player") && FollowPlayer)      //Se o inimigo colidiu com o player e é do tipo que segue o player...
         {
-            transformTarget = null;
-            walkSpeed = pathFind_Speed;
-            transformTarget = collision.gameObject.transform;
-            if(MoveEnemies != null)
+            transformTarget = null;                                     // Anula o tranform do alvo
+            walkSpeed = pathFind_Speed;                            // Muda a velocidade do inimigo para velocidade de perseguiçao
+            transformTarget = collision.gameObject.transform;     // Pega o transform do player
+            if(MoveEnemies != null)                         // Se a corrotina de mover do inimigo já iniciou 
             {
-                StopCoroutine(MoveEnemies);
+                StopCoroutine(MoveEnemies);                 // Para a corrotina de mover do inimigo
             }
-            VoiceAudioSource.clip = PursuitSound;
-            MoveEnemies = StartCoroutine(Move(rb2D, walkSpeed)); // mexi aqui
+            VoiceAudioSource.clip = PursuitSound;           // Muda o clip de audio do AudioSource de voz para som de perseguição
+            MoveEnemies = StartCoroutine(Move(rb2D, walkSpeed));    // Inicia a corrotina de mover do inimigo com a nova velocidade
         }
     }
 
+    // Na "borda de descida" colisão
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))           // Se o inimigo colidiu com o player
         {
-            animator.SetBool("Caminhando", false);
-            //walkerIdle_Speed = pathFind_Speed;
-            walkSpeed = pathFind_Speed;
-            if (MoveEnemies != null)
+            animator.SetBool("Caminhando", false);               // Para a animação de caminhar
+            walkSpeed = walkerIdle_Speed;                        // Muda a velocidade para velocidade de perambular      
+            if (MoveEnemies != null)                             // Se a corrotina de mover o inimigo está sendo executada
             {
-                StopCoroutine(MoveEnemies);
-                //playerAngle = Mathf.Atan2(-lookDir.y, -lookDir.x) * Mathf.Rad2Deg;
+                StopCoroutine(MoveEnemies);                      // Pare a corrotina de mover o inimigo
             }
-            transformTarget = null;
-            VoiceAudioSource.clip = IdleSound;
+            transformTarget = null;                              // Atrubui null ao tranform do alvo
+            VoiceAudioSource.clip = IdleSound;                   // Muda o clip de audio do AudioSource de voz para som de perambular
         }
     }
 
     void Update()
     {
-        Debug.DrawLine(rb2D.position, FinalPos, Color.red);
+        Debug.DrawLine(rb2D.position, FinalPos, Color.red);    // Desenha uma linha vermelha da posiçao do personagem até a posiçao final
     }
 
+    // Funçao que inicia a corrotina de perambular
     public void StartLazyWalkCoroutine()
     {
-        if(LazyWalkCoroutine == null)
-            LazyWalkCoroutine = StartCoroutine(LazyWalk());
+        if(LazyWalkCoroutine == null)                               // Se a corrotina de perambular nao está sendo executada
+            LazyWalkCoroutine = StartCoroutine(LazyWalk());         // Inicie a corrotina de perambular
     }
+
+    // Funçao que para a corrotina de perambular
     public void StopLazyWalkCoroutine()
     {
-        if(LazyWalkCoroutine != null)
+        if(LazyWalkCoroutine != null)                           // Se a corrotina de perambular está sendo executada...
         {
-            StopCoroutine(LazyWalkCoroutine);
-            LazyWalkCoroutine = null;
-            //firstAngle = rb2D.rotation;
+            StopCoroutine(LazyWalkCoroutine);                   // Pars a corrotina de perambular
+            LazyWalkCoroutine = null;                           // Altera o estado da corrotina para null
         }
             
-        if (MoveEnemies != null)
+        if (MoveEnemies != null)                                // Se a corrotina de mover está sendo executada... 
         {
-            StopCoroutine(MoveEnemies);
+            StopCoroutine(MoveEnemies);                         // Altera o estado da corrotina para null
             MoveEnemies = null;
         }
             

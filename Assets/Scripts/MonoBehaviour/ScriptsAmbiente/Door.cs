@@ -4,7 +4,7 @@ using UnityEngine;
 
 /// <summary>
 /// Autor: Lucas Barboza
-/// Data: 19/04/2020
+/// Data: 19/04/2021
 /// Classe que gerencia as portas
 /// </summary>
 
