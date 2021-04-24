@@ -17,7 +17,6 @@ Lucas Barboza Moreira Pinheiro - RA: 11017015
 
 Se prepare para imergir neste TopDown Shooter como um Agente policial que busca provas de um crime, mas se depara com algo muito pior. Baixe o jogo em: https://github.com/lucaslbmp/Shoot-Game/releases/tag/v.1 ou jogue online em https://gilmarcorreia.itch.io/quarantine-zone
 
-<iframe frameborder="0" src="https://itch.io/embed/1009948" width="552" height="167"><a href="https://gilmarcorreia.itch.io/quarantine-zone">Quarantine Zone by GilmarCorreia</a></iframe>
 
 ## **Banner:**
 ![image](QZ_POSTER.jpeg)
