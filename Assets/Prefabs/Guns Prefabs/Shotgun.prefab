@@ -43,8 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e564b9e12c071ef4491824700b3b3909, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalAmmo: 12
-  loadedAmmo: 4
+  totalAmmo: 7
+  loadedAmmo: 7
   ammoCapacity: 7
   isAvailable: 0
   shootDelay: 1.2
