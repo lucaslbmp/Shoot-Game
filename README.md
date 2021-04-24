@@ -30,7 +30,7 @@ Se prepare para imergir neste TopDown Shooter como um Agente policial que busca 
 
 ### Gameplay 2
 
-[![](http://img.youtube.com/vi/TT4wgaOrorA/0.jpg)](http://www.youtube.com/watch?v=TT4wgaOrorA "")
+[![](http://img.youtube.com/vi/TT4wgaOrorA/0.jpg)](https://www.youtube.com/watch?v=kn-XNEbNenE "")
 
 
 ## DESCRIÇÃO DE ATIVIDADES
