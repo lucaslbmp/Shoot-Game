@@ -4,7 +4,7 @@ using UnityEngine;
 
 /// <summary>
 /// Autor: Gilmar Correia
-/// Data:
+/// Data: 06/04/2021
 /// Classe que gerencia os aspectos gerais do jogo, como spawn do player
 /// </summary>
 

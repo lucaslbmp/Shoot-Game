@@ -9,6 +9,6 @@ using UnityEngine.UI;
 
 public class Slot : MonoBehaviour
 {
-    public Text qtdTexto;
-    public Text itemName;
+    public Text qtdTexto;               // Armazena o texto da quantidade do item
+    public Text itemName;               // Armazena o nome do item
 }

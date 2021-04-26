@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// DEV: IVAN CORREIA LIMA COQUEIRO
-/// V.01
-/// ATUALIZADO NO DIA 22-04-2021
+/// Autor: Ivan Correia
+/// Data: 22/04/2021
+/// Classe que gerencia os sons de clique do Menu
 /// </summary>
 
 

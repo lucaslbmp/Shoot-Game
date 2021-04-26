@@ -19,10 +19,10 @@ public class Inventory : MonoBehaviour
 
     public Item pistol;                                                         // Item da pitola (que ja vem no inventario)
 
-    private void Awake()
-    {
-        //DontDestroyOnLoad(this.gameObject);
-    }
+    //private void Awake()
+    //{
+    //    //DontDestroyOnLoad(this.gameObject);
+    //}
 
     void Start()
     {
@@ -88,7 +88,7 @@ public class Inventory : MonoBehaviour
         return false;
     }
 
-    // Funçao responsavel por remover um item da lista
+    // Funçao responsavel por remover um item do inventario
     public void RemoveItem(Item itemToRemove)
     {
         for(int i = 0; i < itens.Length; i++ )                            // Para cada item na lista de itens...

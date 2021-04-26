@@ -1,5 +1,11 @@
 using UnityEngine;
 
+/// <summary>
+/// Autor: Lucas Barboza
+/// Data: 
+/// Classe que contem os atributos de um item
+/// </summary>
+
 //adiciona um quick menu na engine de coletáveis
 [CreateAssetMenu(menuName = "Coletável")]
 
